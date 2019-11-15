@@ -29,7 +29,7 @@ for version in versions:
     service=service,
     version=version,
     config_pattern=config_pattern,
-    package_pattern='com.google.cloud.{service}.{version}',
+    package_pattern='com.google.{service}.{version}',
     gapic=gapic
   )
 
