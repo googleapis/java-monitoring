@@ -170,10 +170,12 @@ public final class ServiceMonitoringServiceProto {
           + "om\322A\211\001https://www.googleapis.com/auth/cl"
           + "oud-platform,https://www.googleapis.com/"
           + "auth/monitoring,https://www.googleapis.c"
-          + "om/auth/monitoring.readB{\n\030com.google.mo"
-          + "nitoring.v3B\035ServiceMonitoringServicePro"
-          + "toP\001Z>google.golang.org/genproto/googlea"
-          + "pis/monitoring/v3;monitoringb\006proto3"
+          + "om/auth/monitoring.readB\265\001\n\030com.google.m"
+          + "onitoring.v3B\035ServiceMonitoringServicePr"
+          + "otoP\001Z>google.golang.org/genproto/google"
+          + "apis/monitoring/v3;monitoring\252\002\032Google.C"
+          + "loud.Monitoring.V3\312\002\032Google\\Cloud\\Monito"
+          + "ring\\V3b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

@@ -175,10 +175,11 @@ public final class ServiceMonitoringProto {
           + "icSliH\000\022\021\n\tthreshold\030\002 \001(\001B\006\n\004type\032N\n\013Me"
           + "tricRange\022\023\n\013time_series\030\001 \001(\t\022*\n\005range\030"
           + "\004 \001(\0132\033.google.monitoring.v3.RangeB\022\n\020wi"
-          + "ndow_criterionBt\n\030com.google.monitoring."
-          + "v3B\026ServiceMonitoringProtoP\001Z>google.gol"
-          + "ang.org/genproto/googleapis/monitoring/v"
-          + "3;monitoringb\006proto3"
+          + "ndow_criterionB\256\001\n\030com.google.monitoring"
+          + ".v3B\026ServiceMonitoringProtoP\001Z>google.go"
+          + "lang.org/genproto/googleapis/monitoring/"
+          + "v3;monitoring\252\002\032Google.Cloud.Monitoring."
+          + "V3\312\002\032Google\\Cloud\\Monitoring\\V3b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
