@@ -26,10 +26,12 @@ If you are using Maven with a BOM, add this to your pom.xml file.
  </dependencies>
 </dependencyManagement>
 
-<dependency>
-  <groupId>com.google.cloud</groupId>
-  <artifactId>google-cloud-monitoring</artifactId>
-</dependency>
+<dependencies>
+  <dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-monitoring</artifactId>
+  </dependency>
+</dependencies>
 ```
 [//]: # ({x-version-update-start:google-cloud-monitoring:released})
 If you are using Maven without a BOM, add this to your dependencies.
