@@ -14,7 +14,7 @@ Quickstart
 ----------
 If you are using Maven with a BOM, add this to your pom.xml file.
 ```xml
-<!-- START monitoring_install_with_bom] -->
+<!-- [START monitoring_install_with_bom] -->
 <dependencyManagement>
  <dependencies>
   <dependency>
@@ -31,12 +31,12 @@ If you are using Maven with a BOM, add this to your pom.xml file.
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-monitoring</artifactId>
 </dependency>
-<!-- END monitoring_install_with_bom] -->
+<!-- [END monitoring_install_with_bom] -->
 ```
 [//]: # ({x-version-update-start:google-cloud-monitoring:released})
 If you are using Maven without a BOM, add this to your dependencies.
 ```xml
-<!-- START monitoring_install_without_bom] -->
+<!-- [START monitoring_install_without_bom] -->
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-monitoring</artifactId>
