@@ -20,17 +20,19 @@ If you are using Maven with a BOM, add this to your pom.xml file.
   <dependency>
     <groupId>com.google.cloud</groupId>
     <artifactId>libraries-bom</artifactId>
-    <version>2.8.0</version>
+    <version>3.1.0</version>
     <type>pom</type>
     <scope>import</scope>
    </dependency>
  </dependencies>
 </dependencyManagement>
 
-<dependency>
-  <groupId>com.google.cloud</groupId>
-  <artifactId>google-cloud-monitoring</artifactId>
-</dependency>
+<dependencies>
+  <dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-monitoring</artifactId>
+  </dependency>
+</dependencies>
 <!-- [END monitoring_install_with_bom] -->
 ```
 [//]: # ({x-version-update-start:google-cloud-monitoring:released})
