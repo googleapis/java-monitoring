@@ -34,7 +34,6 @@ import java.util.ArrayList;
 import java.util.concurrent.Callable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.BeforeClass;
@@ -116,16 +115,22 @@ public class ITVPCServiceControlTest {
 
     conn.getResponseMessage();
 
-    String response =
-        new BufferedReader(new InputStreamReader((InputStream) conn.getErrorStream()))
-            .lines()
-            .collect(Collectors.joining("\n"));
+    BufferedReader reader =
+        new BufferedReader(new InputStreamReader((InputStream) conn.getErrorStream()));
+    StringBuilder response = new StringBuilder();
+
+    for (String line; (line = reader.readLine()) != null; ) {
+      response.append(line).append("\n");
+    }
 
     if (conn.getResponseCode() == 403) {
       throw new PermissionDeniedException(
-          response, null, GrpcStatusCode.of(io.grpc.Status.Code.PERMISSION_DENIED), false);
+          response.toString(),
+          null,
+          GrpcStatusCode.of(io.grpc.Status.Code.PERMISSION_DENIED),
+          false);
     } else if (conn.getResponseCode() != 200) {
-      throw new RuntimeException(response);
+      throw new RuntimeException(response.toString());
     }
     return;
   }
