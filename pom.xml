@@ -256,7 +256,7 @@
 
   <profiles>
     <profile>
-      <id>include-samples</id>
+      <id>enable-samples</id>
       <modules>
         <module>samples</module>
       </modules>
