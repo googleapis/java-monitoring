@@ -12,9 +12,9 @@
     Removing or replacing it should not affect the execution of the samples in anyway.
   -->
   <parent>
-    <groupId>com.google.cloud.samples</groupId>
-    <artifactId>shared-configuration</artifactId>
-    <version>1.0.11</version>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-monitoring-samples</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
   </parent>
 
   <properties>
