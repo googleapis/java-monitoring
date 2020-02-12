@@ -62,17 +62,14 @@ integration)
     bash .kokoro/coerce_logs.sh
     ;;
 samples)
-    if [[ -d samples ]]
-    then
-      mvn -B \
-        -Penable-samples \
-        -DtrimStackTrace=false \
-        -Dclirr.skip=true \
-        -Denforcer.skip=true \
-        -fae \
-        verify
-      bash .kokoro/coerce_logs.sh
-    fi
+    mvn -B \
+      -Penable-samples \
+      -DtrimStackTrace=false \
+      -Dclirr.skip=true \
+      -Denforcer.skip=true \
+      -fae \
+      verify
+    bash .kokoro/coerce_logs.sh
     ;;
 clirr)
     mvn -B -Denforcer.skip=true clirr:check
