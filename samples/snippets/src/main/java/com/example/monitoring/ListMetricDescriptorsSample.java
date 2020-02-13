@@ -19,13 +19,10 @@ import com.google.api.MetricDescriptor;
 import com.google.cloud.monitoring.v3.MetricServiceClient;
 import com.google.monitoring.v3.ListMetricDescriptorsRequest;
 import com.google.monitoring.v3.ProjectName;
-
 import java.io.IOException;
 
 public class ListMetricDescriptorsSample {
-  /**
-   * Returns the first page of all metric descriptors.
-   */
+  /** Returns the first page of all metric descriptors. */
   void listMetricDescriptors() throws IOException {
     // [START monitoring_list_descriptors]
     // Your Google Cloud Platform project ID
@@ -34,11 +31,10 @@ public class ListMetricDescriptorsSample {
     final MetricServiceClient client = MetricServiceClient.create();
     ProjectName name = ProjectName.of(projectId);
 
-    ListMetricDescriptorsRequest request = ListMetricDescriptorsRequest
-            .newBuilder()
-            .setName(name.toString())
-            .build();
-    MetricServiceClient.ListMetricDescriptorsPagedResponse response = client.listMetricDescriptors(request);
+    ListMetricDescriptorsRequest request =
+        ListMetricDescriptorsRequest.newBuilder().setName(name.toString()).build();
+    MetricServiceClient.ListMetricDescriptorsPagedResponse response =
+        client.listMetricDescriptors(request);
 
     System.out.println("Listing descriptors: ");
 

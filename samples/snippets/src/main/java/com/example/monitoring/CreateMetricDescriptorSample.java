@@ -21,7 +21,6 @@ import com.google.api.MetricDescriptor;
 import com.google.cloud.monitoring.v3.MetricServiceClient;
 import com.google.monitoring.v3.CreateMetricDescriptorRequest;
 import com.google.monitoring.v3.ProjectName;
-
 import java.io.IOException;
 
 public class CreateMetricDescriptorSample {
@@ -30,8 +29,9 @@ public class CreateMetricDescriptorSample {
 
   /**
    * Creates a metric descriptor.
-   * <p>
-   * See: https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors/create
+   *
+   * <p>See:
+   * https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors/create
    *
    * @param type The metric type
    */
@@ -45,10 +45,10 @@ public class CreateMetricDescriptorSample {
     ProjectName name = ProjectName.of(projectId);
 
     MetricDescriptor descriptor =
-            MetricDescriptor.newBuilder()
+        MetricDescriptor.newBuilder()
             .setType(metricType)
-            .addLabels(LabelDescriptor
-                    .newBuilder()
+            .addLabels(
+                LabelDescriptor.newBuilder()
                     .setKey("store_id")
                     .setValueType(LabelDescriptor.ValueType.STRING))
             .setDescription("This is a simple example of a custom metric.")
@@ -56,7 +56,8 @@ public class CreateMetricDescriptorSample {
             .setValueType(MetricDescriptor.ValueType.DOUBLE)
             .build();
 
-    CreateMetricDescriptorRequest request = CreateMetricDescriptorRequest.newBuilder()
+    CreateMetricDescriptorRequest request =
+        CreateMetricDescriptorRequest.newBuilder()
             .setName(name.toString())
             .setMetricDescriptor(descriptor)
             .build();
