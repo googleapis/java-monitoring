@@ -7,10 +7,6 @@
   <name>Google Cloud Monitoring Snippets</name>
   <url>https://github.com/googleapis/java-monitoring</url>
 
-  <!--
-    The parent pom defines common style checks and testing strategies for our samples.
-    Removing or replacing it should not affect the execution of the samples in anyway.
-  -->
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-monitoring-samples</artifactId>
