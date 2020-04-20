@@ -1,5 +1,17 @@
 # Changelog
 
+### [1.100.2](https://www.github.com/googleapis/java-monitoring/compare/v1.100.1...v1.100.2) (2020-04-20)
+
+
+### Documentation
+
+* increase the required minimum difference between start time of the next interval ([#140](https://www.github.com/googleapis/java-monitoring/issues/140)) ([57347fd](https://www.github.com/googleapis/java-monitoring/commit/57347fd2d94ef8c102740a8edec20b887e9b2fd1))
+
+
+### Dependencies
+
+* update dependency com.google.guava:guava-bom to v29 ([#128](https://www.github.com/googleapis/java-monitoring/issues/128)) ([ef3c9fe](https://www.github.com/googleapis/java-monitoring/commit/ef3c9fe1ca1e0691132ba37f24cc20a3887e1a44))
+
 ### [1.100.1](https://www.github.com/googleapis/java-monitoring/compare/v1.100.0...v1.100.1) (2020-04-10)
 
 
