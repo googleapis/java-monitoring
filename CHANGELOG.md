@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.101.0](https://www.github.com/googleapis/java-monitoring/compare/v1.100.1...v1.101.0) (2020-06-04)
+
+
+### Features
+
+* add body, ContentType, RequestMethod to UptimeCheckConfig ([#148](https://www.github.com/googleapis/java-monitoring/issues/148)) ([116b4f8](https://www.github.com/googleapis/java-monitoring/commit/116b4f8f45cdab473a271dcc2b9fddaa2c9fb019))
+
+
+### Dependencies
+
+* update dependency com.google.api:api-common to v1.9.1 ([#169](https://www.github.com/googleapis/java-monitoring/issues/169)) ([ab64333](https://www.github.com/googleapis/java-monitoring/commit/ab6433366df879b5aea7267119f34348ecbf769f))
+* update dependency com.google.api.grpc:proto-google-common-protos to v1.18.0 ([#159](https://www.github.com/googleapis/java-monitoring/issues/159)) ([6968856](https://www.github.com/googleapis/java-monitoring/commit/696885690e96065e83bdcf835624c027687c75d3))
+* update dependency com.google.guava:guava-bom to v29 ([#128](https://www.github.com/googleapis/java-monitoring/issues/128)) ([ef3c9fe](https://www.github.com/googleapis/java-monitoring/commit/ef3c9fe1ca1e0691132ba37f24cc20a3887e1a44))
+* update dependency com.google.protobuf:protobuf-java to v3.12.0 ([#164](https://www.github.com/googleapis/java-monitoring/issues/164)) ([e0b27d2](https://www.github.com/googleapis/java-monitoring/commit/e0b27d2d6de799e0a8360e04d25ad078c0b7f9f9))
+* update dependency io.grpc:grpc-bom to v1.29.0 ([#150](https://www.github.com/googleapis/java-monitoring/issues/150)) ([e0508c2](https://www.github.com/googleapis/java-monitoring/commit/e0508c2a6d2029c1b34cfedceb7d6e66fb41e7f9))
+* update dependency org.threeten:threetenbp to v1.4.4 ([#155](https://www.github.com/googleapis/java-monitoring/issues/155)) ([9f9f48d](https://www.github.com/googleapis/java-monitoring/commit/9f9f48d28c218656f316f31e4232ce02ec049ae1))
+
+
+### Documentation
+
+* increase the required minimum difference between start time of the next interval ([#140](https://www.github.com/googleapis/java-monitoring/issues/140)) ([57347fd](https://www.github.com/googleapis/java-monitoring/commit/57347fd2d94ef8c102740a8edec20b887e9b2fd1))
+
 ### [1.100.1](https://www.github.com/googleapis/java-monitoring/compare/v1.100.0...v1.100.1) (2020-04-10)
 
 
