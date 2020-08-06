@@ -42,7 +42,7 @@
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-monitoring</artifactId>
     </dependency>
-    <!-- [END monitoring_install_with_bom] -->
+    <!-- [START_EXCLUDE] -->
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java-util</artifactId>
@@ -60,5 +60,7 @@
       <version>1.0.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- [END_EXCLUDE] -->
   </dependencies>
+  <!-- [END monitoring_install_with_bom] -->
 </project>
