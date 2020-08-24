@@ -328,7 +328,11 @@ public class ITSystemTest {
   @Test
   public void updateUptimeCheckConfigTest() {
     UptimeCheckConfig.HttpCheck httpCheck =
-        UptimeCheckConfig.HttpCheck.newBuilder().setPath("/").setPort(80).build();
+        UptimeCheckConfig.HttpCheck.newBuilder()
+            .setPath("/")
+            .setPort(80)
+            .setRequestMethod(UptimeCheckConfig.HttpCheck.RequestMethod.GET)
+            .build();
     UptimeCheckConfig uptimeCheckConfig =
         UptimeCheckConfig.newBuilder()
             .setName(UPTIME_CHECK_CONFIG_NAME)
