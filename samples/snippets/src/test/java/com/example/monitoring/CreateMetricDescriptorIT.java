@@ -19,7 +19,9 @@ package com.example.monitoring;
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertNotNull;
 
+import com.google.monitoring.v3.ProjectName;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import org.junit.After;
 import org.junit.Before;
@@ -28,11 +30,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-/** Tests for quickstart sample. */
+/** Tests for create metric descriptor sample. */
 @RunWith(JUnit4.class)
-@SuppressWarnings("checkstyle:abbreviationaswordinname")
-public class QuickstartSampleIT {
+public class CreateMetricDescriptorIT {
+
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
+  private static final ProjectName PROJECT_NAME = ProjectName.of(PROJECT_ID);
+  private static final String TYPE = "custom.googleapis.com/invoice/paid/amount";
   private ByteArrayOutputStream bout;
   private PrintStream out;
 
@@ -55,13 +59,15 @@ public class QuickstartSampleIT {
   }
 
   @After
-  public void tearDown() {
+  public void tearDown() throws IOException {
     System.setOut(null);
+    // clean up
+    DeleteMetricDescriptor.deleteMetricDescriptor(PROJECT_ID, PROJECT_NAME.toString());
   }
 
   @Test
-  public void testQuickstart() throws Exception {
-    QuickstartSample.quickstart(PROJECT_ID);
-    assertThat(bout.toString()).contains("Done writing time series data.");
+  public void testCreateMetricDescriptor() throws IOException {
+    CreateMetricDescriptor.createMetricDescriptor(PROJECT_ID, TYPE);
+    assertThat(bout.toString()).contains("metric descriptor created successfully");
   }
 }

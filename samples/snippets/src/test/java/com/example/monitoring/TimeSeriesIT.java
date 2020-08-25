@@ -20,6 +20,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertNotNull;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import org.junit.After;
 import org.junit.Before;
@@ -28,10 +29,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-/** Tests for quickstart sample. */
+/** Tests for time series sample. */
 @RunWith(JUnit4.class)
-@SuppressWarnings("checkstyle:abbreviationaswordinname")
-public class QuickstartSampleIT {
+public class TimeSeriesIT {
+
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
   private ByteArrayOutputStream bout;
   private PrintStream out;
@@ -57,11 +58,26 @@ public class QuickstartSampleIT {
   @After
   public void tearDown() {
     System.setOut(null);
+    bout.reset();
   }
 
   @Test
-  public void testQuickstart() throws Exception {
-    QuickstartSample.quickstart(PROJECT_ID);
-    assertThat(bout.toString()).contains("Done writing time series data.");
+  public void testCreateTimeSeries() throws IOException {
+    CreateTimeSeries.createTimeSeries(PROJECT_ID);
+    assertThat(bout.toString()).contains("Done writing time series value");
+  }
+
+  @Test
+  public void testListTimeSeries() throws IOException {
+    ListTimeSeries.listTimeSeries(
+        "metric.type=\"compute.googleapis.com/instance/cpu/utilization\"", PROJECT_ID);
+    assertThat(bout.toString()).contains("Got timeseries:");
+  }
+
+  @Test
+  public void testListTimeSeriesHeaders() throws IOException {
+    TimeSeriesHeadersList.listTimeSeriesHeaders(
+        PROJECT_ID, "metric.type=\"compute.googleapis.com/instance/cpu/utilization\"");
+    assertThat(bout.toString()).contains("Got timeseries headers:");
   }
 }
