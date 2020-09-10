@@ -19,6 +19,7 @@ package com.example.monitoring;
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertNotNull;
 
+import com.google.monitoring.v3.AlertPolicyName;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -61,7 +62,10 @@ public class DeleteAlertPolicyIT {
     // create an alert policy
     CreateAlertPolicy.createAlertPolicy(PROJECT_ID, alertPolicyDisplayName);
     String result = bout.toString();
-    alertPolicyId = result.substring(result.indexOf(":") + 1, result.length() - 2);
+    alertPolicyId =
+        AlertPolicyName.of(
+                PROJECT_ID, result.substring(result.indexOf(":") + 1, result.length() - 2))
+            .toString();
     bout.reset();
     out.flush();
     System.setOut(out);

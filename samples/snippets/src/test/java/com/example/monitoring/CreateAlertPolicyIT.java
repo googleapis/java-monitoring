@@ -19,6 +19,7 @@ package com.example.monitoring;
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertNotNull;
 
+import com.google.monitoring.v3.AlertPolicyName;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -32,7 +33,7 @@ import org.junit.runners.JUnit4;
 
 /** Tests for create alert policy sample. */
 @RunWith(JUnit4.class)
-public class AlertPolicyCreateIT {
+public class CreateAlertPolicyIT {
   private static final String PROJECT_ID = requireEnvVar("GOOGLE_CLOUD_PROJECT");
   private ByteArrayOutputStream bout;
   private String alertPolicyId;
@@ -74,7 +75,9 @@ public class AlertPolicyCreateIT {
   public void createAlertPolicyTest() throws IOException {
     CreateAlertPolicy.createAlertPolicy(PROJECT_ID, alertPolicyDisplayName);
     String result = bout.toString();
-    alertPolicyId = result.substring(result.indexOf(":") + 1, result.length() - 2);
-    assertThat(bout.toString()).contains("alert policy created:" + alertPolicyId);
+    alertPolicyId =
+        AlertPolicyName.format(
+            PROJECT_ID, result.substring(result.lastIndexOf("/") + 1, result.length() - 2));
+    assertThat(bout.toString()).contains("alert policy created");
   }
 }

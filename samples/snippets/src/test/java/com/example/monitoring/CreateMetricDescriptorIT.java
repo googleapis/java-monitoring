@@ -22,6 +22,7 @@ import static junit.framework.TestCase.assertNotNull;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.UUID;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -34,7 +35,8 @@ import org.junit.runners.JUnit4;
 public class CreateMetricDescriptorIT {
 
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
-  private static final String TYPE = "custom.googleapis.com/invoice/paid/amount";
+  private static final String TYPE =
+      "custom.googleapis.com/invoice/paid/amount" + UUID.randomUUID().toString().substring(0, 8);
   private ByteArrayOutputStream bout;
   private PrintStream out;
 

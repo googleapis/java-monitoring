@@ -57,7 +57,7 @@ public class GetMonitoredResourceIT {
 
   @After
   public void tearDown() {
-    System.setOut(null);
+    System.out.flush();
   }
 
   @Test

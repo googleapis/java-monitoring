@@ -19,6 +19,7 @@ package com.example.monitoring;
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertNotNull;
 
+import com.google.monitoring.v3.AlertPolicyName;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -61,7 +62,10 @@ public class UpdateAlertPolicyIT {
     // create an alert policy
     CreateAlertPolicy.createAlertPolicy(PROJECT_ID, alertPolicyDisplayName);
     String result = bout.toString();
-    alertPolicyId = result.substring(result.indexOf(":") + 1, result.length() - 2);
+    alertPolicyId =
+        AlertPolicyName.of(
+                PROJECT_ID, result.substring(result.indexOf(":") + 1, result.length() - 2))
+            .toString();
     bout.reset();
     out.flush();
     System.setOut(out);
@@ -83,7 +87,10 @@ public class UpdateAlertPolicyIT {
         "update_alert_policy_name_" + UUID.randomUUID().toString().substring(0, 8);
     UpdateAlertPolicy.updateAlertPolicy(alertPolicyId, alertPolicyDisplayName);
     String result = bout.toString();
-    alertPolicyId = result.substring(result.indexOf(":") + 1, result.length() - 2);
-    assertThat(bout.toString()).contains("alert policy updated successfully:" + alertPolicyId);
+    alertPolicyId =
+        AlertPolicyName.of(
+                PROJECT_ID, result.substring(result.indexOf(":") + 1, result.length() - 2))
+            .toString();
+    assertThat(bout.toString()).contains("alert policy updated successfully");
   }
 }

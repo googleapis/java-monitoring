@@ -85,8 +85,9 @@ public class CreateAlertPolicy {
 
       // Create an alert policy
       AlertPolicy actualAlertPolicy = alertPolicyServiceClient.createAlertPolicy(name, alertPolicy);
-
-      System.out.println("alert policy created:" + actualAlertPolicy.getName());
+      String alertPolicyId =
+          actualAlertPolicy.getName().substring(actualAlertPolicy.getName().lastIndexOf("/") + 1);
+      System.out.println("alert policy created:" + alertPolicyId);
     } catch (ApiException ex) {
       System.out.print("\nalert policy was not created." + ex.toString());
     }
