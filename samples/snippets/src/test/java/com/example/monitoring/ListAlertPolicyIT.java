@@ -64,6 +64,6 @@ public class ListAlertPolicyIT {
   @Test
   public void listAlertPolicyTest() throws IOException {
     ListAlertPolicy.listAlertPolicy(PROJECT_ID);
-    assertThat(bout.toString()).contains("List of policy:");
+    assertThat(bout.toString()).contains("success! alert policy");
   }
 }

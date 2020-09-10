@@ -52,7 +52,7 @@ public class ListAlertPolicy {
           .forEach(
               alertPolicy ->
                   System.out.printf(
-                      "alert policy %s is policyId %s\n",
+                      "success! alert policy %s is policyId %s\n",
                       alertPolicy.getDisplayName(), alertPolicy.getName()));
     } catch (ApiException ex) {
       System.out.print("alert policy not found:" + ex.toString());

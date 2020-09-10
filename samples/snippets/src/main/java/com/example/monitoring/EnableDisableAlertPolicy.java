@@ -45,8 +45,8 @@ public class EnableDisableAlertPolicy {
     try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
       // A Filter that identifies which time series should be compared with the threshold
       String metricFilter =
-          "metric.type=compute.googleapis.com/instance/"
-              + "\"cpu/utilization\" AND resource.type=\"gce_instance\"";
+          "metric.type=\"compute.googleapis.com/instance/"
+              + "cpu/utilization\" AND resource.type=\"gce_instance\"";
 
       // Build Duration
       Duration aggregationDuration = Duration.newBuilder().setSeconds(60).build();

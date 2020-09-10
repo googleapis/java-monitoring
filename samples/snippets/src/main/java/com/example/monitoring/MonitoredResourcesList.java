@@ -50,7 +50,10 @@ public class MonitoredResourcesList {
       System.out.println("Listing monitored resource descriptors: ");
       response
           .iterateAll()
-          .forEach(metricDescriptor -> System.out.printf(metricDescriptor.getType()));
+          .forEach(
+              metricDescriptor ->
+                  System.out.printf(
+                      "success! monitored resources type %s \n", metricDescriptor.getType()));
     } catch (ApiException ex) {
       System.out.print("\nmonitored resource descriptors not found." + ex.toString());
     }

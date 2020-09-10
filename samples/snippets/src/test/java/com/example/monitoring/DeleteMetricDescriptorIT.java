@@ -59,7 +59,10 @@ public class DeleteMetricDescriptorIT {
 
   @After
   public void tearDown() {
-    System.setOut(null);
+    // restores print statements in the original method
+    bout.reset();
+    out.flush();
+    System.out.flush();
   }
 
   @Test

@@ -63,6 +63,6 @@ public class ListMetricDescriptorIT {
   @Test
   public void testMetricDescriptorList() throws IOException {
     ListMetricDescriptor.listMetricDescriptors(PROJECT_ID);
-    assertThat(bout.toString()).contains("Listing descriptors");
+    assertThat(bout.toString()).contains("success! metric descriptor with name");
   }
 }

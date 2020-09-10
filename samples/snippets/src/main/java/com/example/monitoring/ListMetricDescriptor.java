@@ -52,7 +52,8 @@ public class ListMetricDescriptor {
           .forEach(
               metricDescriptor ->
                   System.out.printf(
-                      metricDescriptor.getName() + " " + metricDescriptor.getDisplayName()));
+                      "success! metric descriptor with name %s display name %s\n",
+                      metricDescriptor.getName(), metricDescriptor.getDisplayName()));
     } catch (ApiException ex) {
       System.out.print("\nmetric descriptor not found." + ex.toString());
     }

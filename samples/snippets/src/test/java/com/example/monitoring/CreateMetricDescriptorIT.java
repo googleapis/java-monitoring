@@ -19,7 +19,6 @@ package com.example.monitoring;
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertNotNull;
 
-import com.google.monitoring.v3.ProjectName;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -35,7 +34,6 @@ import org.junit.runners.JUnit4;
 public class CreateMetricDescriptorIT {
 
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
-  private static final ProjectName PROJECT_NAME = ProjectName.of(PROJECT_ID);
   private static final String TYPE = "custom.googleapis.com/invoice/paid/amount";
   private ByteArrayOutputStream bout;
   private PrintStream out;
@@ -60,9 +58,12 @@ public class CreateMetricDescriptorIT {
 
   @After
   public void tearDown() throws IOException {
-    System.setOut(null);
     // clean up
-    DeleteMetricDescriptor.deleteMetricDescriptor(PROJECT_ID, PROJECT_NAME.toString());
+    DeleteMetricDescriptor.deleteMetricDescriptor(PROJECT_ID, TYPE);
+    // restores print statements in the original method
+    bout.reset();
+    out.flush();
+    System.out.flush();
   }
 
   @Test

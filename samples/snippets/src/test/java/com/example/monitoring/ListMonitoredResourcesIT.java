@@ -63,6 +63,6 @@ public class ListMonitoredResourcesIT {
   @Test
   public void testListMonitoredResources() throws IOException {
     MonitoredResourcesList.listMonitoredResources(PROJECT_ID);
-    assertThat(bout.toString()).contains("gce_instance");
+    assertThat(bout.toString()).contains("success! monitored resources type");
   }
 }
