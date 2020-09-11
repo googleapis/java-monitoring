@@ -26,14 +26,15 @@ import java.io.IOException;
 // Sample to get monitored resource
 public class GetMonitoredResource {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
     String resourceId = "your-resource-id";
     getMonitoredResource(projectId, resourceId);
   }
 
-  public static void getMonitoredResource(String projectId, String resourceId) throws IOException {
+  public static void getMonitoredResource(String projectId, String resourceId)
+      throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (MetricServiceClient metricServiceClient = MetricServiceClient.create()) {
@@ -44,8 +45,6 @@ public class GetMonitoredResource {
       MonitoredResourceDescriptor response =
           metricServiceClient.getMonitoredResourceDescriptor(name);
       System.out.println(response);
-    } catch (ApiException ex) {
-      System.out.print("\nmonitored resource not found." + ex.toString());
     }
   }
 }

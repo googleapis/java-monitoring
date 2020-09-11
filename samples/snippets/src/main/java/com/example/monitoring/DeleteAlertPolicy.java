@@ -24,22 +24,20 @@ import java.io.IOException;
 // Sample to delete an alert policy
 public class DeleteAlertPolicy {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String alertPolicyId = "alert-policy-id";
     // i.e projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
     deleteAlertPolicy(alertPolicyId);
   }
 
-  public static void deleteAlertPolicy(String alertPolicyId) throws IOException {
+  public static void deleteAlertPolicy(String alertPolicyId) throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
       // Deletes an alerting policy
       alertPolicyServiceClient.deleteAlertPolicy(alertPolicyId);
-      System.out.print("\nalert policy deleted successfully");
-    } catch (ApiException ex) {
-      System.out.print("\nalert policy not found:" + ex.toString());
+      System.out.format("alert policy deleted successfully:%s", alertPolicyId);
     }
   }
 }

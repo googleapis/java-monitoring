@@ -19,7 +19,6 @@ package com.example.monitoring;
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertNotNull;
 
-import com.google.monitoring.v3.AlertPolicyName;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -32,6 +31,7 @@ import org.junit.Test;
 /** Tests for get an alert policy sample. */
 public class GetAlertPolicyIT {
   private static final String PROJECT_ID = requireEnvVar("GOOGLE_CLOUD_PROJECT");
+  private static final String suffix = UUID.randomUUID().toString().substring(0, 8);
   private ByteArrayOutputStream bout;
   private String alertPolicyId;
   private String alertPolicyDisplayName;
@@ -52,17 +52,14 @@ public class GetAlertPolicyIT {
 
   @Before
   public void setUp() throws IOException {
-    alertPolicyDisplayName = "alert_policy_name_" + UUID.randomUUID().toString().substring(0, 8);
+    alertPolicyDisplayName = "alert_policy_name_" + suffix;
     bout = new ByteArrayOutputStream();
     out = new PrintStream(bout);
     System.setOut(out);
     // create an alert policy
     CreateAlertPolicy.createAlertPolicy(PROJECT_ID, alertPolicyDisplayName);
     String result = bout.toString();
-    alertPolicyId =
-        AlertPolicyName.of(
-                PROJECT_ID, result.substring(result.indexOf(":") + 1, result.length() - 2))
-            .toString();
+    alertPolicyId = result.substring(result.indexOf(":") + 1);
     bout.reset();
     out.flush();
     System.setOut(out);

@@ -25,21 +25,19 @@ import java.io.IOException;
 // Sample to get an alert policy
 public class GetAlertPolicy {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     String alertPolicyName = "alert-policy-id";
     // i.e projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
     getAlertPolicy(alertPolicyName);
   }
 
-  public static void getAlertPolicy(String alertPolicyName) throws IOException {
+  public static void getAlertPolicy(String alertPolicyName) throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
       // Gets a single alerting policy
       AlertPolicy alertPolicy = alertPolicyServiceClient.getAlertPolicy(alertPolicyName);
-      System.out.print("alert policy retrieved successfully:" + alertPolicy.getName() + "\n");
-    } catch (ApiException ex) {
-      System.out.print("alert policy not found:" + ex.toString());
+      System.out.format("alert policy retrieved successfully:%s", alertPolicy.getName());
     }
   }
 }

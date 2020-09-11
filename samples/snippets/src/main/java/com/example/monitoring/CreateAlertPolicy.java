@@ -29,7 +29,7 @@ import java.io.IOException;
 // Sample to create an alert policy
 public class CreateAlertPolicy {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
     String alertPolicyName = "your-policy-name";
@@ -37,7 +37,7 @@ public class CreateAlertPolicy {
   }
 
   public static void createAlertPolicy(String projectId, String alertPolicyName)
-      throws IOException {
+      throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
@@ -45,8 +45,9 @@ public class CreateAlertPolicy {
 
       // A Filter that identifies which time series should be compared with the threshold
       String metricFilter =
-          "metric.type=\"compute.googleapis.com/instance/"
-              + "cpu/utilization\" AND resource.type=\"gce_instance\"";
+          String.format(
+              "metric.type=\"compute.googleapis.com/instance/"
+                  + "cpu/utilization\" AND resource.type=\"gce_instance\"");
 
       // Build Duration
       Duration aggregationDuration = Duration.newBuilder().setSeconds(60).build();
@@ -85,11 +86,7 @@ public class CreateAlertPolicy {
 
       // Create an alert policy
       AlertPolicy actualAlertPolicy = alertPolicyServiceClient.createAlertPolicy(name, alertPolicy);
-      String alertPolicyId =
-          actualAlertPolicy.getName().substring(actualAlertPolicy.getName().lastIndexOf("/") + 1);
-      System.out.println("alert policy created:" + alertPolicyId);
-    } catch (ApiException ex) {
-      System.out.print("\nalert policy was not created." + ex.toString());
+      System.out.format("alert policy created:%s", actualAlertPolicy.getName());
     }
   }
 }

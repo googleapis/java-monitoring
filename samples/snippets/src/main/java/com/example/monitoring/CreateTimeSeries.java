@@ -37,13 +37,13 @@ import java.util.Map;
 // Sample to create time series
 public class CreateTimeSeries {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
     createTimeSeries(projectId);
   }
 
-  public static void createTimeSeries(String projectId) throws IOException {
+  public static void createTimeSeries(String projectId) throws ApiException, IOException {
     // Instantiates a client
     try (MetricServiceClient metricServiceClient = MetricServiceClient.create()) {
       // Prepares an individual data point
@@ -96,8 +96,6 @@ public class CreateTimeSeries {
       // Writes time series data
       metricServiceClient.createTimeSeries(request);
       System.out.println("Done writing time series value");
-    } catch (ApiException ex) {
-      System.out.print("\n time series could not be written." + ex.toString());
     }
   }
 }

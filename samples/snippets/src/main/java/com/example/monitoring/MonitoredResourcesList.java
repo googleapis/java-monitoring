@@ -26,13 +26,13 @@ import java.io.IOException;
 // Sample to list monitored resources
 public class MonitoredResourcesList {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
     listMonitoredResources(projectId);
   }
 
-  public static void listMonitoredResources(String projectId) throws IOException {
+  public static void listMonitoredResources(String projectId) throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (MetricServiceClient metricServiceClient = MetricServiceClient.create()) {
@@ -52,10 +52,8 @@ public class MonitoredResourcesList {
           .iterateAll()
           .forEach(
               metricDescriptor ->
-                  System.out.printf(
-                      "success! monitored resources type %s \n", metricDescriptor.getType()));
-    } catch (ApiException ex) {
-      System.out.print("\nmonitored resource descriptors not found." + ex.toString());
+                  System.out.format(
+                      "success! monitored resources type %s %n", metricDescriptor.getType()));
     }
   }
 }

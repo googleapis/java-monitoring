@@ -34,6 +34,8 @@ import org.junit.runners.JUnit4;
 public class TimeSeriesIT {
 
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
+  private final String filter =
+      String.format("metric.type=\"compute.googleapis.com/instance/cpu/utilization\"");
   private ByteArrayOutputStream bout;
   private PrintStream out;
 
@@ -69,15 +71,13 @@ public class TimeSeriesIT {
 
   @Test
   public void testListTimeSeries() throws IOException {
-    ListTimeSeries.listTimeSeries(
-        "metric.type=\"compute.googleapis.com/instance/cpu/utilization\"", PROJECT_ID);
+    ListTimeSeries.listTimeSeries(filter, PROJECT_ID);
     assertThat(bout.toString()).contains("Got timeseries:");
   }
 
   @Test
   public void testListTimeSeriesHeaders() throws IOException {
-    TimeSeriesHeadersList.listTimeSeriesHeaders(
-        PROJECT_ID, "metric.type=\"compute.googleapis.com/instance/cpu/utilization\"");
+    TimeSeriesHeadersList.listTimeSeriesHeaders(PROJECT_ID, filter);
     assertThat(bout.toString()).contains("Got timeseries headers:");
   }
 }

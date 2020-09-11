@@ -20,28 +20,27 @@ package com.example.monitoring;
 import com.google.api.gax.rpc.ApiException;
 import com.google.cloud.monitoring.v3.MetricServiceClient;
 import com.google.monitoring.v3.MetricDescriptorName;
-import com.google.monitoring.v3.ProjectName;
 import java.io.IOException;
 
 // Sample to delete metric descriptor
 public class DeleteMetricDescriptor {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
-    deleteMetricDescriptor(projectId, ProjectName.of(projectId).toString());
+    String metricDescriptorName = "your-metric-descriptor-name";
+    deleteMetricDescriptor(projectId, metricDescriptorName);
   }
 
-  public static void deleteMetricDescriptor(String projectId, String name) throws IOException {
+  public static void deleteMetricDescriptor(String projectId, String name)
+      throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (MetricServiceClient metricServiceClient = MetricServiceClient.create()) {
-      MetricDescriptorName metricName = MetricDescriptorName.of(projectId, name);
+      MetricDescriptorName metricDescriptorName = MetricDescriptorName.of(projectId, name);
       // Deletes a metric descriptor
-      metricServiceClient.deleteMetricDescriptor(metricName);
+      metricServiceClient.deleteMetricDescriptor(metricDescriptorName);
       System.out.println("metric descriptor deleted successfully" + name);
-    } catch (ApiException ex) {
-      System.out.print("\nmetric descriptor was not deleted." + ex.toString());
     }
   }
 }

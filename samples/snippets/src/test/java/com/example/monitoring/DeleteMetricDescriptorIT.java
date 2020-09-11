@@ -35,8 +35,8 @@ import org.junit.runners.JUnit4;
 public class DeleteMetricDescriptorIT {
 
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
-  private static final String METRIC_TYPE =
-      "custom.googleapis.com/invoice/paid/amount" + UUID.randomUUID().toString().substring(0, 8);
+  private static final String suffix = UUID.randomUUID().toString().substring(0, 8);
+  private static final String METRIC_TYPE = "custom.googleapis.com/invoice/paid/amount" + suffix;
   private ByteArrayOutputStream bout;
   private PrintStream out;
 

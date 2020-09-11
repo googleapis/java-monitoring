@@ -30,7 +30,7 @@ import java.io.IOException;
 // Sample to enable disable an alert policy
 public class EnableDisableAlertPolicy {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String displayName = "alert-policy-display-name";
     String alertPolicyId = "alert-policy-id";
@@ -39,14 +39,15 @@ public class EnableDisableAlertPolicy {
   }
 
   public static void enableDisableAlertPolicy(
-      String alertPolicyId, boolean status, String displayName) throws IOException {
+      String alertPolicyId, boolean status, String displayName) throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
       // A Filter that identifies which time series should be compared with the threshold
       String metricFilter =
-          "metric.type=\"compute.googleapis.com/instance/"
-              + "cpu/utilization\" AND resource.type=\"gce_instance\"";
+          String.format(
+              "metric.type=\"compute.googleapis.com/instance/"
+                  + "cpu/utilization\" AND resource.type=\"gce_instance\"");
 
       // Build Duration
       Duration aggregationDuration = Duration.newBuilder().setSeconds(60).build();
@@ -95,10 +96,7 @@ public class EnableDisableAlertPolicy {
       // Process update policy request
       AlertPolicy updatedAlertPolicy =
           alertPolicyServiceClient.updateAlertPolicy(updateAlertPolicyRequest);
-      System.out.print(
-          "alert policy enable disable status:" + updatedAlertPolicy.getEnabled() + "\n");
-    } catch (ApiException ex) {
-      System.out.print("alert policy not found:" + ex.toString());
+      System.out.format("alert policy enable disable status:%s%n", updatedAlertPolicy.getEnabled());
     }
   }
 }

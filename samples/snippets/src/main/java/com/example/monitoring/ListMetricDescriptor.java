@@ -26,13 +26,13 @@ import java.io.IOException;
 // Sample to list metric descriptor
 public class ListMetricDescriptor {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
     listMetricDescriptors(projectId);
   }
 
-  public static void listMetricDescriptors(String projectId) throws IOException {
+  public static void listMetricDescriptors(String projectId) throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (MetricServiceClient metricServiceClient = MetricServiceClient.create()) {
@@ -51,11 +51,9 @@ public class ListMetricDescriptor {
           .iterateAll()
           .forEach(
               metricDescriptor ->
-                  System.out.printf(
-                      "success! metric descriptor with name %s display name %s\n",
+                  System.out.format(
+                      "success! metric descriptor with name %s display name %s%n",
                       metricDescriptor.getName(), metricDescriptor.getDisplayName()));
-    } catch (ApiException ex) {
-      System.out.print("\nmetric descriptor not found." + ex.toString());
     }
   }
 }

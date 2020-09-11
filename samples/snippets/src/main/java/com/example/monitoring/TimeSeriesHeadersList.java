@@ -28,14 +28,15 @@ import java.io.IOException;
 // Sample to list time series with header
 public class TimeSeriesHeadersList {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
     String filter = "your-metric-type-filter";
     listTimeSeriesHeaders(projectId, filter);
   }
 
-  public static void listTimeSeriesHeaders(String projectId, String filter) throws IOException {
+  public static void listTimeSeriesHeaders(String projectId, String filter)
+      throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (MetricServiceClient metricServiceClient = MetricServiceClient.create()) {
@@ -65,8 +66,6 @@ public class TimeSeriesHeadersList {
       // Process the response
       System.out.println("Got timeseries headers: ");
       response.iterateAll().forEach(timeSeries -> System.out.println(timeSeries));
-    } catch (ApiException ex) {
-      System.out.print("\n time series not found." + ex.toString());
     }
   }
 }

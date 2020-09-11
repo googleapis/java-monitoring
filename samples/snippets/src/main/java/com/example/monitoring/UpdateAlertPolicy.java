@@ -29,7 +29,7 @@ import java.io.IOException;
 // Sample to update an alert policy
 public class UpdateAlertPolicy {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String alertPolicyName = "your-alert-policy-displayname";
     String updatedAlertPolicyName = "your-updated-alert-policy-displayname";
@@ -37,14 +37,15 @@ public class UpdateAlertPolicy {
   }
 
   public static void updateAlertPolicy(String alertPolicyName, String newPolicyName)
-      throws IOException {
+      throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
       // A Filter that identifies which time series should be compared with the threshold
       String metricFilter =
-          "metric.type=\"compute.googleapis.com/instance/"
-              + "cpu/utilization\" AND resource.type=\"gce_instance\"";
+          String.format(
+              "metric.type=\"compute.googleapis.com/instance/"
+                  + "cpu/utilization\" AND resource.type=\"gce_instance\"");
 
       // Build Duration
       Duration aggregationDuration = Duration.newBuilder().setSeconds(60).build();
@@ -89,9 +90,7 @@ public class UpdateAlertPolicy {
       // process update policy request
       AlertPolicy updatedAlertPolicy =
           alertPolicyServiceClient.updateAlertPolicy(updateAlertPolicyRequest);
-      System.out.print("alert policy updated successfully:" + updatedAlertPolicy.getDisplayName());
-    } catch (ApiException ex) {
-      System.out.print("alert policy not found:" + ex.toString());
+      System.out.print("alert policy updated successfully:" + updatedAlertPolicy.getName());
     }
   }
 }

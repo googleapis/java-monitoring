@@ -28,7 +28,7 @@ import java.io.IOException;
 // Sample to create metric descriptor
 public class CreateMetricDescriptor {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
     String type = "metric-descriptor-type";
@@ -37,7 +37,7 @@ public class CreateMetricDescriptor {
   }
 
   public static void createMetricDescriptor(String projectId, String metricType)
-      throws IOException {
+      throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (MetricServiceClient metricServiceClient = MetricServiceClient.create()) {
@@ -68,8 +68,6 @@ public class CreateMetricDescriptor {
 
       // Process the response
       System.out.println("metric descriptor created successfully: " + metricDescriptor.getName());
-    } catch (ApiException ex) {
-      System.out.print("\nmetric descriptor was not created." + ex.toString());
     }
   }
 }

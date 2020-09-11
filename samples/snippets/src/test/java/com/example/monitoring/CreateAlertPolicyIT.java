@@ -19,7 +19,6 @@ package com.example.monitoring;
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertNotNull;
 
-import com.google.monitoring.v3.AlertPolicyName;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -35,6 +34,7 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 public class CreateAlertPolicyIT {
   private static final String PROJECT_ID = requireEnvVar("GOOGLE_CLOUD_PROJECT");
+  private final String suffix = UUID.randomUUID().toString().substring(0, 8);
   private ByteArrayOutputStream bout;
   private String alertPolicyId;
   private String alertPolicyDisplayName;
@@ -55,7 +55,7 @@ public class CreateAlertPolicyIT {
 
   @Before
   public void setUp() {
-    alertPolicyDisplayName = "alert_policy_name_" + UUID.randomUUID().toString().substring(0, 8);
+    alertPolicyDisplayName = "alert_policy_name_" + suffix;
     bout = new ByteArrayOutputStream();
     out = new PrintStream(bout);
     System.setOut(out);
@@ -75,9 +75,7 @@ public class CreateAlertPolicyIT {
   public void createAlertPolicyTest() throws IOException {
     CreateAlertPolicy.createAlertPolicy(PROJECT_ID, alertPolicyDisplayName);
     String result = bout.toString();
-    alertPolicyId =
-        AlertPolicyName.format(
-            PROJECT_ID, result.substring(result.lastIndexOf("/") + 1, result.length() - 2));
+    alertPolicyId = result.substring(result.indexOf(":") + 1);
     assertThat(bout.toString()).contains("alert policy created");
   }
 }

@@ -26,13 +26,13 @@ import java.io.IOException;
 // Sample to list an alert policy
 public class ListAlertPolicy {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws ApiException, IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "your-project-id";
     listAlertPolicy(projectId);
   }
 
-  public static void listAlertPolicy(String projectId) throws IOException {
+  public static void listAlertPolicy(String projectId) throws ApiException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests.
     try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
@@ -51,11 +51,9 @@ public class ListAlertPolicy {
           .iterateAll()
           .forEach(
               alertPolicy ->
-                  System.out.printf(
-                      "success! alert policy %s is policyId %s\n",
+                  System.out.format(
+                      "success! alert policy %s is policyId %s%n",
                       alertPolicy.getDisplayName(), alertPolicy.getName()));
-    } catch (ApiException ex) {
-      System.out.print("alert policy not found:" + ex.toString());
     }
   }
 }

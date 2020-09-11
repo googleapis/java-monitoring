@@ -56,7 +56,8 @@ public class QuickstartSampleIT {
 
   @After
   public void tearDown() {
-    System.setOut(null);
+    // clean up
+    System.out.flush();
   }
 
   @Test
