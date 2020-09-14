@@ -42,12 +42,20 @@ public class CreateAlertPolicy {
     // once, and can be reused for multiple requests.
     try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
       ProjectName name = ProjectName.of(projectId);
+      String metricType = "compute.googleapis.com/instance/cpu/utilization";
+      String resourceType = "gce_instance";
 
       // A Filter that identifies which time series should be compared with the threshold
       String metricFilter =
-          String.format(
-              "metric.type=\"compute.googleapis.com/instance/"
-                  + "cpu/utilization\" AND resource.type=\"gce_instance\"");
+          "metric.type="
+              + '"'
+              + metricType
+              + '"'
+              + " AND "
+              + "resource.type="
+              + '"'
+              + resourceType
+              + '"';
 
       // Build Duration
       Duration aggregationDuration = Duration.newBuilder().setSeconds(60).build();
