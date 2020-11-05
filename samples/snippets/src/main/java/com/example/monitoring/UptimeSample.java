@@ -128,7 +128,7 @@ public class UptimeSample {
         listUptimeChecks(projectId);
         break;
       case "listips":
-        listUptimeCheckIPs();
+        listUptimeCheckIps();
         break;
       case "get":
         getUptimeCheckConfig(
@@ -216,7 +216,7 @@ public class UptimeSample {
   // [END monitoring_uptime_check_list_configs]]
 
   // [START monitoring_uptime_check_list_ips]]
-  private static void listUptimeCheckIPs() throws IOException {
+  private static void listUptimeCheckIps() throws IOException {
     try (UptimeCheckServiceClient client = UptimeCheckServiceClient.create()) {
       ListUptimeCheckIpsPagedResponse response =
           client.listUptimeCheckIps(ListUptimeCheckIpsRequest.newBuilder().build());
