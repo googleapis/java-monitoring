@@ -44,7 +44,6 @@ import com.google.protobuf.Empty;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -178,7 +177,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
   public final ListAlertPoliciesPagedResponse listAlertPolicies(FolderName name) {
     ListAlertPoliciesRequest request =
         ListAlertPoliciesRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listAlertPolicies(request);
   }
@@ -198,7 +197,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
   public final ListAlertPoliciesPagedResponse listAlertPolicies(OrganizationName name) {
     ListAlertPoliciesRequest request =
         ListAlertPoliciesRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listAlertPolicies(request);
   }
@@ -218,7 +217,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
   public final ListAlertPoliciesPagedResponse listAlertPolicies(ProjectName name) {
     ListAlertPoliciesRequest request =
         ListAlertPoliciesRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listAlertPolicies(request);
   }
@@ -283,9 +282,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    */
   public final AlertPolicy getAlertPolicy(AlertPolicyName name) {
     GetAlertPolicyRequest request =
-        GetAlertPolicyRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetAlertPolicyRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getAlertPolicy(request);
   }
 
@@ -341,7 +338,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
   public final AlertPolicy createAlertPolicy(FolderName name, AlertPolicy alertPolicy) {
     CreateAlertPolicyRequest request =
         CreateAlertPolicyRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setAlertPolicy(alertPolicy)
             .build();
     return createAlertPolicy(request);
@@ -365,7 +362,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
   public final AlertPolicy createAlertPolicy(OrganizationName name, AlertPolicy alertPolicy) {
     CreateAlertPolicyRequest request =
         CreateAlertPolicyRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setAlertPolicy(alertPolicy)
             .build();
     return createAlertPolicy(request);
@@ -389,7 +386,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
   public final AlertPolicy createAlertPolicy(ProjectName name, AlertPolicy alertPolicy) {
     CreateAlertPolicyRequest request =
         CreateAlertPolicyRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setAlertPolicy(alertPolicy)
             .build();
     return createAlertPolicy(request);
@@ -449,7 +446,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
   public final void deleteAlertPolicy(AlertPolicyName name) {
     DeleteAlertPolicyRequest request =
         DeleteAlertPolicyRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteAlertPolicy(request);
   }

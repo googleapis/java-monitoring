@@ -62,7 +62,6 @@ import com.google.monitoring.v3.UpdateServiceRequest;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -162,7 +161,7 @@ public class ServiceMonitoringServiceStubSettings
 
             @Override
             public Iterable<Service> extractResources(ListServicesResponse payload) {
-              return Objects.isNull(payload.getServicesList())
+              return payload.getServicesList() == null
                   ? ImmutableList.<Service>of()
                   : payload.getServicesList();
             }
@@ -211,7 +210,7 @@ public class ServiceMonitoringServiceStubSettings
             @Override
             public Iterable<ServiceLevelObjective> extractResources(
                 ListServiceLevelObjectivesResponse payload) {
-              return Objects.isNull(payload.getServiceLevelObjectivesList())
+              return payload.getServiceLevelObjectivesList() == null
                   ? ImmutableList.<ServiceLevelObjective>of()
                   : payload.getServiceLevelObjectivesList();
             }

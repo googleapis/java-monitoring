@@ -54,7 +54,6 @@ import com.google.monitoring.v3.UpdateAlertPolicyRequest;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -144,7 +143,7 @@ public class AlertPolicyServiceStubSettings extends StubSettings<AlertPolicyServ
 
             @Override
             public Iterable<AlertPolicy> extractResources(ListAlertPoliciesResponse payload) {
-              return Objects.isNull(payload.getAlertPoliciesList())
+              return payload.getAlertPoliciesList() == null
                   ? ImmutableList.<AlertPolicy>of()
                   : payload.getAlertPoliciesList();
             }
