@@ -487,7 +487,7 @@ public class MetricServiceClient implements BackgroundResource {
    *
    * @param name Required. The project on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param metric_descriptor Required. The new [custom
+   * @param metricDescriptor Required. The new [custom
    *     metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -508,7 +508,7 @@ public class MetricServiceClient implements BackgroundResource {
    *
    * @param name Required. The project on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param metric_descriptor Required. The new [custom
+   * @param metricDescriptor Required. The new [custom
    *     metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -529,7 +529,7 @@ public class MetricServiceClient implements BackgroundResource {
    *
    * @param name Required. The project on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param metric_descriptor Required. The new [custom
+   * @param metricDescriptor Required. The new [custom
    *     metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -550,7 +550,7 @@ public class MetricServiceClient implements BackgroundResource {
    *
    * @param name Required. The project on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param metric_descriptor Required. The new [custom
+   * @param metricDescriptor Required. The new [custom
    *     metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -751,10 +751,10 @@ public class MetricServiceClient implements BackgroundResource {
    *
    * @param name Required. The project on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param time_series Required. The new data to be added to a list of time series. Adds at most
-   *     one data point to each of several time series. The new data point must be more recent than
-   *     any other point in its time series. Each `TimeSeries` value must fully specify a unique
-   *     time series by supplying all label values for the metric and the monitored resource.
+   * @param timeSeries Required. The new data to be added to a list of time series. Adds at most one
+   *     data point to each of several time series. The new data point must be more recent than any
+   *     other point in its time series. Each `TimeSeries` value must fully specify a unique time
+   *     series by supplying all label values for the metric and the monitored resource.
    *     <p>The maximum number of `TimeSeries` objects per `Create` request is 200.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -775,10 +775,10 @@ public class MetricServiceClient implements BackgroundResource {
    *
    * @param name Required. The project on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param time_series Required. The new data to be added to a list of time series. Adds at most
-   *     one data point to each of several time series. The new data point must be more recent than
-   *     any other point in its time series. Each `TimeSeries` value must fully specify a unique
-   *     time series by supplying all label values for the metric and the monitored resource.
+   * @param timeSeries Required. The new data to be added to a list of time series. Adds at most one
+   *     data point to each of several time series. The new data point must be more recent than any
+   *     other point in its time series. Each `TimeSeries` value must fully specify a unique time
+   *     series by supplying all label values for the metric and the monitored resource.
    *     <p>The maximum number of `TimeSeries` objects per `Create` request is 200.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

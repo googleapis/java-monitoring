@@ -192,11 +192,21 @@ public class GrpcMetricServiceStub extends MetricServiceStub {
         MetricServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcMetricServiceStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcMetricServiceStub(MetricServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcMetricServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcMetricServiceStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcMetricServiceStub(
       MetricServiceStubSettings settings,
       ClientContext clientContext,
