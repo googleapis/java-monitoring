@@ -63,7 +63,6 @@ import com.google.monitoring.v3.TimeSeries;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -178,7 +177,7 @@ public class MetricServiceStubSettings extends StubSettings<MetricServiceStubSet
             @Override
             public Iterable<MonitoredResourceDescriptor> extractResources(
                 ListMonitoredResourceDescriptorsResponse payload) {
-              return Objects.isNull(payload.getResourceDescriptorsList())
+              return payload.getResourceDescriptorsList() == null
                   ? ImmutableList.<MonitoredResourceDescriptor>of()
                   : payload.getResourceDescriptorsList();
             }
@@ -219,7 +218,7 @@ public class MetricServiceStubSettings extends StubSettings<MetricServiceStubSet
             @Override
             public Iterable<MetricDescriptor> extractResources(
                 ListMetricDescriptorsResponse payload) {
-              return Objects.isNull(payload.getMetricDescriptorsList())
+              return payload.getMetricDescriptorsList() == null
                   ? ImmutableList.<MetricDescriptor>of()
                   : payload.getMetricDescriptorsList();
             }
@@ -257,7 +256,7 @@ public class MetricServiceStubSettings extends StubSettings<MetricServiceStubSet
 
             @Override
             public Iterable<TimeSeries> extractResources(ListTimeSeriesResponse payload) {
-              return Objects.isNull(payload.getTimeSeriesList())
+              return payload.getTimeSeriesList() == null
                   ? ImmutableList.<TimeSeries>of()
                   : payload.getTimeSeriesList();
             }

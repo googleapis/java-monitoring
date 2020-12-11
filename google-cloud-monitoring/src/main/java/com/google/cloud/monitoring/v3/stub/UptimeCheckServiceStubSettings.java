@@ -58,7 +58,6 @@ import com.google.monitoring.v3.UptimeCheckIp;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -160,7 +159,7 @@ public class UptimeCheckServiceStubSettings extends StubSettings<UptimeCheckServ
             @Override
             public Iterable<UptimeCheckConfig> extractResources(
                 ListUptimeCheckConfigsResponse payload) {
-              return Objects.isNull(payload.getUptimeCheckConfigsList())
+              return payload.getUptimeCheckConfigsList() == null
                   ? ImmutableList.<UptimeCheckConfig>of()
                   : payload.getUptimeCheckConfigsList();
             }
@@ -200,7 +199,7 @@ public class UptimeCheckServiceStubSettings extends StubSettings<UptimeCheckServ
 
             @Override
             public Iterable<UptimeCheckIp> extractResources(ListUptimeCheckIpsResponse payload) {
-              return Objects.isNull(payload.getUptimeCheckIpsList())
+              return payload.getUptimeCheckIpsList() == null
                   ? ImmutableList.<UptimeCheckIp>of()
                   : payload.getUptimeCheckIpsList();
             }

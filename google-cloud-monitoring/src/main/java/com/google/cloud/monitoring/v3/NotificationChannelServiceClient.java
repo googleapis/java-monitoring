@@ -53,7 +53,6 @@ import com.google.protobuf.Empty;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -188,7 +187,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       FolderName name) {
     ListNotificationChannelDescriptorsRequest request =
         ListNotificationChannelDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listNotificationChannelDescriptors(request);
   }
@@ -211,7 +210,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       OrganizationName name) {
     ListNotificationChannelDescriptorsRequest request =
         ListNotificationChannelDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listNotificationChannelDescriptors(request);
   }
@@ -234,7 +233,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       ProjectName name) {
     ListNotificationChannelDescriptorsRequest request =
         ListNotificationChannelDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listNotificationChannelDescriptors(request);
   }
@@ -313,7 +312,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       NotificationChannelDescriptorName name) {
     GetNotificationChannelDescriptorRequest request =
         GetNotificationChannelDescriptorRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getNotificationChannelDescriptor(request);
   }
@@ -373,7 +372,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
   public final ListNotificationChannelsPagedResponse listNotificationChannels(FolderName name) {
     ListNotificationChannelsRequest request =
         ListNotificationChannelsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listNotificationChannels(request);
   }
@@ -394,7 +393,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       OrganizationName name) {
     ListNotificationChannelsRequest request =
         ListNotificationChannelsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listNotificationChannels(request);
   }
@@ -414,7 +413,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
   public final ListNotificationChannelsPagedResponse listNotificationChannels(ProjectName name) {
     ListNotificationChannelsRequest request =
         ListNotificationChannelsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listNotificationChannels(request);
   }
@@ -485,7 +484,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
   public final NotificationChannel getNotificationChannel(NotificationChannelName name) {
     GetNotificationChannelRequest request =
         GetNotificationChannelRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getNotificationChannel(request);
   }
@@ -553,7 +552,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       FolderName name, NotificationChannel notificationChannel) {
     CreateNotificationChannelRequest request =
         CreateNotificationChannelRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setNotificationChannel(notificationChannel)
             .build();
     return createNotificationChannel(request);
@@ -577,7 +576,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       OrganizationName name, NotificationChannel notificationChannel) {
     CreateNotificationChannelRequest request =
         CreateNotificationChannelRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setNotificationChannel(notificationChannel)
             .build();
     return createNotificationChannel(request);
@@ -601,7 +600,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       ProjectName name, NotificationChannel notificationChannel) {
     CreateNotificationChannelRequest request =
         CreateNotificationChannelRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setNotificationChannel(notificationChannel)
             .build();
     return createNotificationChannel(request);
@@ -714,7 +713,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
   public final void deleteNotificationChannel(NotificationChannelName name, boolean force) {
     DeleteNotificationChannelRequest request =
         DeleteNotificationChannelRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setForce(force)
             .build();
     deleteNotificationChannel(request);
@@ -771,7 +770,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
   public final void sendNotificationChannelVerificationCode(NotificationChannelName name) {
     SendNotificationChannelVerificationCodeRequest request =
         SendNotificationChannelVerificationCodeRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     sendNotificationChannelVerificationCode(request);
   }
@@ -843,7 +842,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       getNotificationChannelVerificationCode(NotificationChannelName name) {
     GetNotificationChannelVerificationCodeRequest request =
         GetNotificationChannelVerificationCodeRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getNotificationChannelVerificationCode(request);
   }
@@ -953,7 +952,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
       NotificationChannelName name, String code) {
     VerifyNotificationChannelRequest request =
         VerifyNotificationChannelRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setCode(code)
             .build();
     return verifyNotificationChannel(request);
