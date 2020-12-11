@@ -22,7 +22,21 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * The AlertPolicyService API is used to manage (list, create, delete,
+ * edit) alert policies in Stackdriver Monitoring. An alerting policy is
+ * a description of the conditions under which some aspect of your
+ * system is considered to be "unhealthy" and the ways to notify
+ * people or services about this state. In addition to using this API, alert
+ * policies can also be managed through
+ * [Stackdriver Monitoring](https://cloud.google.com/monitoring/docs/),
+ * which can be reached by clicking the "Monitoring" tab in
+ * [Cloud Console](https://console.cloud.google.com/).
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/monitoring/v3/alert_service.proto")
@@ -296,10 +310,30 @@ public final class AlertPolicyServiceGrpc {
     return AlertPolicyServiceFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * The AlertPolicyService API is used to manage (list, create, delete,
+   * edit) alert policies in Stackdriver Monitoring. An alerting policy is
+   * a description of the conditions under which some aspect of your
+   * system is considered to be "unhealthy" and the ways to notify
+   * people or services about this state. In addition to using this API, alert
+   * policies can also be managed through
+   * [Stackdriver Monitoring](https://cloud.google.com/monitoring/docs/),
+   * which can be reached by clicking the "Monitoring" tab in
+   * [Cloud Console](https://console.cloud.google.com/).
+   * </pre>
+   */
   public abstract static class AlertPolicyServiceImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists the existing alerting policies for the project.
+     * </pre>
+     */
     public void listAlertPolicies(
         com.google.monitoring.v3.ListAlertPoliciesRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListAlertPoliciesResponse>
@@ -307,28 +341,55 @@ public final class AlertPolicyServiceGrpc {
       asyncUnimplementedUnaryCall(getListAlertPoliciesMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a single alerting policy.
+     * </pre>
+     */
     public void getAlertPolicy(
         com.google.monitoring.v3.GetAlertPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.AlertPolicy> responseObserver) {
       asyncUnimplementedUnaryCall(getGetAlertPolicyMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a new alerting policy.
+     * </pre>
+     */
     public void createAlertPolicy(
         com.google.monitoring.v3.CreateAlertPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.AlertPolicy> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateAlertPolicyMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an alerting policy.
+     * </pre>
+     */
     public void deleteAlertPolicy(
         com.google.monitoring.v3.DeleteAlertPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteAlertPolicyMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an alerting policy. You can either replace the entire policy with
+     * a new one or replace only certain fields in the current alerting policy by
+     * specifying the fields to be updated via `updateMask`. Returns the
+     * updated alerting policy.
+     * </pre>
+     */
     public void updateAlertPolicy(
         com.google.monitoring.v3.UpdateAlertPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.AlertPolicy> responseObserver) {
@@ -373,7 +434,21 @@ public final class AlertPolicyServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * The AlertPolicyService API is used to manage (list, create, delete,
+   * edit) alert policies in Stackdriver Monitoring. An alerting policy is
+   * a description of the conditions under which some aspect of your
+   * system is considered to be "unhealthy" and the ways to notify
+   * people or services about this state. In addition to using this API, alert
+   * policies can also be managed through
+   * [Stackdriver Monitoring](https://cloud.google.com/monitoring/docs/),
+   * which can be reached by clicking the "Monitoring" tab in
+   * [Cloud Console](https://console.cloud.google.com/).
+   * </pre>
+   */
   public static final class AlertPolicyServiceStub
       extends io.grpc.stub.AbstractAsyncStub<AlertPolicyServiceStub> {
     private AlertPolicyServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -386,7 +461,13 @@ public final class AlertPolicyServiceGrpc {
       return new AlertPolicyServiceStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists the existing alerting policies for the project.
+     * </pre>
+     */
     public void listAlertPolicies(
         com.google.monitoring.v3.ListAlertPoliciesRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListAlertPoliciesResponse>
@@ -397,7 +478,13 @@ public final class AlertPolicyServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a single alerting policy.
+     * </pre>
+     */
     public void getAlertPolicy(
         com.google.monitoring.v3.GetAlertPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.AlertPolicy> responseObserver) {
@@ -407,7 +494,13 @@ public final class AlertPolicyServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a new alerting policy.
+     * </pre>
+     */
     public void createAlertPolicy(
         com.google.monitoring.v3.CreateAlertPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.AlertPolicy> responseObserver) {
@@ -417,7 +510,13 @@ public final class AlertPolicyServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an alerting policy.
+     * </pre>
+     */
     public void deleteAlertPolicy(
         com.google.monitoring.v3.DeleteAlertPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -427,7 +526,16 @@ public final class AlertPolicyServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an alerting policy. You can either replace the entire policy with
+     * a new one or replace only certain fields in the current alerting policy by
+     * specifying the fields to be updated via `updateMask`. Returns the
+     * updated alerting policy.
+     * </pre>
+     */
     public void updateAlertPolicy(
         com.google.monitoring.v3.UpdateAlertPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.AlertPolicy> responseObserver) {
@@ -438,7 +546,21 @@ public final class AlertPolicyServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * The AlertPolicyService API is used to manage (list, create, delete,
+   * edit) alert policies in Stackdriver Monitoring. An alerting policy is
+   * a description of the conditions under which some aspect of your
+   * system is considered to be "unhealthy" and the ways to notify
+   * people or services about this state. In addition to using this API, alert
+   * policies can also be managed through
+   * [Stackdriver Monitoring](https://cloud.google.com/monitoring/docs/),
+   * which can be reached by clicking the "Monitoring" tab in
+   * [Cloud Console](https://console.cloud.google.com/).
+   * </pre>
+   */
   public static final class AlertPolicyServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AlertPolicyServiceBlockingStub> {
     private AlertPolicyServiceBlockingStub(
@@ -452,34 +574,67 @@ public final class AlertPolicyServiceGrpc {
       return new AlertPolicyServiceBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists the existing alerting policies for the project.
+     * </pre>
+     */
     public com.google.monitoring.v3.ListAlertPoliciesResponse listAlertPolicies(
         com.google.monitoring.v3.ListAlertPoliciesRequest request) {
       return blockingUnaryCall(
           getChannel(), getListAlertPoliciesMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a single alerting policy.
+     * </pre>
+     */
     public com.google.monitoring.v3.AlertPolicy getAlertPolicy(
         com.google.monitoring.v3.GetAlertPolicyRequest request) {
       return blockingUnaryCall(getChannel(), getGetAlertPolicyMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a new alerting policy.
+     * </pre>
+     */
     public com.google.monitoring.v3.AlertPolicy createAlertPolicy(
         com.google.monitoring.v3.CreateAlertPolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateAlertPolicyMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an alerting policy.
+     * </pre>
+     */
     public com.google.protobuf.Empty deleteAlertPolicy(
         com.google.monitoring.v3.DeleteAlertPolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteAlertPolicyMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an alerting policy. You can either replace the entire policy with
+     * a new one or replace only certain fields in the current alerting policy by
+     * specifying the fields to be updated via `updateMask`. Returns the
+     * updated alerting policy.
+     * </pre>
+     */
     public com.google.monitoring.v3.AlertPolicy updateAlertPolicy(
         com.google.monitoring.v3.UpdateAlertPolicyRequest request) {
       return blockingUnaryCall(
@@ -487,7 +642,21 @@ public final class AlertPolicyServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * The AlertPolicyService API is used to manage (list, create, delete,
+   * edit) alert policies in Stackdriver Monitoring. An alerting policy is
+   * a description of the conditions under which some aspect of your
+   * system is considered to be "unhealthy" and the ways to notify
+   * people or services about this state. In addition to using this API, alert
+   * policies can also be managed through
+   * [Stackdriver Monitoring](https://cloud.google.com/monitoring/docs/),
+   * which can be reached by clicking the "Monitoring" tab in
+   * [Cloud Console](https://console.cloud.google.com/).
+   * </pre>
+   */
   public static final class AlertPolicyServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<AlertPolicyServiceFutureStub> {
     private AlertPolicyServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -500,7 +669,13 @@ public final class AlertPolicyServiceGrpc {
       return new AlertPolicyServiceFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists the existing alerting policies for the project.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListAlertPoliciesResponse>
         listAlertPolicies(com.google.monitoring.v3.ListAlertPoliciesRequest request) {
@@ -508,28 +683,55 @@ public final class AlertPolicyServiceGrpc {
           getChannel().newCall(getListAlertPoliciesMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a single alerting policy.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.AlertPolicy>
         getAlertPolicy(com.google.monitoring.v3.GetAlertPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetAlertPolicyMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a new alerting policy.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.AlertPolicy>
         createAlertPolicy(com.google.monitoring.v3.CreateAlertPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateAlertPolicyMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an alerting policy.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteAlertPolicy(com.google.monitoring.v3.DeleteAlertPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteAlertPolicyMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an alerting policy. You can either replace the entire policy with
+     * a new one or replace only certain fields in the current alerting policy by
+     * specifying the fields to be updated via `updateMask`. Returns the
+     * updated alerting policy.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.AlertPolicy>
         updateAlertPolicy(com.google.monitoring.v3.UpdateAlertPolicyRequest request) {
       return futureUnaryCall(
