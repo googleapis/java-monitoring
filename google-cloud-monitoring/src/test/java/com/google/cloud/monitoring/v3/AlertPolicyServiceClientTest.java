@@ -278,7 +278,7 @@ public class AlertPolicyServiceClientTest {
         AlertPolicy.newBuilder()
             .setName(
                 AlertPolicyName.ofProjectAlertPolicyName("[PROJECT]", "[ALERT_POLICY]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .putAllUserLabels(new HashMap<String, String>())
             .addAllConditions(new ArrayList<AlertPolicy.Condition>())
             .setEnabled(BoolValue.newBuilder().build())
@@ -326,7 +326,7 @@ public class AlertPolicyServiceClientTest {
         AlertPolicy.newBuilder()
             .setName(
                 AlertPolicyName.ofProjectAlertPolicyName("[PROJECT]", "[ALERT_POLICY]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .putAllUserLabels(new HashMap<String, String>())
             .addAllConditions(new ArrayList<AlertPolicy.Condition>())
             .setEnabled(BoolValue.newBuilder().build())
@@ -373,7 +373,7 @@ public class AlertPolicyServiceClientTest {
         AlertPolicy.newBuilder()
             .setName(
                 AlertPolicyName.ofProjectAlertPolicyName("[PROJECT]", "[ALERT_POLICY]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .putAllUserLabels(new HashMap<String, String>())
             .addAllConditions(new ArrayList<AlertPolicy.Condition>())
             .setEnabled(BoolValue.newBuilder().build())
@@ -423,7 +423,7 @@ public class AlertPolicyServiceClientTest {
         AlertPolicy.newBuilder()
             .setName(
                 AlertPolicyName.ofProjectAlertPolicyName("[PROJECT]", "[ALERT_POLICY]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .putAllUserLabels(new HashMap<String, String>())
             .addAllConditions(new ArrayList<AlertPolicy.Condition>())
             .setEnabled(BoolValue.newBuilder().build())
@@ -473,7 +473,7 @@ public class AlertPolicyServiceClientTest {
         AlertPolicy.newBuilder()
             .setName(
                 AlertPolicyName.ofProjectAlertPolicyName("[PROJECT]", "[ALERT_POLICY]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .putAllUserLabels(new HashMap<String, String>())
             .addAllConditions(new ArrayList<AlertPolicy.Condition>())
             .setEnabled(BoolValue.newBuilder().build())
@@ -523,7 +523,7 @@ public class AlertPolicyServiceClientTest {
         AlertPolicy.newBuilder()
             .setName(
                 AlertPolicyName.ofProjectAlertPolicyName("[PROJECT]", "[ALERT_POLICY]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .putAllUserLabels(new HashMap<String, String>())
             .addAllConditions(new ArrayList<AlertPolicy.Condition>())
             .setEnabled(BoolValue.newBuilder().build())
@@ -642,7 +642,7 @@ public class AlertPolicyServiceClientTest {
         AlertPolicy.newBuilder()
             .setName(
                 AlertPolicyName.ofProjectAlertPolicyName("[PROJECT]", "[ALERT_POLICY]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .putAllUserLabels(new HashMap<String, String>())
             .addAllConditions(new ArrayList<AlertPolicy.Condition>())
             .setEnabled(BoolValue.newBuilder().build())
