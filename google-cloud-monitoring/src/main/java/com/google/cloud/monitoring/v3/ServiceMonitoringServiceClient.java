@@ -491,7 +491,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
    *
    * @param parent Required. Resource name of the parent `Service`. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-   * @param service_level_objective Required. The `ServiceLevelObjective` to create. The provided
+   * @param serviceLevelObjective Required. The `ServiceLevelObjective` to create. The provided
    *     `name` will be respected if no `ServiceLevelObjective` exists with this name.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -511,7 +511,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
    *
    * @param parent Required. Resource name of the parent `Service`. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-   * @param service_level_objective Required. The `ServiceLevelObjective` to create. The provided
+   * @param serviceLevelObjective Required. The `ServiceLevelObjective` to create. The provided
    *     `name` will be respected if no `ServiceLevelObjective` exists with this name.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -675,7 +675,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   /**
    * Update the given `ServiceLevelObjective`.
    *
-   * @param service_level_objective Required. The `ServiceLevelObjective` to draw updates from. The
+   * @param serviceLevelObjective Required. The `ServiceLevelObjective` to draw updates from. The
    *     given `name` specifies the resource to update.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */

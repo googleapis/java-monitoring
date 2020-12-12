@@ -330,8 +330,8 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    *     written, not the name of the created policy. The alerting policy that is returned will have
    *     a name that contains a normalized representation of this name as a prefix but adds a suffix
    *     of the form `/alertPolicies/[ALERT_POLICY_ID]`, identifying the policy in the container.
-   * @param alert_policy Required. The requested alerting policy. You should omit the `name` field
-   *     in this policy. The name will be returned in the new policy, including a new
+   * @param alertPolicy Required. The requested alerting policy. You should omit the `name` field in
+   *     this policy. The name will be returned in the new policy, including a new
    *     `[ALERT_POLICY_ID]` value.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -354,8 +354,8 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    *     written, not the name of the created policy. The alerting policy that is returned will have
    *     a name that contains a normalized representation of this name as a prefix but adds a suffix
    *     of the form `/alertPolicies/[ALERT_POLICY_ID]`, identifying the policy in the container.
-   * @param alert_policy Required. The requested alerting policy. You should omit the `name` field
-   *     in this policy. The name will be returned in the new policy, including a new
+   * @param alertPolicy Required. The requested alerting policy. You should omit the `name` field in
+   *     this policy. The name will be returned in the new policy, including a new
    *     `[ALERT_POLICY_ID]` value.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -378,8 +378,8 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    *     written, not the name of the created policy. The alerting policy that is returned will have
    *     a name that contains a normalized representation of this name as a prefix but adds a suffix
    *     of the form `/alertPolicies/[ALERT_POLICY_ID]`, identifying the policy in the container.
-   * @param alert_policy Required. The requested alerting policy. You should omit the `name` field
-   *     in this policy. The name will be returned in the new policy, including a new
+   * @param alertPolicy Required. The requested alerting policy. You should omit the `name` field in
+   *     this policy. The name will be returned in the new policy, including a new
    *     `[ALERT_POLICY_ID]` value.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -402,8 +402,8 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    *     written, not the name of the created policy. The alerting policy that is returned will have
    *     a name that contains a normalized representation of this name as a prefix but adds a suffix
    *     of the form `/alertPolicies/[ALERT_POLICY_ID]`, identifying the policy in the container.
-   * @param alert_policy Required. The requested alerting policy. You should omit the `name` field
-   *     in this policy. The name will be returned in the new policy, including a new
+   * @param alertPolicy Required. The requested alerting policy. You should omit the `name` field in
+   *     this policy. The name will be returned in the new policy, including a new
    *     `[ALERT_POLICY_ID]` value.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -492,7 +492,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    * only certain fields in the current alerting policy by specifying the fields to be updated via
    * `updateMask`. Returns the updated alerting policy.
    *
-   * @param update_mask Optional. A list of alerting policy field names. If this field is not empty,
+   * @param updateMask Optional. A list of alerting policy field names. If this field is not empty,
    *     each listed field in the existing alerting policy is set to the value of the corresponding
    *     field in the supplied policy (`alert_policy`), or to the field's default value if the field
    *     is not in the supplied alerting policy. Fields not listed retain their previous value.
@@ -507,7 +507,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    *     the new policy will keep their former `[CONDITION_ID]` if the supplied condition includes
    *     the `name` field with that `[CONDITION_ID]`. If the supplied condition omits the `name`
    *     field, then a new `[CONDITION_ID]` is created.
-   * @param alert_policy Required. The updated alerting policy or the updated values for the fields
+   * @param alertPolicy Required. The updated alerting policy or the updated values for the fields
    *     listed in `update_mask`. If `update_mask` is not empty, any fields in this policy that are
    *     not in `update_mask` are ignored.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
