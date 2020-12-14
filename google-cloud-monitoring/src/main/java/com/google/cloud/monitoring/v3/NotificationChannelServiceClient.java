@@ -545,7 +545,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
    *     newly created channel. The resulting channel's name will have a normalized version of this
    *     field as a prefix, but will add `/notificationChannels/[CHANNEL_ID]` to identify the
    *     channel.
-   * @param notification_channel Required. The definition of the `NotificationChannel` to create.
+   * @param notificationChannel Required. The definition of the `NotificationChannel` to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final NotificationChannel createNotificationChannel(
@@ -569,7 +569,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
    *     newly created channel. The resulting channel's name will have a normalized version of this
    *     field as a prefix, but will add `/notificationChannels/[CHANNEL_ID]` to identify the
    *     channel.
-   * @param notification_channel Required. The definition of the `NotificationChannel` to create.
+   * @param notificationChannel Required. The definition of the `NotificationChannel` to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final NotificationChannel createNotificationChannel(
@@ -593,7 +593,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
    *     newly created channel. The resulting channel's name will have a normalized version of this
    *     field as a prefix, but will add `/notificationChannels/[CHANNEL_ID]` to identify the
    *     channel.
-   * @param notification_channel Required. The definition of the `NotificationChannel` to create.
+   * @param notificationChannel Required. The definition of the `NotificationChannel` to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final NotificationChannel createNotificationChannel(
@@ -617,7 +617,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
    *     newly created channel. The resulting channel's name will have a normalized version of this
    *     field as a prefix, but will add `/notificationChannels/[CHANNEL_ID]` to identify the
    *     channel.
-   * @param notification_channel Required. The definition of the `NotificationChannel` to create.
+   * @param notificationChannel Required. The definition of the `NotificationChannel` to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final NotificationChannel createNotificationChannel(
@@ -659,8 +659,8 @@ public class NotificationChannelServiceClient implements BackgroundResource {
   /**
    * Updates a notification channel. Fields not specified in the field mask remain unchanged.
    *
-   * @param update_mask The fields to update.
-   * @param notification_channel Required. A description of the changes to be applied to the
+   * @param updateMask The fields to update.
+   * @param notificationChannel Required. A description of the changes to be applied to the
    *     specified notification channel. The description must provide a definition for fields to be
    *     updated; the names of these fields should also be included in the `update_mask`.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails

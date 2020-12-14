@@ -329,7 +329,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
    *
    * @param parent Required. The project in which to create the Uptime check. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param uptime_check_config Required. The new Uptime check configuration.
+   * @param uptimeCheckConfig Required. The new Uptime check configuration.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UptimeCheckConfig createUptimeCheckConfig(
@@ -348,7 +348,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
    *
    * @param parent Required. The project in which to create the Uptime check. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param uptime_check_config Required. The new Uptime check configuration.
+   * @param uptimeCheckConfig Required. The new Uptime check configuration.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UptimeCheckConfig createUptimeCheckConfig(
@@ -367,7 +367,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
    *
    * @param parent Required. The project in which to create the Uptime check. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param uptime_check_config Required. The new Uptime check configuration.
+   * @param uptimeCheckConfig Required. The new Uptime check configuration.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UptimeCheckConfig createUptimeCheckConfig(
@@ -386,7 +386,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
    *
    * @param parent Required. The project in which to create the Uptime check. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
-   * @param uptime_check_config Required. The new Uptime check configuration.
+   * @param uptimeCheckConfig Required. The new Uptime check configuration.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UptimeCheckConfig createUptimeCheckConfig(
@@ -427,10 +427,10 @@ public class UptimeCheckServiceClient implements BackgroundResource {
    * new one or replace only certain fields in the current configuration by specifying the fields to
    * be updated via `updateMask`. Returns the updated configuration.
    *
-   * @param uptime_check_config Required. If an `updateMask` has been specified, this field gives
-   *     the values for the set of fields mentioned in the `updateMask`. If an `updateMask` has not
-   *     been given, this Uptime check configuration replaces the current configuration. If a field
-   *     is mentioned in `updateMask` but the corresonding field is omitted in this partial Uptime
+   * @param uptimeCheckConfig Required. If an `updateMask` has been specified, this field gives the
+   *     values for the set of fields mentioned in the `updateMask`. If an `updateMask` has not been
+   *     given, this Uptime check configuration replaces the current configuration. If a field is
+   *     mentioned in `updateMask` but the corresonding field is omitted in this partial Uptime
    *     check configuration, it has the effect of deleting/clearing the field from the
    *     configuration on the server.
    *     <p>The following fields can be updated: `display_name`, `http_check`, `tcp_check`,

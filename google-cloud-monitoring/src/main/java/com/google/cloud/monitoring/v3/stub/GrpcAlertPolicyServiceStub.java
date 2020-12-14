@@ -131,11 +131,21 @@ public class GrpcAlertPolicyServiceStub extends AlertPolicyServiceStub {
         AlertPolicyServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcAlertPolicyServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAlertPolicyServiceStub(
       AlertPolicyServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcAlertPolicyServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcAlertPolicyServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcAlertPolicyServiceStub(
       AlertPolicyServiceStubSettings settings,
       ClientContext clientContext,
