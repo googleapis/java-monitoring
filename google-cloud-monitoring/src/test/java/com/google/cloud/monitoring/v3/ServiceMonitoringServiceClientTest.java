@@ -106,7 +106,7 @@ public class ServiceMonitoringServiceClientTest {
     Service expectedResponse =
         Service.newBuilder()
             .setName(ServiceName.ofProjectServiceName("[PROJECT]", "[SERVICE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .build();
     mockServiceMonitoringService.addResponse(expectedResponse);
 
@@ -148,7 +148,7 @@ public class ServiceMonitoringServiceClientTest {
     Service expectedResponse =
         Service.newBuilder()
             .setName(ServiceName.ofProjectServiceName("[PROJECT]", "[SERVICE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .build();
     mockServiceMonitoringService.addResponse(expectedResponse);
 
@@ -190,7 +190,7 @@ public class ServiceMonitoringServiceClientTest {
     Service expectedResponse =
         Service.newBuilder()
             .setName(ServiceName.ofProjectServiceName("[PROJECT]", "[SERVICE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .build();
     mockServiceMonitoringService.addResponse(expectedResponse);
 
@@ -232,7 +232,7 @@ public class ServiceMonitoringServiceClientTest {
     Service expectedResponse =
         Service.newBuilder()
             .setName(ServiceName.ofProjectServiceName("[PROJECT]", "[SERVICE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .build();
     mockServiceMonitoringService.addResponse(expectedResponse);
 
@@ -274,7 +274,7 @@ public class ServiceMonitoringServiceClientTest {
     Service expectedResponse =
         Service.newBuilder()
             .setName(ServiceName.ofProjectServiceName("[PROJECT]", "[SERVICE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .build();
     mockServiceMonitoringService.addResponse(expectedResponse);
 
@@ -313,7 +313,7 @@ public class ServiceMonitoringServiceClientTest {
     Service expectedResponse =
         Service.newBuilder()
             .setName(ServiceName.ofProjectServiceName("[PROJECT]", "[SERVICE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .build();
     mockServiceMonitoringService.addResponse(expectedResponse);
 
@@ -528,7 +528,7 @@ public class ServiceMonitoringServiceClientTest {
     Service expectedResponse =
         Service.newBuilder()
             .setName(ServiceName.ofProjectServiceName("[PROJECT]", "[SERVICE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .build();
     mockServiceMonitoringService.addResponse(expectedResponse);
 
@@ -638,7 +638,7 @@ public class ServiceMonitoringServiceClientTest {
                 ServiceLevelObjectiveName.ofProjectServiceServiceLevelObjectiveName(
                         "[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setServiceLevelIndicator(ServiceLevelIndicator.newBuilder().build())
             .setGoal(3178259)
             .build();
@@ -687,7 +687,7 @@ public class ServiceMonitoringServiceClientTest {
                 ServiceLevelObjectiveName.ofProjectServiceServiceLevelObjectiveName(
                         "[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setServiceLevelIndicator(ServiceLevelIndicator.newBuilder().build())
             .setGoal(3178259)
             .build();
@@ -736,7 +736,7 @@ public class ServiceMonitoringServiceClientTest {
                 ServiceLevelObjectiveName.ofProjectServiceServiceLevelObjectiveName(
                         "[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setServiceLevelIndicator(ServiceLevelIndicator.newBuilder().build())
             .setGoal(3178259)
             .build();
@@ -785,7 +785,7 @@ public class ServiceMonitoringServiceClientTest {
                 ServiceLevelObjectiveName.ofProjectServiceServiceLevelObjectiveName(
                         "[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setServiceLevelIndicator(ServiceLevelIndicator.newBuilder().build())
             .setGoal(3178259)
             .build();
@@ -922,7 +922,7 @@ public class ServiceMonitoringServiceClientTest {
                 ServiceLevelObjectiveName.ofProjectServiceServiceLevelObjectiveName(
                         "[PROJECT]", "[SERVICE]", "[SERVICE_LEVEL_OBJECTIVE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setServiceLevelIndicator(ServiceLevelIndicator.newBuilder().build())
             .setGoal(3178259)
             .build();

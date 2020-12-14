@@ -309,7 +309,7 @@ public class NotificationChannelServiceClientTest {
                         "[PROJECT]", "[CHANNEL_DESCRIPTOR]")
                     .toString())
             .setType("type3575610")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .addAllSupportedTiers(new ArrayList<ServiceTier>())
@@ -360,7 +360,7 @@ public class NotificationChannelServiceClientTest {
                         "[PROJECT]", "[CHANNEL_DESCRIPTOR]")
                     .toString())
             .setType("type3575610")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .addAllSupportedTiers(new ArrayList<ServiceTier>())
@@ -587,7 +587,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())
@@ -639,7 +639,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())
@@ -687,7 +687,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())
@@ -739,7 +739,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())
@@ -791,7 +791,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())
@@ -843,7 +843,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())
@@ -895,7 +895,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())
@@ -1187,7 +1187,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())
@@ -1242,7 +1242,7 @@ public class NotificationChannelServiceClientTest {
                 NotificationChannelName.ofProjectNotificationChannelName(
                         "[PROJECT]", "[NOTIFICATION_CHANNEL]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .putAllLabels(new HashMap<String, String>())
             .putAllUserLabels(new HashMap<String, String>())

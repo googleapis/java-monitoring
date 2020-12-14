@@ -275,8 +275,8 @@ public class GroupServiceClientTest {
     Group expectedResponse =
         Group.newBuilder()
             .setName(GroupName.ofProjectGroupName("[PROJECT]", "[GROUP]").toString())
-            .setDisplayName("display_name1615086568")
-            .setParentName("parent_name1015022848")
+            .setDisplayName("displayName1714148973")
+            .setParentName("parentName-244870571")
             .setFilter("filter-1274492040")
             .setIsCluster(true)
             .build();
@@ -317,8 +317,8 @@ public class GroupServiceClientTest {
     Group expectedResponse =
         Group.newBuilder()
             .setName(GroupName.ofProjectGroupName("[PROJECT]", "[GROUP]").toString())
-            .setDisplayName("display_name1615086568")
-            .setParentName("parent_name1015022848")
+            .setDisplayName("displayName1714148973")
+            .setParentName("parentName-244870571")
             .setFilter("filter-1274492040")
             .setIsCluster(true)
             .build();
@@ -359,8 +359,8 @@ public class GroupServiceClientTest {
     Group expectedResponse =
         Group.newBuilder()
             .setName(GroupName.ofProjectGroupName("[PROJECT]", "[GROUP]").toString())
-            .setDisplayName("display_name1615086568")
-            .setParentName("parent_name1015022848")
+            .setDisplayName("displayName1714148973")
+            .setParentName("parentName-244870571")
             .setFilter("filter-1274492040")
             .setIsCluster(true)
             .build();
@@ -404,8 +404,8 @@ public class GroupServiceClientTest {
     Group expectedResponse =
         Group.newBuilder()
             .setName(GroupName.ofProjectGroupName("[PROJECT]", "[GROUP]").toString())
-            .setDisplayName("display_name1615086568")
-            .setParentName("parent_name1015022848")
+            .setDisplayName("displayName1714148973")
+            .setParentName("parentName-244870571")
             .setFilter("filter-1274492040")
             .setIsCluster(true)
             .build();
@@ -449,8 +449,8 @@ public class GroupServiceClientTest {
     Group expectedResponse =
         Group.newBuilder()
             .setName(GroupName.ofProjectGroupName("[PROJECT]", "[GROUP]").toString())
-            .setDisplayName("display_name1615086568")
-            .setParentName("parent_name1015022848")
+            .setDisplayName("displayName1714148973")
+            .setParentName("parentName-244870571")
             .setFilter("filter-1274492040")
             .setIsCluster(true)
             .build();
@@ -494,8 +494,8 @@ public class GroupServiceClientTest {
     Group expectedResponse =
         Group.newBuilder()
             .setName(GroupName.ofProjectGroupName("[PROJECT]", "[GROUP]").toString())
-            .setDisplayName("display_name1615086568")
-            .setParentName("parent_name1015022848")
+            .setDisplayName("displayName1714148973")
+            .setParentName("parentName-244870571")
             .setFilter("filter-1274492040")
             .setIsCluster(true)
             .build();
@@ -539,8 +539,8 @@ public class GroupServiceClientTest {
     Group expectedResponse =
         Group.newBuilder()
             .setName(GroupName.ofProjectGroupName("[PROJECT]", "[GROUP]").toString())
-            .setDisplayName("display_name1615086568")
-            .setParentName("parent_name1015022848")
+            .setDisplayName("displayName1714148973")
+            .setParentName("parentName-244870571")
             .setFilter("filter-1274492040")
             .setIsCluster(true)
             .build();

@@ -297,7 +297,7 @@ public class MetricServiceClientTest {
         MonitoredResourceDescriptor.newBuilder()
             .setName("name3373707")
             .setType("type3575610")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .build();
@@ -344,7 +344,7 @@ public class MetricServiceClientTest {
         MonitoredResourceDescriptor.newBuilder()
             .setName("name3373707")
             .setType("type3575610")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .build();
@@ -570,7 +570,7 @@ public class MetricServiceClientTest {
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .setUnit("unit3594628")
             .setDescription("description-1724546052")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .addAllMonitoredResourceTypes(new ArrayList<String>())
             .build();
     mockMetricService.addResponse(expectedResponse);
@@ -616,7 +616,7 @@ public class MetricServiceClientTest {
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .setUnit("unit3594628")
             .setDescription("description-1724546052")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .addAllMonitoredResourceTypes(new ArrayList<String>())
             .build();
     mockMetricService.addResponse(expectedResponse);
@@ -660,7 +660,7 @@ public class MetricServiceClientTest {
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .setUnit("unit3594628")
             .setDescription("description-1724546052")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .addAllMonitoredResourceTypes(new ArrayList<String>())
             .build();
     mockMetricService.addResponse(expectedResponse);
@@ -708,7 +708,7 @@ public class MetricServiceClientTest {
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .setUnit("unit3594628")
             .setDescription("description-1724546052")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .addAllMonitoredResourceTypes(new ArrayList<String>())
             .build();
     mockMetricService.addResponse(expectedResponse);
@@ -756,7 +756,7 @@ public class MetricServiceClientTest {
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .setUnit("unit3594628")
             .setDescription("description-1724546052")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .addAllMonitoredResourceTypes(new ArrayList<String>())
             .build();
     mockMetricService.addResponse(expectedResponse);
@@ -804,7 +804,7 @@ public class MetricServiceClientTest {
             .addAllLabels(new ArrayList<LabelDescriptor>())
             .setUnit("unit3594628")
             .setDescription("description-1724546052")
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .addAllMonitoredResourceTypes(new ArrayList<String>())
             .build();
     mockMetricService.addResponse(expectedResponse);
