@@ -22,20 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * The UptimeCheckService API is used to manage (list, create, delete, edit)
- * Uptime check configurations in the Stackdriver Monitoring product. An Uptime
- * check is a piece of configuration that determines which resources and
- * services to monitor for availability. These configurations can also be
- * configured interactively by navigating to the [Cloud Console]
- * (http://console.cloud.google.com), selecting the appropriate project,
- * clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
- * and then clicking on "Uptime".
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/monitoring/v3/uptime_service.proto")
@@ -383,30 +370,10 @@ public final class UptimeCheckServiceGrpc {
     return UptimeCheckServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The UptimeCheckService API is used to manage (list, create, delete, edit)
-   * Uptime check configurations in the Stackdriver Monitoring product. An Uptime
-   * check is a piece of configuration that determines which resources and
-   * services to monitor for availability. These configurations can also be
-   * configured interactively by navigating to the [Cloud Console]
-   * (http://console.cloud.google.com), selecting the appropriate project,
-   * clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
-   * and then clicking on "Uptime".
-   * </pre>
-   */
+  /** */
   public abstract static class UptimeCheckServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing valid Uptime check configurations for the project
-     * (leaving out any invalid configurations).
-     * </pre>
-     */
+    /** */
     public void listUptimeCheckConfigs(
         com.google.monitoring.v3.ListUptimeCheckConfigsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListUptimeCheckConfigsResponse>
@@ -414,70 +381,35 @@ public final class UptimeCheckServiceGrpc {
       asyncUnimplementedUnaryCall(getListUptimeCheckConfigsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single Uptime check configuration.
-     * </pre>
-     */
+    /** */
     public void getUptimeCheckConfig(
         com.google.monitoring.v3.GetUptimeCheckConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.UptimeCheckConfig> responseObserver) {
       asyncUnimplementedUnaryCall(getGetUptimeCheckConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new Uptime check configuration.
-     * </pre>
-     */
+    /** */
     public void createUptimeCheckConfig(
         com.google.monitoring.v3.CreateUptimeCheckConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.UptimeCheckConfig> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateUptimeCheckConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an Uptime check configuration. You can either replace the entire
-     * configuration with a new one or replace only certain fields in the current
-     * configuration by specifying the fields to be updated via `updateMask`.
-     * Returns the updated configuration.
-     * </pre>
-     */
+    /** */
     public void updateUptimeCheckConfig(
         com.google.monitoring.v3.UpdateUptimeCheckConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.UptimeCheckConfig> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateUptimeCheckConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an Uptime check configuration. Note that this method will fail
-     * if the Uptime check configuration is referenced by an alert policy or
-     * other dependent configs that would be rendered invalid by the deletion.
-     * </pre>
-     */
+    /** */
     public void deleteUptimeCheckConfig(
         com.google.monitoring.v3.DeleteUptimeCheckConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteUptimeCheckConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns the list of IP addresses that checkers run from
-     * </pre>
-     */
+    /** */
     public void listUptimeCheckIps(
         com.google.monitoring.v3.ListUptimeCheckIpsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListUptimeCheckIpsResponse>
@@ -533,20 +465,7 @@ public final class UptimeCheckServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The UptimeCheckService API is used to manage (list, create, delete, edit)
-   * Uptime check configurations in the Stackdriver Monitoring product. An Uptime
-   * check is a piece of configuration that determines which resources and
-   * services to monitor for availability. These configurations can also be
-   * configured interactively by navigating to the [Cloud Console]
-   * (http://console.cloud.google.com), selecting the appropriate project,
-   * clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
-   * and then clicking on "Uptime".
-   * </pre>
-   */
+  /** */
   public static final class UptimeCheckServiceStub
       extends io.grpc.stub.AbstractAsyncStub<UptimeCheckServiceStub> {
     private UptimeCheckServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -559,14 +478,7 @@ public final class UptimeCheckServiceGrpc {
       return new UptimeCheckServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing valid Uptime check configurations for the project
-     * (leaving out any invalid configurations).
-     * </pre>
-     */
+    /** */
     public void listUptimeCheckConfigs(
         com.google.monitoring.v3.ListUptimeCheckConfigsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListUptimeCheckConfigsResponse>
@@ -577,13 +489,7 @@ public final class UptimeCheckServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single Uptime check configuration.
-     * </pre>
-     */
+    /** */
     public void getUptimeCheckConfig(
         com.google.monitoring.v3.GetUptimeCheckConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.UptimeCheckConfig> responseObserver) {
@@ -593,13 +499,7 @@ public final class UptimeCheckServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new Uptime check configuration.
-     * </pre>
-     */
+    /** */
     public void createUptimeCheckConfig(
         com.google.monitoring.v3.CreateUptimeCheckConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.UptimeCheckConfig> responseObserver) {
@@ -609,16 +509,7 @@ public final class UptimeCheckServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an Uptime check configuration. You can either replace the entire
-     * configuration with a new one or replace only certain fields in the current
-     * configuration by specifying the fields to be updated via `updateMask`.
-     * Returns the updated configuration.
-     * </pre>
-     */
+    /** */
     public void updateUptimeCheckConfig(
         com.google.monitoring.v3.UpdateUptimeCheckConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.UptimeCheckConfig> responseObserver) {
@@ -628,15 +519,7 @@ public final class UptimeCheckServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an Uptime check configuration. Note that this method will fail
-     * if the Uptime check configuration is referenced by an alert policy or
-     * other dependent configs that would be rendered invalid by the deletion.
-     * </pre>
-     */
+    /** */
     public void deleteUptimeCheckConfig(
         com.google.monitoring.v3.DeleteUptimeCheckConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -646,13 +529,7 @@ public final class UptimeCheckServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns the list of IP addresses that checkers run from
-     * </pre>
-     */
+    /** */
     public void listUptimeCheckIps(
         com.google.monitoring.v3.ListUptimeCheckIpsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListUptimeCheckIpsResponse>
@@ -664,20 +541,7 @@ public final class UptimeCheckServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The UptimeCheckService API is used to manage (list, create, delete, edit)
-   * Uptime check configurations in the Stackdriver Monitoring product. An Uptime
-   * check is a piece of configuration that determines which resources and
-   * services to monitor for availability. These configurations can also be
-   * configured interactively by navigating to the [Cloud Console]
-   * (http://console.cloud.google.com), selecting the appropriate project,
-   * clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
-   * and then clicking on "Uptime".
-   * </pre>
-   */
+  /** */
   public static final class UptimeCheckServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<UptimeCheckServiceBlockingStub> {
     private UptimeCheckServiceBlockingStub(
@@ -691,84 +555,42 @@ public final class UptimeCheckServiceGrpc {
       return new UptimeCheckServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing valid Uptime check configurations for the project
-     * (leaving out any invalid configurations).
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListUptimeCheckConfigsResponse listUptimeCheckConfigs(
         com.google.monitoring.v3.ListUptimeCheckConfigsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListUptimeCheckConfigsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single Uptime check configuration.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.UptimeCheckConfig getUptimeCheckConfig(
         com.google.monitoring.v3.GetUptimeCheckConfigRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetUptimeCheckConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new Uptime check configuration.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.UptimeCheckConfig createUptimeCheckConfig(
         com.google.monitoring.v3.CreateUptimeCheckConfigRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateUptimeCheckConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an Uptime check configuration. You can either replace the entire
-     * configuration with a new one or replace only certain fields in the current
-     * configuration by specifying the fields to be updated via `updateMask`.
-     * Returns the updated configuration.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.UptimeCheckConfig updateUptimeCheckConfig(
         com.google.monitoring.v3.UpdateUptimeCheckConfigRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateUptimeCheckConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an Uptime check configuration. Note that this method will fail
-     * if the Uptime check configuration is referenced by an alert policy or
-     * other dependent configs that would be rendered invalid by the deletion.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteUptimeCheckConfig(
         com.google.monitoring.v3.DeleteUptimeCheckConfigRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteUptimeCheckConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns the list of IP addresses that checkers run from
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListUptimeCheckIpsResponse listUptimeCheckIps(
         com.google.monitoring.v3.ListUptimeCheckIpsRequest request) {
       return blockingUnaryCall(
@@ -776,20 +598,7 @@ public final class UptimeCheckServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The UptimeCheckService API is used to manage (list, create, delete, edit)
-   * Uptime check configurations in the Stackdriver Monitoring product. An Uptime
-   * check is a piece of configuration that determines which resources and
-   * services to monitor for availability. These configurations can also be
-   * configured interactively by navigating to the [Cloud Console]
-   * (http://console.cloud.google.com), selecting the appropriate project,
-   * clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
-   * and then clicking on "Uptime".
-   * </pre>
-   */
+  /** */
   public static final class UptimeCheckServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<UptimeCheckServiceFutureStub> {
     private UptimeCheckServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -802,14 +611,7 @@ public final class UptimeCheckServiceGrpc {
       return new UptimeCheckServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing valid Uptime check configurations for the project
-     * (leaving out any invalid configurations).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListUptimeCheckConfigsResponse>
         listUptimeCheckConfigs(com.google.monitoring.v3.ListUptimeCheckConfigsRequest request) {
@@ -817,13 +619,7 @@ public final class UptimeCheckServiceGrpc {
           getChannel().newCall(getListUptimeCheckConfigsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single Uptime check configuration.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.UptimeCheckConfig>
         getUptimeCheckConfig(com.google.monitoring.v3.GetUptimeCheckConfigRequest request) {
@@ -831,13 +627,7 @@ public final class UptimeCheckServiceGrpc {
           getChannel().newCall(getGetUptimeCheckConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new Uptime check configuration.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.UptimeCheckConfig>
         createUptimeCheckConfig(com.google.monitoring.v3.CreateUptimeCheckConfigRequest request) {
@@ -845,16 +635,7 @@ public final class UptimeCheckServiceGrpc {
           getChannel().newCall(getCreateUptimeCheckConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an Uptime check configuration. You can either replace the entire
-     * configuration with a new one or replace only certain fields in the current
-     * configuration by specifying the fields to be updated via `updateMask`.
-     * Returns the updated configuration.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.UptimeCheckConfig>
         updateUptimeCheckConfig(com.google.monitoring.v3.UpdateUptimeCheckConfigRequest request) {
@@ -862,28 +643,14 @@ public final class UptimeCheckServiceGrpc {
           getChannel().newCall(getUpdateUptimeCheckConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an Uptime check configuration. Note that this method will fail
-     * if the Uptime check configuration is referenced by an alert policy or
-     * other dependent configs that would be rendered invalid by the deletion.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteUptimeCheckConfig(com.google.monitoring.v3.DeleteUptimeCheckConfigRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteUptimeCheckConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns the list of IP addresses that checkers run from
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListUptimeCheckIpsResponse>
         listUptimeCheckIps(com.google.monitoring.v3.ListUptimeCheckIpsRequest request) {

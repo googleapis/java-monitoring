@@ -22,14 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * The Notification Channel API provides access to configuration that
- * controls how messages related to incidents are sent.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/monitoring/v3/notification_service.proto")
@@ -607,25 +600,11 @@ public final class NotificationChannelServiceGrpc {
     return NotificationChannelServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Notification Channel API provides access to configuration that
-   * controls how messages related to incidents are sent.
-   * </pre>
-   */
+  /** */
   public abstract static class NotificationChannelServiceImplBase
       implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the descriptors for supported channel types. The use of descriptors
-     * makes it possible for new channel types to be dynamically added.
-     * </pre>
-     */
+    /** */
     public void listNotificationChannelDescriptors(
         com.google.monitoring.v3.ListNotificationChannelDescriptorsRequest request,
         io.grpc.stub.StreamObserver<
@@ -634,14 +613,7 @@ public final class NotificationChannelServiceGrpc {
       asyncUnimplementedUnaryCall(getListNotificationChannelDescriptorsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single channel descriptor. The descriptor indicates which fields
-     * are expected / permitted for a notification channel of the given type.
-     * </pre>
-     */
+    /** */
     public void getNotificationChannelDescriptor(
         com.google.monitoring.v3.GetNotificationChannelDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannelDescriptor>
@@ -649,13 +621,7 @@ public final class NotificationChannelServiceGrpc {
       asyncUnimplementedUnaryCall(getGetNotificationChannelDescriptorMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the notification channels that have been created for the project.
-     * </pre>
-     */
+    /** */
     public void listNotificationChannels(
         com.google.monitoring.v3.ListNotificationChannelsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListNotificationChannelsResponse>
@@ -663,17 +629,7 @@ public final class NotificationChannelServiceGrpc {
       asyncUnimplementedUnaryCall(getListNotificationChannelsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single notification channel. The channel includes the relevant
-     * configuration details with which the channel was created. However, the
-     * response may truncate or omit passwords, API keys, or other private key
-     * matter and thus the response may not be 100% identical to the information
-     * that was supplied in the call to the create method.
-     * </pre>
-     */
+    /** */
     public void getNotificationChannel(
         com.google.monitoring.v3.GetNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannel>
@@ -681,14 +637,7 @@ public final class NotificationChannelServiceGrpc {
       asyncUnimplementedUnaryCall(getGetNotificationChannelMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new notification channel, representing a single notification
-     * endpoint such as an email address, SMS number, or PagerDuty service.
-     * </pre>
-     */
+    /** */
     public void createNotificationChannel(
         com.google.monitoring.v3.CreateNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannel>
@@ -696,14 +645,7 @@ public final class NotificationChannelServiceGrpc {
       asyncUnimplementedUnaryCall(getCreateNotificationChannelMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a notification channel. Fields not specified in the field mask
-     * remain unchanged.
-     * </pre>
-     */
+    /** */
     public void updateNotificationChannel(
         com.google.monitoring.v3.UpdateNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannel>
@@ -711,27 +653,14 @@ public final class NotificationChannelServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateNotificationChannelMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a notification channel.
-     * </pre>
-     */
+    /** */
     public void deleteNotificationChannel(
         com.google.monitoring.v3.DeleteNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteNotificationChannelMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Causes a verification code to be delivered to the channel. The code
-     * can then be supplied in `VerifyNotificationChannel` to verify the channel.
-     * </pre>
-     */
+    /** */
     public void sendNotificationChannelVerificationCode(
         com.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -739,32 +668,7 @@ public final class NotificationChannelServiceGrpc {
           getSendNotificationChannelVerificationCodeMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Requests a verification code for an already verified channel that can then
-     * be used in a call to VerifyNotificationChannel() on a different channel
-     * with an equivalent identity in the same or in a different project. This
-     * makes it possible to copy a channel between projects without requiring
-     * manual reverification of the channel. If the channel is not in the
-     * verified state, this method will fail (in other words, this may only be
-     * used if the SendNotificationChannelVerificationCode and
-     * VerifyNotificationChannel paths have already been used to put the given
-     * channel into the verified state).
-     * There is no guarantee that the verification codes returned by this method
-     * will be of a similar structure or form as the ones that are delivered
-     * to the channel via SendNotificationChannelVerificationCode; while
-     * VerifyNotificationChannel() will recognize both the codes delivered via
-     * SendNotificationChannelVerificationCode() and returned from
-     * GetNotificationChannelVerificationCode(), it is typically the case that
-     * the verification codes delivered via
-     * SendNotificationChannelVerificationCode() will be shorter and also
-     * have a shorter expiration (e.g. codes such as "G-123456") whereas
-     * GetVerificationCode() will typically return a much longer, websafe base
-     * 64 encoded string that has a longer expiration time.
-     * </pre>
-     */
+    /** */
     public void getNotificationChannelVerificationCode(
         com.google.monitoring.v3.GetNotificationChannelVerificationCodeRequest request,
         io.grpc.stub.StreamObserver<
@@ -774,15 +678,7 @@ public final class NotificationChannelServiceGrpc {
           getGetNotificationChannelVerificationCodeMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Verifies a `NotificationChannel` by proving receipt of the code
-     * delivered to the channel as a result of calling
-     * `SendNotificationChannelVerificationCode`.
-     * </pre>
-     */
+    /** */
     public void verifyNotificationChannel(
         com.google.monitoring.v3.VerifyNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannel>
@@ -866,14 +762,7 @@ public final class NotificationChannelServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Notification Channel API provides access to configuration that
-   * controls how messages related to incidents are sent.
-   * </pre>
-   */
+  /** */
   public static final class NotificationChannelServiceStub
       extends io.grpc.stub.AbstractAsyncStub<NotificationChannelServiceStub> {
     private NotificationChannelServiceStub(
@@ -887,14 +776,7 @@ public final class NotificationChannelServiceGrpc {
       return new NotificationChannelServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the descriptors for supported channel types. The use of descriptors
-     * makes it possible for new channel types to be dynamically added.
-     * </pre>
-     */
+    /** */
     public void listNotificationChannelDescriptors(
         com.google.monitoring.v3.ListNotificationChannelDescriptorsRequest request,
         io.grpc.stub.StreamObserver<
@@ -906,14 +788,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single channel descriptor. The descriptor indicates which fields
-     * are expected / permitted for a notification channel of the given type.
-     * </pre>
-     */
+    /** */
     public void getNotificationChannelDescriptor(
         com.google.monitoring.v3.GetNotificationChannelDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannelDescriptor>
@@ -924,13 +799,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the notification channels that have been created for the project.
-     * </pre>
-     */
+    /** */
     public void listNotificationChannels(
         com.google.monitoring.v3.ListNotificationChannelsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListNotificationChannelsResponse>
@@ -941,17 +810,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single notification channel. The channel includes the relevant
-     * configuration details with which the channel was created. However, the
-     * response may truncate or omit passwords, API keys, or other private key
-     * matter and thus the response may not be 100% identical to the information
-     * that was supplied in the call to the create method.
-     * </pre>
-     */
+    /** */
     public void getNotificationChannel(
         com.google.monitoring.v3.GetNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannel>
@@ -962,14 +821,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new notification channel, representing a single notification
-     * endpoint such as an email address, SMS number, or PagerDuty service.
-     * </pre>
-     */
+    /** */
     public void createNotificationChannel(
         com.google.monitoring.v3.CreateNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannel>
@@ -980,14 +832,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a notification channel. Fields not specified in the field mask
-     * remain unchanged.
-     * </pre>
-     */
+    /** */
     public void updateNotificationChannel(
         com.google.monitoring.v3.UpdateNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannel>
@@ -998,13 +843,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a notification channel.
-     * </pre>
-     */
+    /** */
     public void deleteNotificationChannel(
         com.google.monitoring.v3.DeleteNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1014,14 +853,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Causes a verification code to be delivered to the channel. The code
-     * can then be supplied in `VerifyNotificationChannel` to verify the channel.
-     * </pre>
-     */
+    /** */
     public void sendNotificationChannelVerificationCode(
         com.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1032,32 +864,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Requests a verification code for an already verified channel that can then
-     * be used in a call to VerifyNotificationChannel() on a different channel
-     * with an equivalent identity in the same or in a different project. This
-     * makes it possible to copy a channel between projects without requiring
-     * manual reverification of the channel. If the channel is not in the
-     * verified state, this method will fail (in other words, this may only be
-     * used if the SendNotificationChannelVerificationCode and
-     * VerifyNotificationChannel paths have already been used to put the given
-     * channel into the verified state).
-     * There is no guarantee that the verification codes returned by this method
-     * will be of a similar structure or form as the ones that are delivered
-     * to the channel via SendNotificationChannelVerificationCode; while
-     * VerifyNotificationChannel() will recognize both the codes delivered via
-     * SendNotificationChannelVerificationCode() and returned from
-     * GetNotificationChannelVerificationCode(), it is typically the case that
-     * the verification codes delivered via
-     * SendNotificationChannelVerificationCode() will be shorter and also
-     * have a shorter expiration (e.g. codes such as "G-123456") whereas
-     * GetVerificationCode() will typically return a much longer, websafe base
-     * 64 encoded string that has a longer expiration time.
-     * </pre>
-     */
+    /** */
     public void getNotificationChannelVerificationCode(
         com.google.monitoring.v3.GetNotificationChannelVerificationCodeRequest request,
         io.grpc.stub.StreamObserver<
@@ -1069,15 +876,7 @@ public final class NotificationChannelServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Verifies a `NotificationChannel` by proving receipt of the code
-     * delivered to the channel as a result of calling
-     * `SendNotificationChannelVerificationCode`.
-     * </pre>
-     */
+    /** */
     public void verifyNotificationChannel(
         com.google.monitoring.v3.VerifyNotificationChannelRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.NotificationChannel>
@@ -1089,14 +888,7 @@ public final class NotificationChannelServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Notification Channel API provides access to configuration that
-   * controls how messages related to incidents are sent.
-   * </pre>
-   */
+  /** */
   public static final class NotificationChannelServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<NotificationChannelServiceBlockingStub> {
     private NotificationChannelServiceBlockingStub(
@@ -1110,14 +902,7 @@ public final class NotificationChannelServiceGrpc {
       return new NotificationChannelServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the descriptors for supported channel types. The use of descriptors
-     * makes it possible for new channel types to be dynamically added.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListNotificationChannelDescriptorsResponse
         listNotificationChannelDescriptors(
             com.google.monitoring.v3.ListNotificationChannelDescriptorsRequest request) {
@@ -1125,99 +910,49 @@ public final class NotificationChannelServiceGrpc {
           getChannel(), getListNotificationChannelDescriptorsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single channel descriptor. The descriptor indicates which fields
-     * are expected / permitted for a notification channel of the given type.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.NotificationChannelDescriptor getNotificationChannelDescriptor(
         com.google.monitoring.v3.GetNotificationChannelDescriptorRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetNotificationChannelDescriptorMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the notification channels that have been created for the project.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListNotificationChannelsResponse listNotificationChannels(
         com.google.monitoring.v3.ListNotificationChannelsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListNotificationChannelsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single notification channel. The channel includes the relevant
-     * configuration details with which the channel was created. However, the
-     * response may truncate or omit passwords, API keys, or other private key
-     * matter and thus the response may not be 100% identical to the information
-     * that was supplied in the call to the create method.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.NotificationChannel getNotificationChannel(
         com.google.monitoring.v3.GetNotificationChannelRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetNotificationChannelMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new notification channel, representing a single notification
-     * endpoint such as an email address, SMS number, or PagerDuty service.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.NotificationChannel createNotificationChannel(
         com.google.monitoring.v3.CreateNotificationChannelRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateNotificationChannelMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a notification channel. Fields not specified in the field mask
-     * remain unchanged.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.NotificationChannel updateNotificationChannel(
         com.google.monitoring.v3.UpdateNotificationChannelRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateNotificationChannelMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a notification channel.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteNotificationChannel(
         com.google.monitoring.v3.DeleteNotificationChannelRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteNotificationChannelMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Causes a verification code to be delivered to the channel. The code
-     * can then be supplied in `VerifyNotificationChannel` to verify the channel.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty sendNotificationChannelVerificationCode(
         com.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest request) {
       return blockingUnaryCall(
@@ -1227,32 +962,7 @@ public final class NotificationChannelServiceGrpc {
           request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Requests a verification code for an already verified channel that can then
-     * be used in a call to VerifyNotificationChannel() on a different channel
-     * with an equivalent identity in the same or in a different project. This
-     * makes it possible to copy a channel between projects without requiring
-     * manual reverification of the channel. If the channel is not in the
-     * verified state, this method will fail (in other words, this may only be
-     * used if the SendNotificationChannelVerificationCode and
-     * VerifyNotificationChannel paths have already been used to put the given
-     * channel into the verified state).
-     * There is no guarantee that the verification codes returned by this method
-     * will be of a similar structure or form as the ones that are delivered
-     * to the channel via SendNotificationChannelVerificationCode; while
-     * VerifyNotificationChannel() will recognize both the codes delivered via
-     * SendNotificationChannelVerificationCode() and returned from
-     * GetNotificationChannelVerificationCode(), it is typically the case that
-     * the verification codes delivered via
-     * SendNotificationChannelVerificationCode() will be shorter and also
-     * have a shorter expiration (e.g. codes such as "G-123456") whereas
-     * GetVerificationCode() will typically return a much longer, websafe base
-     * 64 encoded string that has a longer expiration time.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.GetNotificationChannelVerificationCodeResponse
         getNotificationChannelVerificationCode(
             com.google.monitoring.v3.GetNotificationChannelVerificationCodeRequest request) {
@@ -1263,15 +973,7 @@ public final class NotificationChannelServiceGrpc {
           request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Verifies a `NotificationChannel` by proving receipt of the code
-     * delivered to the channel as a result of calling
-     * `SendNotificationChannelVerificationCode`.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.NotificationChannel verifyNotificationChannel(
         com.google.monitoring.v3.VerifyNotificationChannelRequest request) {
       return blockingUnaryCall(
@@ -1279,14 +981,7 @@ public final class NotificationChannelServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Notification Channel API provides access to configuration that
-   * controls how messages related to incidents are sent.
-   * </pre>
-   */
+  /** */
   public static final class NotificationChannelServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<NotificationChannelServiceFutureStub> {
     private NotificationChannelServiceFutureStub(
@@ -1300,14 +995,7 @@ public final class NotificationChannelServiceGrpc {
       return new NotificationChannelServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the descriptors for supported channel types. The use of descriptors
-     * makes it possible for new channel types to be dynamically added.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListNotificationChannelDescriptorsResponse>
         listNotificationChannelDescriptors(
@@ -1317,14 +1005,7 @@ public final class NotificationChannelServiceGrpc {
           request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single channel descriptor. The descriptor indicates which fields
-     * are expected / permitted for a notification channel of the given type.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.NotificationChannelDescriptor>
         getNotificationChannelDescriptor(
@@ -1334,13 +1015,7 @@ public final class NotificationChannelServiceGrpc {
           request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the notification channels that have been created for the project.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListNotificationChannelsResponse>
         listNotificationChannels(com.google.monitoring.v3.ListNotificationChannelsRequest request) {
@@ -1348,17 +1023,7 @@ public final class NotificationChannelServiceGrpc {
           getChannel().newCall(getListNotificationChannelsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single notification channel. The channel includes the relevant
-     * configuration details with which the channel was created. However, the
-     * response may truncate or omit passwords, API keys, or other private key
-     * matter and thus the response may not be 100% identical to the information
-     * that was supplied in the call to the create method.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.NotificationChannel>
         getNotificationChannel(com.google.monitoring.v3.GetNotificationChannelRequest request) {
@@ -1366,14 +1031,7 @@ public final class NotificationChannelServiceGrpc {
           getChannel().newCall(getGetNotificationChannelMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new notification channel, representing a single notification
-     * endpoint such as an email address, SMS number, or PagerDuty service.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.NotificationChannel>
         createNotificationChannel(
@@ -1382,14 +1040,7 @@ public final class NotificationChannelServiceGrpc {
           getChannel().newCall(getCreateNotificationChannelMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a notification channel. Fields not specified in the field mask
-     * remain unchanged.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.NotificationChannel>
         updateNotificationChannel(
@@ -1398,13 +1049,7 @@ public final class NotificationChannelServiceGrpc {
           getChannel().newCall(getUpdateNotificationChannelMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a notification channel.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteNotificationChannel(
             com.google.monitoring.v3.DeleteNotificationChannelRequest request) {
@@ -1412,14 +1057,7 @@ public final class NotificationChannelServiceGrpc {
           getChannel().newCall(getDeleteNotificationChannelMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Causes a verification code to be delivered to the channel. The code
-     * can then be supplied in `VerifyNotificationChannel` to verify the channel.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         sendNotificationChannelVerificationCode(
             com.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest request) {
@@ -1429,32 +1067,7 @@ public final class NotificationChannelServiceGrpc {
           request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Requests a verification code for an already verified channel that can then
-     * be used in a call to VerifyNotificationChannel() on a different channel
-     * with an equivalent identity in the same or in a different project. This
-     * makes it possible to copy a channel between projects without requiring
-     * manual reverification of the channel. If the channel is not in the
-     * verified state, this method will fail (in other words, this may only be
-     * used if the SendNotificationChannelVerificationCode and
-     * VerifyNotificationChannel paths have already been used to put the given
-     * channel into the verified state).
-     * There is no guarantee that the verification codes returned by this method
-     * will be of a similar structure or form as the ones that are delivered
-     * to the channel via SendNotificationChannelVerificationCode; while
-     * VerifyNotificationChannel() will recognize both the codes delivered via
-     * SendNotificationChannelVerificationCode() and returned from
-     * GetNotificationChannelVerificationCode(), it is typically the case that
-     * the verification codes delivered via
-     * SendNotificationChannelVerificationCode() will be shorter and also
-     * have a shorter expiration (e.g. codes such as "G-123456") whereas
-     * GetVerificationCode() will typically return a much longer, websafe base
-     * 64 encoded string that has a longer expiration time.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.GetNotificationChannelVerificationCodeResponse>
         getNotificationChannelVerificationCode(
@@ -1464,15 +1077,7 @@ public final class NotificationChannelServiceGrpc {
           request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Verifies a `NotificationChannel` by proving receipt of the code
-     * delivered to the channel as a result of calling
-     * `SendNotificationChannelVerificationCode`.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.NotificationChannel>
         verifyNotificationChannel(
