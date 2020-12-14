@@ -46,7 +46,6 @@ import com.google.monitoring.v3.UptimeCheckIp;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -178,7 +177,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
   public final ListUptimeCheckConfigsPagedResponse listUptimeCheckConfigs(FolderName parent) {
     ListUptimeCheckConfigsRequest request =
         ListUptimeCheckConfigsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listUptimeCheckConfigs(request);
   }
@@ -196,7 +195,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
   public final ListUptimeCheckConfigsPagedResponse listUptimeCheckConfigs(OrganizationName parent) {
     ListUptimeCheckConfigsRequest request =
         ListUptimeCheckConfigsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listUptimeCheckConfigs(request);
   }
@@ -214,7 +213,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
   public final ListUptimeCheckConfigsPagedResponse listUptimeCheckConfigs(ProjectName parent) {
     ListUptimeCheckConfigsRequest request =
         ListUptimeCheckConfigsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listUptimeCheckConfigs(request);
   }
@@ -283,7 +282,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
   public final UptimeCheckConfig getUptimeCheckConfig(UptimeCheckConfigName name) {
     GetUptimeCheckConfigRequest request =
         GetUptimeCheckConfigRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getUptimeCheckConfig(request);
   }
@@ -337,7 +336,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
       FolderName parent, UptimeCheckConfig uptimeCheckConfig) {
     CreateUptimeCheckConfigRequest request =
         CreateUptimeCheckConfigRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setUptimeCheckConfig(uptimeCheckConfig)
             .build();
     return createUptimeCheckConfig(request);
@@ -356,7 +355,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
       OrganizationName parent, UptimeCheckConfig uptimeCheckConfig) {
     CreateUptimeCheckConfigRequest request =
         CreateUptimeCheckConfigRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setUptimeCheckConfig(uptimeCheckConfig)
             .build();
     return createUptimeCheckConfig(request);
@@ -375,7 +374,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
       ProjectName parent, UptimeCheckConfig uptimeCheckConfig) {
     CreateUptimeCheckConfigRequest request =
         CreateUptimeCheckConfigRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setUptimeCheckConfig(uptimeCheckConfig)
             .build();
     return createUptimeCheckConfig(request);
@@ -483,7 +482,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
   public final void deleteUptimeCheckConfig(UptimeCheckConfigName name) {
     DeleteUptimeCheckConfigRequest request =
         DeleteUptimeCheckConfigRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteUptimeCheckConfig(request);
   }

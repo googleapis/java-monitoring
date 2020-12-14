@@ -52,7 +52,6 @@ import com.google.monitoring.v3.TimeSeries;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -177,7 +176,7 @@ public class MetricServiceClient implements BackgroundResource {
       FolderName name) {
     ListMonitoredResourceDescriptorsRequest request =
         ListMonitoredResourceDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listMonitoredResourceDescriptors(request);
   }
@@ -195,7 +194,7 @@ public class MetricServiceClient implements BackgroundResource {
       OrganizationName name) {
     ListMonitoredResourceDescriptorsRequest request =
         ListMonitoredResourceDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listMonitoredResourceDescriptors(request);
   }
@@ -213,7 +212,7 @@ public class MetricServiceClient implements BackgroundResource {
       ProjectName name) {
     ListMonitoredResourceDescriptorsRequest request =
         ListMonitoredResourceDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listMonitoredResourceDescriptors(request);
   }
@@ -286,7 +285,7 @@ public class MetricServiceClient implements BackgroundResource {
       MonitoredResourceDescriptorName name) {
     GetMonitoredResourceDescriptorRequest request =
         GetMonitoredResourceDescriptorRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getMonitoredResourceDescriptor(request);
   }
@@ -340,7 +339,7 @@ public class MetricServiceClient implements BackgroundResource {
   public final ListMetricDescriptorsPagedResponse listMetricDescriptors(FolderName name) {
     ListMetricDescriptorsRequest request =
         ListMetricDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listMetricDescriptors(request);
   }
@@ -356,7 +355,7 @@ public class MetricServiceClient implements BackgroundResource {
   public final ListMetricDescriptorsPagedResponse listMetricDescriptors(OrganizationName name) {
     ListMetricDescriptorsRequest request =
         ListMetricDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listMetricDescriptors(request);
   }
@@ -372,7 +371,7 @@ public class MetricServiceClient implements BackgroundResource {
   public final ListMetricDescriptorsPagedResponse listMetricDescriptors(ProjectName name) {
     ListMetricDescriptorsRequest request =
         ListMetricDescriptorsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return listMetricDescriptors(request);
   }
@@ -438,7 +437,7 @@ public class MetricServiceClient implements BackgroundResource {
   public final MetricDescriptor getMetricDescriptor(MetricDescriptorName name) {
     GetMetricDescriptorRequest request =
         GetMetricDescriptorRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getMetricDescriptor(request);
   }
@@ -496,7 +495,7 @@ public class MetricServiceClient implements BackgroundResource {
       FolderName name, MetricDescriptor metricDescriptor) {
     CreateMetricDescriptorRequest request =
         CreateMetricDescriptorRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setMetricDescriptor(metricDescriptor)
             .build();
     return createMetricDescriptor(request);
@@ -517,7 +516,7 @@ public class MetricServiceClient implements BackgroundResource {
       OrganizationName name, MetricDescriptor metricDescriptor) {
     CreateMetricDescriptorRequest request =
         CreateMetricDescriptorRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setMetricDescriptor(metricDescriptor)
             .build();
     return createMetricDescriptor(request);
@@ -538,7 +537,7 @@ public class MetricServiceClient implements BackgroundResource {
       ProjectName name, MetricDescriptor metricDescriptor) {
     CreateMetricDescriptorRequest request =
         CreateMetricDescriptorRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setMetricDescriptor(metricDescriptor)
             .build();
     return createMetricDescriptor(request);
@@ -602,7 +601,7 @@ public class MetricServiceClient implements BackgroundResource {
   public final void deleteMetricDescriptor(MetricDescriptorName name) {
     DeleteMetricDescriptorRequest request =
         DeleteMetricDescriptorRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteMetricDescriptor(request);
   }
@@ -671,7 +670,7 @@ public class MetricServiceClient implements BackgroundResource {
       ListTimeSeriesRequest.TimeSeriesView view) {
     ListTimeSeriesRequest request =
         ListTimeSeriesRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setFilter(filter)
             .setInterval(interval)
             .setView(view)
@@ -762,7 +761,7 @@ public class MetricServiceClient implements BackgroundResource {
   public final void createTimeSeries(ProjectName name, List<TimeSeries> timeSeries) {
     CreateTimeSeriesRequest request =
         CreateTimeSeriesRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .addAllTimeSeries(timeSeries)
             .build();
     createTimeSeries(request);

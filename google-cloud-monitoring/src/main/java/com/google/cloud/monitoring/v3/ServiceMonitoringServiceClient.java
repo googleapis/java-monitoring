@@ -51,7 +51,6 @@ import com.google.monitoring.v3.UpdateServiceRequest;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -181,7 +180,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   public final Service createService(FolderName parent, Service service) {
     CreateServiceRequest request =
         CreateServiceRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setService(service)
             .build();
     return createService(request);
@@ -199,7 +198,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   public final Service createService(OrganizationName parent, Service service) {
     CreateServiceRequest request =
         CreateServiceRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setService(service)
             .build();
     return createService(request);
@@ -217,7 +216,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   public final Service createService(ProjectName parent, Service service) {
     CreateServiceRequest request =
         CreateServiceRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setService(service)
             .build();
     return createService(request);
@@ -269,9 +268,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
    */
   public final Service getService(ServiceName name) {
     GetServiceRequest request =
-        GetServiceRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetServiceRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getService(request);
   }
 
@@ -321,7 +318,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   public final ListServicesPagedResponse listServices(FolderName parent) {
     ListServicesRequest request =
         ListServicesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listServices(request);
   }
@@ -338,7 +335,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   public final ListServicesPagedResponse listServices(OrganizationName parent) {
     ListServicesRequest request =
         ListServicesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listServices(request);
   }
@@ -355,7 +352,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   public final ListServicesPagedResponse listServices(ProjectName parent) {
     ListServicesRequest request =
         ListServicesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listServices(request);
   }
@@ -450,9 +447,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
    */
   public final void deleteService(ServiceName name) {
     DeleteServiceRequest request =
-        DeleteServiceRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteServiceRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     deleteService(request);
   }
 
@@ -504,7 +499,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
       ServiceName parent, ServiceLevelObjective serviceLevelObjective) {
     CreateServiceLevelObjectiveRequest request =
         CreateServiceLevelObjectiveRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setServiceLevelObjective(serviceLevelObjective)
             .build();
     return createServiceLevelObjective(request);
@@ -564,7 +559,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   public final ServiceLevelObjective getServiceLevelObjective(ServiceLevelObjectiveName name) {
     GetServiceLevelObjectiveRequest request =
         GetServiceLevelObjectiveRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getServiceLevelObjective(request);
   }
@@ -620,7 +615,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
       ServiceName parent) {
     ListServiceLevelObjectivesRequest request =
         ListServiceLevelObjectivesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listServiceLevelObjectives(request);
   }
@@ -727,7 +722,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
   public final void deleteServiceLevelObjective(ServiceLevelObjectiveName name) {
     DeleteServiceLevelObjectiveRequest request =
         DeleteServiceLevelObjectiveRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteServiceLevelObjective(request);
   }

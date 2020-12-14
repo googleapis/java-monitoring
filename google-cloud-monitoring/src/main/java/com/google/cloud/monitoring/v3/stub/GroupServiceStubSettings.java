@@ -58,7 +58,6 @@ import com.google.monitoring.v3.UpdateGroupRequest;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -145,7 +144,7 @@ public class GroupServiceStubSettings extends StubSettings<GroupServiceStubSetti
 
             @Override
             public Iterable<Group> extractResources(ListGroupsResponse payload) {
-              return Objects.isNull(payload.getGroupList())
+              return payload.getGroupList() == null
                   ? ImmutableList.<Group>of()
                   : payload.getGroupList();
             }
@@ -185,7 +184,7 @@ public class GroupServiceStubSettings extends StubSettings<GroupServiceStubSetti
 
             @Override
             public Iterable<MonitoredResource> extractResources(ListGroupMembersResponse payload) {
-              return Objects.isNull(payload.getMembersList())
+              return payload.getMembersList() == null
                   ? ImmutableList.<MonitoredResource>of()
                   : payload.getMembersList();
             }

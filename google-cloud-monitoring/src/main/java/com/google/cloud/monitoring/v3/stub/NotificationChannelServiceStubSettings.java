@@ -63,7 +63,6 @@ import com.google.monitoring.v3.VerifyNotificationChannelRequest;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -185,7 +184,7 @@ public class NotificationChannelServiceStubSettings
             @Override
             public Iterable<NotificationChannelDescriptor> extractResources(
                 ListNotificationChannelDescriptorsResponse payload) {
-              return Objects.isNull(payload.getChannelDescriptorsList())
+              return payload.getChannelDescriptorsList() == null
                   ? ImmutableList.<NotificationChannelDescriptor>of()
                   : payload.getChannelDescriptorsList();
             }
@@ -232,7 +231,7 @@ public class NotificationChannelServiceStubSettings
             @Override
             public Iterable<NotificationChannel> extractResources(
                 ListNotificationChannelsResponse payload) {
-              return Objects.isNull(payload.getNotificationChannelsList())
+              return payload.getNotificationChannelsList() == null
                   ? ImmutableList.<NotificationChannel>of()
                   : payload.getNotificationChannelsList();
             }

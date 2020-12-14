@@ -46,7 +46,6 @@ import com.google.monitoring.v3.UpdateGroupRequest;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -174,9 +173,7 @@ public class GroupServiceClient implements BackgroundResource {
    */
   public final ListGroupsPagedResponse listGroups(FolderName name) {
     ListGroupsRequest request =
-        ListGroupsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        ListGroupsRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return listGroups(request);
   }
 
@@ -190,9 +187,7 @@ public class GroupServiceClient implements BackgroundResource {
    */
   public final ListGroupsPagedResponse listGroups(OrganizationName name) {
     ListGroupsRequest request =
-        ListGroupsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        ListGroupsRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return listGroups(request);
   }
 
@@ -206,9 +201,7 @@ public class GroupServiceClient implements BackgroundResource {
    */
   public final ListGroupsPagedResponse listGroups(ProjectName name) {
     ListGroupsRequest request =
-        ListGroupsRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        ListGroupsRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return listGroups(request);
   }
 
@@ -266,7 +259,7 @@ public class GroupServiceClient implements BackgroundResource {
    */
   public final Group getGroup(GroupName name) {
     GetGroupRequest request =
-        GetGroupRequest.newBuilder().setName(Objects.isNull(name) ? null : name.toString()).build();
+        GetGroupRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getGroup(request);
   }
 
@@ -317,7 +310,7 @@ public class GroupServiceClient implements BackgroundResource {
   public final Group createGroup(FolderName name, Group group) {
     CreateGroupRequest request =
         CreateGroupRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setGroup(group)
             .build();
     return createGroup(request);
@@ -336,7 +329,7 @@ public class GroupServiceClient implements BackgroundResource {
   public final Group createGroup(OrganizationName name, Group group) {
     CreateGroupRequest request =
         CreateGroupRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setGroup(group)
             .build();
     return createGroup(request);
@@ -355,7 +348,7 @@ public class GroupServiceClient implements BackgroundResource {
   public final Group createGroup(ProjectName name, Group group) {
     CreateGroupRequest request =
         CreateGroupRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setGroup(group)
             .build();
     return createGroup(request);
@@ -442,9 +435,7 @@ public class GroupServiceClient implements BackgroundResource {
    */
   public final void deleteGroup(GroupName name) {
     DeleteGroupRequest request =
-        DeleteGroupRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteGroupRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     deleteGroup(request);
   }
 
@@ -492,9 +483,7 @@ public class GroupServiceClient implements BackgroundResource {
    */
   public final ListGroupMembersPagedResponse listGroupMembers(GroupName name) {
     ListGroupMembersRequest request =
-        ListGroupMembersRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        ListGroupMembersRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return listGroupMembers(request);
   }
 
