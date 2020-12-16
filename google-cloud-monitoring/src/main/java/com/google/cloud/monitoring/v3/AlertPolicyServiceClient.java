@@ -33,7 +33,7 @@ import com.google.monitoring.v3.AlertPolicy;
 import com.google.monitoring.v3.AlertPolicyName;
 import com.google.monitoring.v3.CreateAlertPolicyRequest;
 import com.google.monitoring.v3.DeleteAlertPolicyRequest;
-import com.google.monitoring.v3.FolderName;
+import com.google.api.resourcenames.ResourceName;
 import com.google.monitoring.v3.GetAlertPolicyRequest;
 import com.google.monitoring.v3.ListAlertPoliciesRequest;
 import com.google.monitoring.v3.ListAlertPoliciesResponse;
@@ -174,7 +174,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    *     instead.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final ListAlertPoliciesPagedResponse listAlertPolicies(FolderName name) {
+  public final ListAlertPoliciesPagedResponse listAlertPolicies(ResourceName name) {
     ListAlertPoliciesRequest request =
         ListAlertPoliciesRequest.newBuilder()
             .setName(name == null ? null : name.toString())
@@ -335,7 +335,7 @@ public class AlertPolicyServiceClient implements BackgroundResource {
    *     `[ALERT_POLICY_ID]` value.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final AlertPolicy createAlertPolicy(FolderName name, AlertPolicy alertPolicy) {
+  public final AlertPolicy createAlertPolicy(ResourceName name, AlertPolicy alertPolicy) {
     CreateAlertPolicyRequest request =
         CreateAlertPolicyRequest.newBuilder()
             .setName(name == null ? null : name.toString())

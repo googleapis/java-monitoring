@@ -31,7 +31,7 @@ import com.google.cloud.monitoring.v3.stub.NotificationChannelServiceStubSetting
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.monitoring.v3.CreateNotificationChannelRequest;
 import com.google.monitoring.v3.DeleteNotificationChannelRequest;
-import com.google.monitoring.v3.FolderName;
+import com.google.api.resourcenames.ResourceName;
 import com.google.monitoring.v3.GetNotificationChannelDescriptorRequest;
 import com.google.monitoring.v3.GetNotificationChannelRequest;
 import com.google.monitoring.v3.GetNotificationChannelVerificationCodeRequest;
@@ -184,7 +184,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListNotificationChannelDescriptorsPagedResponse listNotificationChannelDescriptors(
-      FolderName name) {
+      ResourceName name) {
     ListNotificationChannelDescriptorsRequest request =
         ListNotificationChannelDescriptorsRequest.newBuilder()
             .setName(name == null ? null : name.toString())
@@ -369,7 +369,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
    *     operation.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final ListNotificationChannelsPagedResponse listNotificationChannels(FolderName name) {
+  public final ListNotificationChannelsPagedResponse listNotificationChannels(ResourceName name) {
     ListNotificationChannelsRequest request =
         ListNotificationChannelsRequest.newBuilder()
             .setName(name == null ? null : name.toString())
@@ -549,7 +549,7 @@ public class NotificationChannelServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final NotificationChannel createNotificationChannel(
-      FolderName name, NotificationChannel notificationChannel) {
+      ResourceName name, NotificationChannel notificationChannel) {
     CreateNotificationChannelRequest request =
         CreateNotificationChannelRequest.newBuilder()
             .setName(name == null ? null : name.toString())

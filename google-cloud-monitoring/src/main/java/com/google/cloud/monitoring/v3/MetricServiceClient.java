@@ -34,7 +34,7 @@ import com.google.common.util.concurrent.MoreExecutors;
 import com.google.monitoring.v3.CreateMetricDescriptorRequest;
 import com.google.monitoring.v3.CreateTimeSeriesRequest;
 import com.google.monitoring.v3.DeleteMetricDescriptorRequest;
-import com.google.monitoring.v3.FolderName;
+import com.google.api.resourcenames.ResourceName;
 import com.google.monitoring.v3.GetMetricDescriptorRequest;
 import com.google.monitoring.v3.GetMonitoredResourceDescriptorRequest;
 import com.google.monitoring.v3.ListMetricDescriptorsRequest;
@@ -173,7 +173,7 @@ public class MetricServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListMonitoredResourceDescriptorsPagedResponse listMonitoredResourceDescriptors(
-      FolderName name) {
+      ResourceName name) {
     ListMonitoredResourceDescriptorsRequest request =
         ListMonitoredResourceDescriptorsRequest.newBuilder()
             .setName(name == null ? null : name.toString())
@@ -336,7 +336,7 @@ public class MetricServiceClient implements BackgroundResource {
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final ListMetricDescriptorsPagedResponse listMetricDescriptors(FolderName name) {
+  public final ListMetricDescriptorsPagedResponse listMetricDescriptors(ResourceName name) {
     ListMetricDescriptorsRequest request =
         ListMetricDescriptorsRequest.newBuilder()
             .setName(name == null ? null : name.toString())
@@ -492,7 +492,7 @@ public class MetricServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MetricDescriptor createMetricDescriptor(
-      FolderName name, MetricDescriptor metricDescriptor) {
+      ResourceName name, MetricDescriptor metricDescriptor) {
     CreateMetricDescriptorRequest request =
         CreateMetricDescriptorRequest.newBuilder()
             .setName(name == null ? null : name.toString())

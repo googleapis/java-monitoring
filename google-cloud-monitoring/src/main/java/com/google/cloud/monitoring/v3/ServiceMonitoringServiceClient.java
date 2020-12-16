@@ -33,7 +33,7 @@ import com.google.monitoring.v3.CreateServiceLevelObjectiveRequest;
 import com.google.monitoring.v3.CreateServiceRequest;
 import com.google.monitoring.v3.DeleteServiceLevelObjectiveRequest;
 import com.google.monitoring.v3.DeleteServiceRequest;
-import com.google.monitoring.v3.FolderName;
+import com.google.api.resourcenames.ResourceName;
 import com.google.monitoring.v3.GetServiceLevelObjectiveRequest;
 import com.google.monitoring.v3.GetServiceRequest;
 import com.google.monitoring.v3.ListServiceLevelObjectivesRequest;
@@ -177,7 +177,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
    * @param service Required. The `Service` to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final Service createService(FolderName parent, Service service) {
+  public final Service createService(ResourceName parent, Service service) {
     CreateServiceRequest request =
         CreateServiceRequest.newBuilder()
             .setParent(parent == null ? null : parent.toString())
@@ -315,7 +315,7 @@ public class ServiceMonitoringServiceClient implements BackgroundResource {
    *     <p>projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final ListServicesPagedResponse listServices(FolderName parent) {
+  public final ListServicesPagedResponse listServices(ResourceName parent) {
     ListServicesRequest request =
         ListServicesRequest.newBuilder()
             .setParent(parent == null ? null : parent.toString())

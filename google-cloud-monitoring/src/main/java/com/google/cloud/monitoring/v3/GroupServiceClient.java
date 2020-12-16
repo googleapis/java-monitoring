@@ -32,7 +32,7 @@ import com.google.cloud.monitoring.v3.stub.GroupServiceStubSettings;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.monitoring.v3.CreateGroupRequest;
 import com.google.monitoring.v3.DeleteGroupRequest;
-import com.google.monitoring.v3.FolderName;
+import com.google.api.resourcenames.ResourceName;
 import com.google.monitoring.v3.GetGroupRequest;
 import com.google.monitoring.v3.Group;
 import com.google.monitoring.v3.GroupName;
@@ -171,7 +171,7 @@ public class GroupServiceClient implements BackgroundResource {
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final ListGroupsPagedResponse listGroups(FolderName name) {
+  public final ListGroupsPagedResponse listGroups(ResourceName name) {
     ListGroupsRequest request =
         ListGroupsRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return listGroups(request);
@@ -307,7 +307,7 @@ public class GroupServiceClient implements BackgroundResource {
    *     the system assigns the name.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final Group createGroup(FolderName name, Group group) {
+  public final Group createGroup(ResourceName name, Group group) {
     CreateGroupRequest request =
         CreateGroupRequest.newBuilder()
             .setName(name == null ? null : name.toString())

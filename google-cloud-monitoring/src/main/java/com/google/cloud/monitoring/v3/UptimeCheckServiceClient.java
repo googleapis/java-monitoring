@@ -31,7 +31,7 @@ import com.google.cloud.monitoring.v3.stub.UptimeCheckServiceStubSettings;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.monitoring.v3.CreateUptimeCheckConfigRequest;
 import com.google.monitoring.v3.DeleteUptimeCheckConfigRequest;
-import com.google.monitoring.v3.FolderName;
+import com.google.api.resourcenames.ResourceName;
 import com.google.monitoring.v3.GetUptimeCheckConfigRequest;
 import com.google.monitoring.v3.ListUptimeCheckConfigsRequest;
 import com.google.monitoring.v3.ListUptimeCheckConfigsResponse;
@@ -174,7 +174,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final ListUptimeCheckConfigsPagedResponse listUptimeCheckConfigs(FolderName parent) {
+  public final ListUptimeCheckConfigsPagedResponse listUptimeCheckConfigs(ResourceName parent) {
     ListUptimeCheckConfigsRequest request =
         ListUptimeCheckConfigsRequest.newBuilder()
             .setParent(parent == null ? null : parent.toString())
@@ -333,7 +333,7 @@ public class UptimeCheckServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UptimeCheckConfig createUptimeCheckConfig(
-      FolderName parent, UptimeCheckConfig uptimeCheckConfig) {
+      ResourceName parent, UptimeCheckConfig uptimeCheckConfig) {
     CreateUptimeCheckConfigRequest request =
         CreateUptimeCheckConfigRequest.newBuilder()
             .setParent(parent == null ? null : parent.toString())
