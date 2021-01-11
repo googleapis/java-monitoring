@@ -286,7 +286,7 @@ public class UptimeCheckServiceClientTest {
                 UptimeCheckConfigName.ofProjectUptimeCheckConfigName(
                         "[PROJECT]", "[UPTIME_CHECK_CONFIG]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setPeriod(Duration.newBuilder().build())
             .setTimeout(Duration.newBuilder().build())
             .addAllContentMatchers(new ArrayList<UptimeCheckConfig.ContentMatcher>())
@@ -338,7 +338,7 @@ public class UptimeCheckServiceClientTest {
                 UptimeCheckConfigName.ofProjectUptimeCheckConfigName(
                         "[PROJECT]", "[UPTIME_CHECK_CONFIG]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setPeriod(Duration.newBuilder().build())
             .setTimeout(Duration.newBuilder().build())
             .addAllContentMatchers(new ArrayList<UptimeCheckConfig.ContentMatcher>())
@@ -387,7 +387,7 @@ public class UptimeCheckServiceClientTest {
                 UptimeCheckConfigName.ofProjectUptimeCheckConfigName(
                         "[PROJECT]", "[UPTIME_CHECK_CONFIG]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setPeriod(Duration.newBuilder().build())
             .setTimeout(Duration.newBuilder().build())
             .addAllContentMatchers(new ArrayList<UptimeCheckConfig.ContentMatcher>())
@@ -439,7 +439,7 @@ public class UptimeCheckServiceClientTest {
                 UptimeCheckConfigName.ofProjectUptimeCheckConfigName(
                         "[PROJECT]", "[UPTIME_CHECK_CONFIG]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setPeriod(Duration.newBuilder().build())
             .setTimeout(Duration.newBuilder().build())
             .addAllContentMatchers(new ArrayList<UptimeCheckConfig.ContentMatcher>())
@@ -491,7 +491,7 @@ public class UptimeCheckServiceClientTest {
                 UptimeCheckConfigName.ofProjectUptimeCheckConfigName(
                         "[PROJECT]", "[UPTIME_CHECK_CONFIG]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setPeriod(Duration.newBuilder().build())
             .setTimeout(Duration.newBuilder().build())
             .addAllContentMatchers(new ArrayList<UptimeCheckConfig.ContentMatcher>())
@@ -543,7 +543,7 @@ public class UptimeCheckServiceClientTest {
                 UptimeCheckConfigName.ofProjectUptimeCheckConfigName(
                         "[PROJECT]", "[UPTIME_CHECK_CONFIG]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setPeriod(Duration.newBuilder().build())
             .setTimeout(Duration.newBuilder().build())
             .addAllContentMatchers(new ArrayList<UptimeCheckConfig.ContentMatcher>())
@@ -595,7 +595,7 @@ public class UptimeCheckServiceClientTest {
                 UptimeCheckConfigName.ofProjectUptimeCheckConfigName(
                         "[PROJECT]", "[UPTIME_CHECK_CONFIG]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setPeriod(Duration.newBuilder().build())
             .setTimeout(Duration.newBuilder().build())
             .addAllContentMatchers(new ArrayList<UptimeCheckConfig.ContentMatcher>())
@@ -722,7 +722,7 @@ public class UptimeCheckServiceClientTest {
     ListUptimeCheckIpsRequest request =
         ListUptimeCheckIpsRequest.newBuilder()
             .setPageSize(883849137)
-            .setPageToken("page_token1630607433")
+            .setPageToken("pageToken873572522")
             .build();
 
     ListUptimeCheckIpsPagedResponse pagedListResponse = client.listUptimeCheckIps(request);
@@ -753,7 +753,7 @@ public class UptimeCheckServiceClientTest {
       ListUptimeCheckIpsRequest request =
           ListUptimeCheckIpsRequest.newBuilder()
               .setPageSize(883849137)
-              .setPageToken("page_token1630607433")
+              .setPageToken("pageToken873572522")
               .build();
       client.listUptimeCheckIps(request);
       Assert.fail("No exception raised");
