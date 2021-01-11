@@ -22,7 +22,16 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
+ * managing and querying aspects of a workspace's services. These include the
+ * `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
+ * of categorized Health Metrics.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/monitoring/v3/service_service.proto")
@@ -547,24 +556,51 @@ public final class ServiceMonitoringServiceGrpc {
     return ServiceMonitoringServiceFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
+   * managing and querying aspects of a workspace's services. These include the
+   * `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
+   * of categorized Health Metrics.
+   * </pre>
+   */
   public abstract static class ServiceMonitoringServiceImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Create a `Service`.
+     * </pre>
+     */
     public void createService(
         com.google.monitoring.v3.CreateServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Service> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateServiceMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Get the named `Service`.
+     * </pre>
+     */
     public void getService(
         com.google.monitoring.v3.GetServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Service> responseObserver) {
       asyncUnimplementedUnaryCall(getGetServiceMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * List `Service`s for this workspace.
+     * </pre>
+     */
     public void listServices(
         com.google.monitoring.v3.ListServicesRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListServicesResponse>
@@ -572,21 +608,39 @@ public final class ServiceMonitoringServiceGrpc {
       asyncUnimplementedUnaryCall(getListServicesMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Update this `Service`.
+     * </pre>
+     */
     public void updateService(
         com.google.monitoring.v3.UpdateServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Service> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateServiceMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Soft delete this `Service`.
+     * </pre>
+     */
     public void deleteService(
         com.google.monitoring.v3.DeleteServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteServiceMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Create a `ServiceLevelObjective` for the given `Service`.
+     * </pre>
+     */
     public void createServiceLevelObjective(
         com.google.monitoring.v3.CreateServiceLevelObjectiveRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ServiceLevelObjective>
@@ -594,7 +648,13 @@ public final class ServiceMonitoringServiceGrpc {
       asyncUnimplementedUnaryCall(getCreateServiceLevelObjectiveMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Get a `ServiceLevelObjective` by name.
+     * </pre>
+     */
     public void getServiceLevelObjective(
         com.google.monitoring.v3.GetServiceLevelObjectiveRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ServiceLevelObjective>
@@ -602,7 +662,13 @@ public final class ServiceMonitoringServiceGrpc {
       asyncUnimplementedUnaryCall(getGetServiceLevelObjectiveMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * List the `ServiceLevelObjective`s for the given `Service`.
+     * </pre>
+     */
     public void listServiceLevelObjectives(
         com.google.monitoring.v3.ListServiceLevelObjectivesRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListServiceLevelObjectivesResponse>
@@ -610,7 +676,13 @@ public final class ServiceMonitoringServiceGrpc {
       asyncUnimplementedUnaryCall(getListServiceLevelObjectivesMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Update the given `ServiceLevelObjective`.
+     * </pre>
+     */
     public void updateServiceLevelObjective(
         com.google.monitoring.v3.UpdateServiceLevelObjectiveRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ServiceLevelObjective>
@@ -618,7 +690,13 @@ public final class ServiceMonitoringServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateServiceLevelObjectiveMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Delete the given `ServiceLevelObjective`.
+     * </pre>
+     */
     public void deleteServiceLevelObjective(
         com.google.monitoring.v3.DeleteServiceLevelObjectiveRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -696,7 +774,16 @@ public final class ServiceMonitoringServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
+   * managing and querying aspects of a workspace's services. These include the
+   * `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
+   * of categorized Health Metrics.
+   * </pre>
+   */
   public static final class ServiceMonitoringServiceStub
       extends io.grpc.stub.AbstractAsyncStub<ServiceMonitoringServiceStub> {
     private ServiceMonitoringServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -709,7 +796,13 @@ public final class ServiceMonitoringServiceGrpc {
       return new ServiceMonitoringServiceStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Create a `Service`.
+     * </pre>
+     */
     public void createService(
         com.google.monitoring.v3.CreateServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Service> responseObserver) {
@@ -719,7 +812,13 @@ public final class ServiceMonitoringServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Get the named `Service`.
+     * </pre>
+     */
     public void getService(
         com.google.monitoring.v3.GetServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Service> responseObserver) {
@@ -727,7 +826,13 @@ public final class ServiceMonitoringServiceGrpc {
           getChannel().newCall(getGetServiceMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * List `Service`s for this workspace.
+     * </pre>
+     */
     public void listServices(
         com.google.monitoring.v3.ListServicesRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListServicesResponse>
@@ -738,7 +843,13 @@ public final class ServiceMonitoringServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Update this `Service`.
+     * </pre>
+     */
     public void updateService(
         com.google.monitoring.v3.UpdateServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Service> responseObserver) {
@@ -748,7 +859,13 @@ public final class ServiceMonitoringServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Soft delete this `Service`.
+     * </pre>
+     */
     public void deleteService(
         com.google.monitoring.v3.DeleteServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -758,7 +875,13 @@ public final class ServiceMonitoringServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Create a `ServiceLevelObjective` for the given `Service`.
+     * </pre>
+     */
     public void createServiceLevelObjective(
         com.google.monitoring.v3.CreateServiceLevelObjectiveRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ServiceLevelObjective>
@@ -769,7 +892,13 @@ public final class ServiceMonitoringServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Get a `ServiceLevelObjective` by name.
+     * </pre>
+     */
     public void getServiceLevelObjective(
         com.google.monitoring.v3.GetServiceLevelObjectiveRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ServiceLevelObjective>
@@ -780,7 +909,13 @@ public final class ServiceMonitoringServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * List the `ServiceLevelObjective`s for the given `Service`.
+     * </pre>
+     */
     public void listServiceLevelObjectives(
         com.google.monitoring.v3.ListServiceLevelObjectivesRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListServiceLevelObjectivesResponse>
@@ -791,7 +926,13 @@ public final class ServiceMonitoringServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Update the given `ServiceLevelObjective`.
+     * </pre>
+     */
     public void updateServiceLevelObjective(
         com.google.monitoring.v3.UpdateServiceLevelObjectiveRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ServiceLevelObjective>
@@ -802,7 +943,13 @@ public final class ServiceMonitoringServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Delete the given `ServiceLevelObjective`.
+     * </pre>
+     */
     public void deleteServiceLevelObjective(
         com.google.monitoring.v3.DeleteServiceLevelObjectiveRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -813,7 +960,16 @@ public final class ServiceMonitoringServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
+   * managing and querying aspects of a workspace's services. These include the
+   * `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
+   * of categorized Health Metrics.
+   * </pre>
+   */
   public static final class ServiceMonitoringServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ServiceMonitoringServiceBlockingStub> {
     private ServiceMonitoringServiceBlockingStub(
@@ -827,65 +983,125 @@ public final class ServiceMonitoringServiceGrpc {
       return new ServiceMonitoringServiceBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Create a `Service`.
+     * </pre>
+     */
     public com.google.monitoring.v3.Service createService(
         com.google.monitoring.v3.CreateServiceRequest request) {
       return blockingUnaryCall(getChannel(), getCreateServiceMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Get the named `Service`.
+     * </pre>
+     */
     public com.google.monitoring.v3.Service getService(
         com.google.monitoring.v3.GetServiceRequest request) {
       return blockingUnaryCall(getChannel(), getGetServiceMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * List `Service`s for this workspace.
+     * </pre>
+     */
     public com.google.monitoring.v3.ListServicesResponse listServices(
         com.google.monitoring.v3.ListServicesRequest request) {
       return blockingUnaryCall(getChannel(), getListServicesMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Update this `Service`.
+     * </pre>
+     */
     public com.google.monitoring.v3.Service updateService(
         com.google.monitoring.v3.UpdateServiceRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateServiceMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Soft delete this `Service`.
+     * </pre>
+     */
     public com.google.protobuf.Empty deleteService(
         com.google.monitoring.v3.DeleteServiceRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteServiceMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Create a `ServiceLevelObjective` for the given `Service`.
+     * </pre>
+     */
     public com.google.monitoring.v3.ServiceLevelObjective createServiceLevelObjective(
         com.google.monitoring.v3.CreateServiceLevelObjectiveRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateServiceLevelObjectiveMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Get a `ServiceLevelObjective` by name.
+     * </pre>
+     */
     public com.google.monitoring.v3.ServiceLevelObjective getServiceLevelObjective(
         com.google.monitoring.v3.GetServiceLevelObjectiveRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetServiceLevelObjectiveMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * List the `ServiceLevelObjective`s for the given `Service`.
+     * </pre>
+     */
     public com.google.monitoring.v3.ListServiceLevelObjectivesResponse listServiceLevelObjectives(
         com.google.monitoring.v3.ListServiceLevelObjectivesRequest request) {
       return blockingUnaryCall(
           getChannel(), getListServiceLevelObjectivesMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Update the given `ServiceLevelObjective`.
+     * </pre>
+     */
     public com.google.monitoring.v3.ServiceLevelObjective updateServiceLevelObjective(
         com.google.monitoring.v3.UpdateServiceLevelObjectiveRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateServiceLevelObjectiveMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Delete the given `ServiceLevelObjective`.
+     * </pre>
+     */
     public com.google.protobuf.Empty deleteServiceLevelObjective(
         com.google.monitoring.v3.DeleteServiceLevelObjectiveRequest request) {
       return blockingUnaryCall(
@@ -893,7 +1109,16 @@ public final class ServiceMonitoringServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
+   * managing and querying aspects of a workspace's services. These include the
+   * `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
+   * of categorized Health Metrics.
+   * </pre>
+   */
   public static final class ServiceMonitoringServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<ServiceMonitoringServiceFutureStub> {
     private ServiceMonitoringServiceFutureStub(
@@ -907,21 +1132,39 @@ public final class ServiceMonitoringServiceGrpc {
       return new ServiceMonitoringServiceFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Create a `Service`.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.Service>
         createService(com.google.monitoring.v3.CreateServiceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateServiceMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Get the named `Service`.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.Service>
         getService(com.google.monitoring.v3.GetServiceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetServiceMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * List `Service`s for this workspace.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListServicesResponse>
         listServices(com.google.monitoring.v3.ListServicesRequest request) {
@@ -929,21 +1172,39 @@ public final class ServiceMonitoringServiceGrpc {
           getChannel().newCall(getListServicesMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Update this `Service`.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.Service>
         updateService(com.google.monitoring.v3.UpdateServiceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateServiceMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Soft delete this `Service`.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteService(com.google.monitoring.v3.DeleteServiceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteServiceMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Create a `ServiceLevelObjective` for the given `Service`.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ServiceLevelObjective>
         createServiceLevelObjective(
@@ -952,7 +1213,13 @@ public final class ServiceMonitoringServiceGrpc {
           getChannel().newCall(getCreateServiceLevelObjectiveMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Get a `ServiceLevelObjective` by name.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ServiceLevelObjective>
         getServiceLevelObjective(com.google.monitoring.v3.GetServiceLevelObjectiveRequest request) {
@@ -960,7 +1227,13 @@ public final class ServiceMonitoringServiceGrpc {
           getChannel().newCall(getGetServiceLevelObjectiveMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * List the `ServiceLevelObjective`s for the given `Service`.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListServiceLevelObjectivesResponse>
         listServiceLevelObjectives(
@@ -969,7 +1242,13 @@ public final class ServiceMonitoringServiceGrpc {
           getChannel().newCall(getListServiceLevelObjectivesMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Update the given `ServiceLevelObjective`.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ServiceLevelObjective>
         updateServiceLevelObjective(
@@ -978,7 +1257,13 @@ public final class ServiceMonitoringServiceGrpc {
           getChannel().newCall(getUpdateServiceLevelObjectiveMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Delete the given `ServiceLevelObjective`.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteServiceLevelObjective(
             com.google.monitoring.v3.DeleteServiceLevelObjectiveRequest request) {
