@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      https://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.google.cloud.monitoring.v3;
 
 import com.google.api.MetricDescriptor;
@@ -38,10 +37,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import javax.annotation.Generated;
 
+@javax.annotation.Generated("by GAPIC")
 @BetaApi
-@Generated("by gapic-generator-java")
 public class MockMetricServiceImpl extends MetricServiceImplBase {
   private List<AbstractMessage> requests;
   private Queue<Object> responses;
@@ -79,10 +77,10 @@ public class MockMetricServiceImpl extends MetricServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ListMonitoredResourceDescriptorsResponse) {
       requests.add(request);
-      responseObserver.onNext(((ListMonitoredResourceDescriptorsResponse) response));
+      responseObserver.onNext((ListMonitoredResourceDescriptorsResponse) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError(((Exception) response));
+      responseObserver.onError((Exception) response);
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -95,10 +93,10 @@ public class MockMetricServiceImpl extends MetricServiceImplBase {
     Object response = responses.remove();
     if (response instanceof MonitoredResourceDescriptor) {
       requests.add(request);
-      responseObserver.onNext(((MonitoredResourceDescriptor) response));
+      responseObserver.onNext((MonitoredResourceDescriptor) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError(((Exception) response));
+      responseObserver.onError((Exception) response);
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -111,10 +109,10 @@ public class MockMetricServiceImpl extends MetricServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ListMetricDescriptorsResponse) {
       requests.add(request);
-      responseObserver.onNext(((ListMetricDescriptorsResponse) response));
+      responseObserver.onNext((ListMetricDescriptorsResponse) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError(((Exception) response));
+      responseObserver.onError((Exception) response);
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -126,10 +124,10 @@ public class MockMetricServiceImpl extends MetricServiceImplBase {
     Object response = responses.remove();
     if (response instanceof MetricDescriptor) {
       requests.add(request);
-      responseObserver.onNext(((MetricDescriptor) response));
+      responseObserver.onNext((MetricDescriptor) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError(((Exception) response));
+      responseObserver.onError((Exception) response);
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -141,10 +139,10 @@ public class MockMetricServiceImpl extends MetricServiceImplBase {
     Object response = responses.remove();
     if (response instanceof MetricDescriptor) {
       requests.add(request);
-      responseObserver.onNext(((MetricDescriptor) response));
+      responseObserver.onNext((MetricDescriptor) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError(((Exception) response));
+      responseObserver.onError((Exception) response);
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -156,10 +154,10 @@ public class MockMetricServiceImpl extends MetricServiceImplBase {
     Object response = responses.remove();
     if (response instanceof Empty) {
       requests.add(request);
-      responseObserver.onNext(((Empty) response));
+      responseObserver.onNext((Empty) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError(((Exception) response));
+      responseObserver.onError((Exception) response);
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -171,10 +169,10 @@ public class MockMetricServiceImpl extends MetricServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ListTimeSeriesResponse) {
       requests.add(request);
-      responseObserver.onNext(((ListTimeSeriesResponse) response));
+      responseObserver.onNext((ListTimeSeriesResponse) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError(((Exception) response));
+      responseObserver.onError((Exception) response);
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -186,10 +184,10 @@ public class MockMetricServiceImpl extends MetricServiceImplBase {
     Object response = responses.remove();
     if (response instanceof Empty) {
       requests.add(request);
-      responseObserver.onNext(((Empty) response));
+      responseObserver.onNext((Empty) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError(((Exception) response));
+      responseObserver.onError((Exception) response);
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }

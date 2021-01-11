@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      https://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,57 +26,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS.
-@Generated("by gapic-generator-java")
+/** AUTO-GENERATED DOCUMENTATION AND CLASS */
+@javax.annotation.Generated("by GAPIC protoc plugin")
 public class AlertPolicyName implements ResourceName {
-  private static final PathTemplate PROJECT_ALERT_POLICY =
+
+  @Deprecated
+  protected AlertPolicyName() {}
+
+  private static final PathTemplate PROJECT_ALERT_POLICY_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("projects/{project}/alertPolicies/{alert_policy}");
-  private static final PathTemplate ORGANIZATION_ALERT_POLICY =
+  private static final PathTemplate ORGANIZATION_ALERT_POLICY_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding(
           "organizations/{organization}/alertPolicies/{alert_policy}");
-  private static final PathTemplate FOLDER_ALERT_POLICY =
+  private static final PathTemplate FOLDER_ALERT_POLICY_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("folders/{folder}/alertPolicies/{alert_policy}");
+
   private volatile Map<String, String> fieldValuesMap;
   private PathTemplate pathTemplate;
   private String fixedValue;
-  private final String project;
-  private final String alertPolicy;
-  private final String organization;
-  private final String folder;
 
-  @Deprecated
-  protected AlertPolicyName() {
-    project = null;
-    alertPolicy = null;
-    organization = null;
-    folder = null;
-  }
-
-  private AlertPolicyName(Builder builder) {
-    project = Preconditions.checkNotNull(builder.getProject());
-    alertPolicy = Preconditions.checkNotNull(builder.getAlertPolicy());
-    organization = null;
-    folder = null;
-    pathTemplate = PROJECT_ALERT_POLICY;
-  }
-
-  private AlertPolicyName(OrganizationAlertPolicyBuilder builder) {
-    organization = Preconditions.checkNotNull(builder.getOrganization());
-    alertPolicy = Preconditions.checkNotNull(builder.getAlertPolicy());
-    project = null;
-    folder = null;
-    pathTemplate = ORGANIZATION_ALERT_POLICY;
-  }
-
-  private AlertPolicyName(FolderAlertPolicyBuilder builder) {
-    folder = Preconditions.checkNotNull(builder.getFolder());
-    alertPolicy = Preconditions.checkNotNull(builder.getAlertPolicy());
-    project = null;
-    organization = null;
-    pathTemplate = FOLDER_ALERT_POLICY;
-  }
+  private String project;
+  private String alertPolicy;
+  private String organization;
+  private String folder;
 
   public String getProject() {
     return project;
@@ -92,6 +65,24 @@ public class AlertPolicyName implements ResourceName {
 
   public String getFolder() {
     return folder;
+  }
+
+  private AlertPolicyName(Builder builder) {
+    project = Preconditions.checkNotNull(builder.getProject());
+    alertPolicy = Preconditions.checkNotNull(builder.getAlertPolicy());
+    pathTemplate = PROJECT_ALERT_POLICY_PATH_TEMPLATE;
+  }
+
+  private AlertPolicyName(OrganizationAlertPolicyBuilder builder) {
+    organization = Preconditions.checkNotNull(builder.getOrganization());
+    alertPolicy = Preconditions.checkNotNull(builder.getAlertPolicy());
+    pathTemplate = ORGANIZATION_ALERT_POLICY_PATH_TEMPLATE;
+  }
+
+  private AlertPolicyName(FolderAlertPolicyBuilder builder) {
+    folder = Preconditions.checkNotNull(builder.getFolder());
+    alertPolicy = Preconditions.checkNotNull(builder.getAlertPolicy());
+    pathTemplate = FOLDER_ALERT_POLICY_PATH_TEMPLATE;
   }
 
   public static Builder newBuilder() {
@@ -118,12 +109,12 @@ public class AlertPolicyName implements ResourceName {
   }
 
   public static AlertPolicyName of(String project, String alertPolicy) {
-    return newBuilder().setProject(project).setAlertPolicy(alertPolicy).build();
+    return newProjectAlertPolicyBuilder().setProject(project).setAlertPolicy(alertPolicy).build();
   }
 
   @BetaApi("The static create methods are not stable yet and may be changed in the future.")
   public static AlertPolicyName ofProjectAlertPolicyName(String project, String alertPolicy) {
-    return newBuilder().setProject(project).setAlertPolicy(alertPolicy).build();
+    return newProjectAlertPolicyBuilder().setProject(project).setAlertPolicy(alertPolicy).build();
   }
 
   @BetaApi("The static create methods are not stable yet and may be changed in the future.")
@@ -171,18 +162,18 @@ public class AlertPolicyName implements ResourceName {
     if (formattedString.isEmpty()) {
       return null;
     }
-    if (PROJECT_ALERT_POLICY.matches(formattedString)) {
-      Map<String, String> matchMap = PROJECT_ALERT_POLICY.match(formattedString);
+    if (PROJECT_ALERT_POLICY_PATH_TEMPLATE.matches(formattedString)) {
+      Map<String, String> matchMap = PROJECT_ALERT_POLICY_PATH_TEMPLATE.match(formattedString);
       return ofProjectAlertPolicyName(matchMap.get("project"), matchMap.get("alert_policy"));
-    } else if (ORGANIZATION_ALERT_POLICY.matches(formattedString)) {
-      Map<String, String> matchMap = ORGANIZATION_ALERT_POLICY.match(formattedString);
+    } else if (ORGANIZATION_ALERT_POLICY_PATH_TEMPLATE.matches(formattedString)) {
+      Map<String, String> matchMap = ORGANIZATION_ALERT_POLICY_PATH_TEMPLATE.match(formattedString);
       return ofOrganizationAlertPolicyName(
           matchMap.get("organization"), matchMap.get("alert_policy"));
-    } else if (FOLDER_ALERT_POLICY.matches(formattedString)) {
-      Map<String, String> matchMap = FOLDER_ALERT_POLICY.match(formattedString);
+    } else if (FOLDER_ALERT_POLICY_PATH_TEMPLATE.matches(formattedString)) {
+      Map<String, String> matchMap = FOLDER_ALERT_POLICY_PATH_TEMPLATE.match(formattedString);
       return ofFolderAlertPolicyName(matchMap.get("folder"), matchMap.get("alert_policy"));
     }
-    throw new ValidationException("AlertPolicyName.parse: formattedString not in valid format");
+    throw new ValidationException("JobName.parse: formattedString not in valid format");
   }
 
   public static List<AlertPolicyName> parseList(List<String> formattedStrings) {
@@ -206,9 +197,9 @@ public class AlertPolicyName implements ResourceName {
   }
 
   public static boolean isParsableFrom(String formattedString) {
-    return PROJECT_ALERT_POLICY.matches(formattedString)
-        || ORGANIZATION_ALERT_POLICY.matches(formattedString)
-        || FOLDER_ALERT_POLICY.matches(formattedString);
+    return PROJECT_ALERT_POLICY_PATH_TEMPLATE.matches(formattedString)
+        || ORGANIZATION_ALERT_POLICY_PATH_TEMPLATE.matches(formattedString)
+        || FOLDER_ALERT_POLICY_PATH_TEMPLATE.matches(formattedString);
   }
 
   @Override
@@ -245,39 +236,9 @@ public class AlertPolicyName implements ResourceName {
     return fixedValue != null ? fixedValue : pathTemplate.instantiate(getFieldValuesMap());
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (o == this) {
-      return true;
-    }
-    if (o != null || getClass() == o.getClass()) {
-      AlertPolicyName that = ((AlertPolicyName) o);
-      return Objects.equals(this.project, that.project)
-          && Objects.equals(this.alertPolicy, that.alertPolicy)
-          && Objects.equals(this.organization, that.organization)
-          && Objects.equals(this.folder, that.folder);
-    }
-    return false;
-  }
-
-  @Override
-  public int hashCode() {
-    int h = 1;
-    h *= 1000003;
-    h ^= Objects.hashCode(fixedValue);
-    h *= 1000003;
-    h ^= Objects.hashCode(project);
-    h *= 1000003;
-    h ^= Objects.hashCode(alertPolicy);
-    h *= 1000003;
-    h ^= Objects.hashCode(organization);
-    h *= 1000003;
-    h ^= Objects.hashCode(folder);
-    return h;
-  }
-
   /** Builder for projects/{project}/alertPolicies/{alert_policy}. */
   public static class Builder {
+
     private String project;
     private String alertPolicy;
 
@@ -303,8 +264,9 @@ public class AlertPolicyName implements ResourceName {
 
     private Builder(AlertPolicyName alertPolicyName) {
       Preconditions.checkArgument(
-          Objects.equals(alertPolicyName.pathTemplate, PROJECT_ALERT_POLICY),
-          "toBuilder is only supported when AlertPolicyName has the pattern of projects/{project}/alertPolicies/{alert_policy}");
+          alertPolicyName.pathTemplate == PROJECT_ALERT_POLICY_PATH_TEMPLATE,
+          "toBuilder is only supported when AlertPolicyName has the pattern of "
+              + "projects/{project}/alertPolicies/{alert_policy}.");
       project = alertPolicyName.project;
       alertPolicy = alertPolicyName.alertPolicy;
     }
@@ -317,10 +279,11 @@ public class AlertPolicyName implements ResourceName {
   /** Builder for organizations/{organization}/alertPolicies/{alert_policy}. */
   @BetaApi("The per-pattern Builders are not stable yet and may be changed in the future.")
   public static class OrganizationAlertPolicyBuilder {
+
     private String organization;
     private String alertPolicy;
 
-    protected OrganizationAlertPolicyBuilder() {}
+    private OrganizationAlertPolicyBuilder() {}
 
     public String getOrganization() {
       return organization;
@@ -348,10 +311,11 @@ public class AlertPolicyName implements ResourceName {
   /** Builder for folders/{folder}/alertPolicies/{alert_policy}. */
   @BetaApi("The per-pattern Builders are not stable yet and may be changed in the future.")
   public static class FolderAlertPolicyBuilder {
+
     private String folder;
     private String alertPolicy;
 
-    protected FolderAlertPolicyBuilder() {}
+    private FolderAlertPolicyBuilder() {}
 
     public String getFolder() {
       return folder;
@@ -374,5 +338,36 @@ public class AlertPolicyName implements ResourceName {
     public AlertPolicyName build() {
       return new AlertPolicyName(this);
     }
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (o == this) {
+      return true;
+    }
+    if (o != null || getClass() == o.getClass()) {
+      AlertPolicyName that = (AlertPolicyName) o;
+      return (Objects.equals(this.project, that.project))
+          && (Objects.equals(this.alertPolicy, that.alertPolicy))
+          && (Objects.equals(this.organization, that.organization))
+          && (Objects.equals(this.folder, that.folder));
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    int h = 1;
+    h *= 1000003;
+    h ^= Objects.hashCode(fixedValue);
+    h *= 1000003;
+    h ^= Objects.hashCode(project);
+    h *= 1000003;
+    h ^= Objects.hashCode(alertPolicy);
+    h *= 1000003;
+    h ^= Objects.hashCode(organization);
+    h *= 1000003;
+    h ^= Objects.hashCode(folder);
+    return h;
   }
 }

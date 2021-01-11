@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      https://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,9 +15,11 @@
  */
 
 /**
- * The interfaces provided are listed below, along with usage samples.
+ * A client to Cloud Monitoring API.
  *
- * <p>======================= AlertPolicyServiceClient =======================
+ * <p>The interfaces provided are listed below, along with usage samples.
+ *
+ * <p>======================== AlertPolicyServiceClient ========================
  *
  * <p>Service Description: The AlertPolicyService API is used to manage (list, create, delete, edit)
  * alert policies in Stackdriver Monitoring. An alerting policy is a description of the conditions
@@ -28,7 +30,16 @@
  *
  * <p>Sample for AlertPolicyServiceClient:
  *
- * <p>======================= GroupServiceClient =======================
+ * <pre>
+ * <code>
+ * try (AlertPolicyServiceClient alertPolicyServiceClient = AlertPolicyServiceClient.create()) {
+ *   AlertPolicyName name = AlertPolicyName.ofProjectAlertPolicyName("[PROJECT]", "[ALERT_POLICY]");
+ *   AlertPolicy response = alertPolicyServiceClient.getAlertPolicy(name);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ================== GroupServiceClient ==================
  *
  * <p>Service Description: The Group API lets you inspect and manage your
  * [groups](#google.monitoring.v3.Group).
@@ -42,21 +53,49 @@
  *
  * <p>Sample for GroupServiceClient:
  *
- * <p>======================= MetricServiceClient =======================
+ * <pre>
+ * <code>
+ * try (GroupServiceClient groupServiceClient = GroupServiceClient.create()) {
+ *   GroupName name = GroupName.ofProjectGroupName("[PROJECT]", "[GROUP]");
+ *   Group response = groupServiceClient.getGroup(name);
+ * }
+ * </code>
+ * </pre>
+ *
+ * =================== MetricServiceClient ===================
  *
  * <p>Service Description: Manages metric descriptors, monitored resource descriptors, and time
  * series data.
  *
  * <p>Sample for MetricServiceClient:
  *
- * <p>======================= NotificationChannelServiceClient =======================
+ * <pre>
+ * <code>
+ * try (MetricServiceClient metricServiceClient = MetricServiceClient.create()) {
+ *   MonitoredResourceDescriptorName name = MonitoredResourceDescriptorName.ofProjectMonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+ *   MonitoredResourceDescriptor response = metricServiceClient.getMonitoredResourceDescriptor(name);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ================================ NotificationChannelServiceClient
+ * ================================
  *
  * <p>Service Description: The Notification Channel API provides access to configuration that
  * controls how messages related to incidents are sent.
  *
  * <p>Sample for NotificationChannelServiceClient:
  *
- * <p>======================= ServiceMonitoringServiceClient =======================
+ * <pre>
+ * <code>
+ * try (NotificationChannelServiceClient notificationChannelServiceClient = NotificationChannelServiceClient.create()) {
+ *   NotificationChannelDescriptorName name = NotificationChannelDescriptorName.ofProjectChannelDescriptorName("[PROJECT]", "[CHANNEL_DESCRIPTOR]");
+ *   NotificationChannelDescriptor response = notificationChannelServiceClient.getNotificationChannelDescriptor(name);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================== ServiceMonitoringServiceClient ==============================
  *
  * <p>Service Description: The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
  * managing and querying aspects of a workspace's services. These include the `Service`'s monitored
@@ -64,7 +103,17 @@
  *
  * <p>Sample for ServiceMonitoringServiceClient:
  *
- * <p>======================= UptimeCheckServiceClient =======================
+ * <pre>
+ * <code>
+ * try (ServiceMonitoringServiceClient serviceMonitoringServiceClient = ServiceMonitoringServiceClient.create()) {
+ *   ResourceName parent = ProjectName.of("[PROJECT]");
+ *   Service service = Service.newBuilder().build();
+ *   Service response = serviceMonitoringServiceClient.createService(parent, service);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ======================== UptimeCheckServiceClient ========================
  *
  * <p>Service Description: The UptimeCheckService API is used to manage (list, create, delete, edit)
  * Uptime check configurations in the Stackdriver Monitoring product. An Uptime check is a piece of
@@ -74,8 +123,17 @@
  * the left-hand side to navigate to Stackdriver, and then clicking on "Uptime".
  *
  * <p>Sample for UptimeCheckServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.create()) {
+ *   UptimeCheckConfigName name = UptimeCheckConfigName.ofProjectUptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+ *   UptimeCheckConfig response = uptimeCheckServiceClient.getUptimeCheckConfig(name);
+ * }
+ * </code>
+ * </pre>
  */
-@Generated("by gapic-generator-java")
+@Generated("by gapic-generator")
 package com.google.cloud.monitoring.v3;
 
 import javax.annotation.Generated;

@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      https://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.google.cloud.monitoring.v3.stub;
 
 import static com.google.cloud.monitoring.v3.ServiceMonitoringServiceClient.ListServiceLevelObjectivesPagedResponse;
 import static com.google.cloud.monitoring.v3.ServiceMonitoringServiceClient.ListServicesPagedResponse;
 
+import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -27,7 +27,6 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
-import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.monitoring.v3.CreateServiceLevelObjectiveRequest;
 import com.google.monitoring.v3.CreateServiceRequest;
 import com.google.monitoring.v3.DeleteServiceLevelObjectiveRequest;
@@ -50,14 +49,16 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS.
+// AUTO-GENERATED DOCUMENTATION AND CLASS
 /**
- * gRPC stub implementation for the ServiceMonitoringService service API.
+ * gRPC stub implementation for Cloud Monitoring API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator-java")
+@Generated("by gapic-generator")
+@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
 public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceStub {
+
   private static final MethodDescriptor<CreateServiceRequest, Service>
       createServiceMethodDescriptor =
           MethodDescriptor.<CreateServiceRequest, Service>newBuilder()
@@ -67,7 +68,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
                   ProtoUtils.marshaller(CreateServiceRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Service.getDefaultInstance()))
               .build();
-
   private static final MethodDescriptor<GetServiceRequest, Service> getServiceMethodDescriptor =
       MethodDescriptor.<GetServiceRequest, Service>newBuilder()
           .setType(MethodDescriptor.MethodType.UNARY)
@@ -75,7 +75,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
           .setRequestMarshaller(ProtoUtils.marshaller(GetServiceRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Service.getDefaultInstance()))
           .build();
-
   private static final MethodDescriptor<ListServicesRequest, ListServicesResponse>
       listServicesMethodDescriptor =
           MethodDescriptor.<ListServicesRequest, ListServicesResponse>newBuilder()
@@ -85,7 +84,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListServicesResponse.getDefaultInstance()))
               .build();
-
   private static final MethodDescriptor<UpdateServiceRequest, Service>
       updateServiceMethodDescriptor =
           MethodDescriptor.<UpdateServiceRequest, Service>newBuilder()
@@ -95,7 +93,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
                   ProtoUtils.marshaller(UpdateServiceRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Service.getDefaultInstance()))
               .build();
-
   private static final MethodDescriptor<DeleteServiceRequest, Empty> deleteServiceMethodDescriptor =
       MethodDescriptor.<DeleteServiceRequest, Empty>newBuilder()
           .setType(MethodDescriptor.MethodType.UNARY)
@@ -103,7 +100,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
           .setRequestMarshaller(ProtoUtils.marshaller(DeleteServiceRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
           .build();
-
   private static final MethodDescriptor<CreateServiceLevelObjectiveRequest, ServiceLevelObjective>
       createServiceLevelObjectiveMethodDescriptor =
           MethodDescriptor.<CreateServiceLevelObjectiveRequest, ServiceLevelObjective>newBuilder()
@@ -115,7 +111,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ServiceLevelObjective.getDefaultInstance()))
               .build();
-
   private static final MethodDescriptor<GetServiceLevelObjectiveRequest, ServiceLevelObjective>
       getServiceLevelObjectiveMethodDescriptor =
           MethodDescriptor.<GetServiceLevelObjectiveRequest, ServiceLevelObjective>newBuilder()
@@ -127,7 +122,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ServiceLevelObjective.getDefaultInstance()))
               .build();
-
   private static final MethodDescriptor<
           ListServiceLevelObjectivesRequest, ListServiceLevelObjectivesResponse>
       listServiceLevelObjectivesMethodDescriptor =
@@ -141,7 +135,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListServiceLevelObjectivesResponse.getDefaultInstance()))
               .build();
-
   private static final MethodDescriptor<UpdateServiceLevelObjectiveRequest, ServiceLevelObjective>
       updateServiceLevelObjectiveMethodDescriptor =
           MethodDescriptor.<UpdateServiceLevelObjectiveRequest, ServiceLevelObjective>newBuilder()
@@ -153,7 +146,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ServiceLevelObjective.getDefaultInstance()))
               .build();
-
   private static final MethodDescriptor<DeleteServiceLevelObjectiveRequest, Empty>
       deleteServiceLevelObjectiveMethodDescriptor =
           MethodDescriptor.<DeleteServiceLevelObjectiveRequest, Empty>newBuilder()
@@ -164,6 +156,8 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
                   ProtoUtils.marshaller(DeleteServiceLevelObjectiveRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
               .build();
+
+  private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<CreateServiceRequest, Service> createServiceCallable;
   private final UnaryCallable<GetServiceRequest, Service> getServiceCallable;
@@ -186,8 +180,6 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
   private final UnaryCallable<DeleteServiceLevelObjectiveRequest, Empty>
       deleteServiceLevelObjectiveCallable;
 
-  private final BackgroundResource backgroundResources;
-  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcServiceMonitoringServiceStub create(
@@ -207,19 +199,28 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
         ServiceMonitoringServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcServiceMonitoringServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcServiceMonitoringServiceStub(
       ServiceMonitoringServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcServiceMonitoringServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcServiceMonitoringServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcServiceMonitoringServiceStub(
       ServiceMonitoringServiceStubSettings settings,
       ClientContext clientContext,
       GrpcStubCallableFactory callableFactory)
       throws IOException {
     this.callableFactory = callableFactory;
-    this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
     GrpcCallSettings<CreateServiceRequest, Service> createServiceTransportSettings =
         GrpcCallSettings.<CreateServiceRequest, Service>newBuilder()
@@ -413,12 +414,7 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
             settings.deleteServiceLevelObjectiveSettings(),
             clientContext);
 
-    this.backgroundResources =
-        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
-  }
-
-  public GrpcOperationsStub getOperationsStub() {
-    return operationsStub;
+    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
 
   public UnaryCallable<CreateServiceRequest, Service> createServiceCallable() {
@@ -429,12 +425,12 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
     return getServiceCallable;
   }
 
-  public UnaryCallable<ListServicesRequest, ListServicesResponse> listServicesCallable() {
-    return listServicesCallable;
-  }
-
   public UnaryCallable<ListServicesRequest, ListServicesPagedResponse> listServicesPagedCallable() {
     return listServicesPagedCallable;
+  }
+
+  public UnaryCallable<ListServicesRequest, ListServicesResponse> listServicesCallable() {
+    return listServicesCallable;
   }
 
   public UnaryCallable<UpdateServiceRequest, Service> updateServiceCallable() {
@@ -455,14 +451,14 @@ public class GrpcServiceMonitoringServiceStub extends ServiceMonitoringServiceSt
     return getServiceLevelObjectiveCallable;
   }
 
-  public UnaryCallable<ListServiceLevelObjectivesRequest, ListServiceLevelObjectivesResponse>
-      listServiceLevelObjectivesCallable() {
-    return listServiceLevelObjectivesCallable;
-  }
-
   public UnaryCallable<ListServiceLevelObjectivesRequest, ListServiceLevelObjectivesPagedResponse>
       listServiceLevelObjectivesPagedCallable() {
     return listServiceLevelObjectivesPagedCallable;
+  }
+
+  public UnaryCallable<ListServiceLevelObjectivesRequest, ListServiceLevelObjectivesResponse>
+      listServiceLevelObjectivesCallable() {
+    return listServiceLevelObjectivesCallable;
   }
 
   public UnaryCallable<UpdateServiceLevelObjectiveRequest, ServiceLevelObjective>
