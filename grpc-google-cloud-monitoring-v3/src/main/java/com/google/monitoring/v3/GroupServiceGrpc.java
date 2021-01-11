@@ -22,23 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * The Group API lets you inspect and manage your
- * [groups](#google.monitoring.v3.Group).
- * A group is a named filter that is used to identify
- * a collection of monitored resources. Groups are typically used to
- * mirror the physical and/or logical topology of the environment.
- * Because group membership is computed dynamically, monitored
- * resources that are started in the future are automatically placed
- * in matching groups. By using a group to name monitored resources in,
- * for example, an alert policy, the target of that alert policy is
- * updated automatically as monitored resources are added and removed
- * from the infrastructure.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/monitoring/v3/group_service.proto")
@@ -337,98 +321,45 @@ public final class GroupServiceGrpc {
     return GroupServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Group API lets you inspect and manage your
-   * [groups](#google.monitoring.v3.Group).
-   * A group is a named filter that is used to identify
-   * a collection of monitored resources. Groups are typically used to
-   * mirror the physical and/or logical topology of the environment.
-   * Because group membership is computed dynamically, monitored
-   * resources that are started in the future are automatically placed
-   * in matching groups. By using a group to name monitored resources in,
-   * for example, an alert policy, the target of that alert policy is
-   * updated automatically as monitored resources are added and removed
-   * from the infrastructure.
-   * </pre>
-   */
+  /** */
   public abstract static class GroupServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing groups.
-     * </pre>
-     */
+    /** */
     public void listGroups(
         com.google.monitoring.v3.ListGroupsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListGroupsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListGroupsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single group.
-     * </pre>
-     */
+    /** */
     public void getGroup(
         com.google.monitoring.v3.GetGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Group> responseObserver) {
       asyncUnimplementedUnaryCall(getGetGroupMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new group.
-     * </pre>
-     */
+    /** */
     public void createGroup(
         com.google.monitoring.v3.CreateGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Group> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateGroupMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an existing group.
-     * You can change any group attributes except `name`.
-     * </pre>
-     */
+    /** */
     public void updateGroup(
         com.google.monitoring.v3.UpdateGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Group> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateGroupMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an existing group.
-     * </pre>
-     */
+    /** */
     public void deleteGroup(
         com.google.monitoring.v3.DeleteGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteGroupMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the monitored resources that are members of a group.
-     * </pre>
-     */
+    /** */
     public void listGroupMembers(
         com.google.monitoring.v3.ListGroupMembersRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListGroupMembersResponse>
@@ -480,23 +411,7 @@ public final class GroupServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Group API lets you inspect and manage your
-   * [groups](#google.monitoring.v3.Group).
-   * A group is a named filter that is used to identify
-   * a collection of monitored resources. Groups are typically used to
-   * mirror the physical and/or logical topology of the environment.
-   * Because group membership is computed dynamically, monitored
-   * resources that are started in the future are automatically placed
-   * in matching groups. By using a group to name monitored resources in,
-   * for example, an alert policy, the target of that alert policy is
-   * updated automatically as monitored resources are added and removed
-   * from the infrastructure.
-   * </pre>
-   */
+  /** */
   public static final class GroupServiceStub
       extends io.grpc.stub.AbstractAsyncStub<GroupServiceStub> {
     private GroupServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -508,13 +423,7 @@ public final class GroupServiceGrpc {
       return new GroupServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing groups.
-     * </pre>
-     */
+    /** */
     public void listGroups(
         com.google.monitoring.v3.ListGroupsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListGroupsResponse> responseObserver) {
@@ -522,13 +431,7 @@ public final class GroupServiceGrpc {
           getChannel().newCall(getListGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single group.
-     * </pre>
-     */
+    /** */
     public void getGroup(
         com.google.monitoring.v3.GetGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Group> responseObserver) {
@@ -536,13 +439,7 @@ public final class GroupServiceGrpc {
           getChannel().newCall(getGetGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new group.
-     * </pre>
-     */
+    /** */
     public void createGroup(
         com.google.monitoring.v3.CreateGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Group> responseObserver) {
@@ -552,14 +449,7 @@ public final class GroupServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an existing group.
-     * You can change any group attributes except `name`.
-     * </pre>
-     */
+    /** */
     public void updateGroup(
         com.google.monitoring.v3.UpdateGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.Group> responseObserver) {
@@ -569,13 +459,7 @@ public final class GroupServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an existing group.
-     * </pre>
-     */
+    /** */
     public void deleteGroup(
         com.google.monitoring.v3.DeleteGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -585,13 +469,7 @@ public final class GroupServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the monitored resources that are members of a group.
-     * </pre>
-     */
+    /** */
     public void listGroupMembers(
         com.google.monitoring.v3.ListGroupMembersRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListGroupMembersResponse>
@@ -603,23 +481,7 @@ public final class GroupServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Group API lets you inspect and manage your
-   * [groups](#google.monitoring.v3.Group).
-   * A group is a named filter that is used to identify
-   * a collection of monitored resources. Groups are typically used to
-   * mirror the physical and/or logical topology of the environment.
-   * Because group membership is computed dynamically, monitored
-   * resources that are started in the future are automatically placed
-   * in matching groups. By using a group to name monitored resources in,
-   * for example, an alert policy, the target of that alert policy is
-   * updated automatically as monitored resources are added and removed
-   * from the infrastructure.
-   * </pre>
-   */
+  /** */
   public static final class GroupServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<GroupServiceBlockingStub> {
     private GroupServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -632,74 +494,37 @@ public final class GroupServiceGrpc {
       return new GroupServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing groups.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListGroupsResponse listGroups(
         com.google.monitoring.v3.ListGroupsRequest request) {
       return blockingUnaryCall(getChannel(), getListGroupsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single group.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.Group getGroup(
         com.google.monitoring.v3.GetGroupRequest request) {
       return blockingUnaryCall(getChannel(), getGetGroupMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new group.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.Group createGroup(
         com.google.monitoring.v3.CreateGroupRequest request) {
       return blockingUnaryCall(getChannel(), getCreateGroupMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an existing group.
-     * You can change any group attributes except `name`.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.Group updateGroup(
         com.google.monitoring.v3.UpdateGroupRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateGroupMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an existing group.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteGroup(
         com.google.monitoring.v3.DeleteGroupRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteGroupMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the monitored resources that are members of a group.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListGroupMembersResponse listGroupMembers(
         com.google.monitoring.v3.ListGroupMembersRequest request) {
       return blockingUnaryCall(
@@ -707,23 +532,7 @@ public final class GroupServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Group API lets you inspect and manage your
-   * [groups](#google.monitoring.v3.Group).
-   * A group is a named filter that is used to identify
-   * a collection of monitored resources. Groups are typically used to
-   * mirror the physical and/or logical topology of the environment.
-   * Because group membership is computed dynamically, monitored
-   * resources that are started in the future are automatically placed
-   * in matching groups. By using a group to name monitored resources in,
-   * for example, an alert policy, the target of that alert policy is
-   * updated automatically as monitored resources are added and removed
-   * from the infrastructure.
-   * </pre>
-   */
+  /** */
   public static final class GroupServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<GroupServiceFutureStub> {
     private GroupServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -736,13 +545,7 @@ public final class GroupServiceGrpc {
       return new GroupServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing groups.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListGroupsResponse>
         listGroups(com.google.monitoring.v3.ListGroupsRequest request) {
@@ -750,65 +553,34 @@ public final class GroupServiceGrpc {
           getChannel().newCall(getListGroupsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single group.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.Group>
         getGroup(com.google.monitoring.v3.GetGroupRequest request) {
       return futureUnaryCall(getChannel().newCall(getGetGroupMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new group.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.Group>
         createGroup(com.google.monitoring.v3.CreateGroupRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateGroupMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an existing group.
-     * You can change any group attributes except `name`.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.monitoring.v3.Group>
         updateGroup(com.google.monitoring.v3.UpdateGroupRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateGroupMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an existing group.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteGroup(com.google.monitoring.v3.DeleteGroupRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteGroupMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the monitored resources that are members of a group.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListGroupMembersResponse>
         listGroupMembers(com.google.monitoring.v3.ListGroupMembersRequest request) {

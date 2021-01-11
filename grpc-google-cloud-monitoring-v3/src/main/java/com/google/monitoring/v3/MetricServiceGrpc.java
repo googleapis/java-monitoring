@@ -22,14 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * Manages metric descriptors, monitored resource descriptors, and
- * time series data.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/monitoring/v3/metric_service.proto")
@@ -460,23 +453,10 @@ public final class MetricServiceGrpc {
     return MetricServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages metric descriptors, monitored resource descriptors, and
-   * time series data.
-   * </pre>
-   */
+  /** */
   public abstract static class MetricServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void listMonitoredResourceDescriptors(
         com.google.monitoring.v3.ListMonitoredResourceDescriptorsRequest request,
         io.grpc.stub.StreamObserver<
@@ -485,26 +465,14 @@ public final class MetricServiceGrpc {
       asyncUnimplementedUnaryCall(getListMonitoredResourceDescriptorsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single monitored resource descriptor. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void getMonitoredResourceDescriptor(
         com.google.monitoring.v3.GetMonitoredResourceDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.api.MonitoredResourceDescriptor> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMonitoredResourceDescriptorMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists metric descriptors that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void listMetricDescriptors(
         com.google.monitoring.v3.ListMetricDescriptorsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListMetricDescriptorsResponse>
@@ -512,56 +480,28 @@ public final class MetricServiceGrpc {
       asyncUnimplementedUnaryCall(getListMetricDescriptorsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single metric descriptor. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void getMetricDescriptor(
         com.google.monitoring.v3.GetMetricDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.api.MetricDescriptor> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMetricDescriptorMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new metric descriptor.
-     * User-created metric descriptors define
-     * [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
-     * </pre>
-     */
+    /** */
     public void createMetricDescriptor(
         com.google.monitoring.v3.CreateMetricDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.api.MetricDescriptor> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMetricDescriptorMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a metric descriptor. Only user-created
-     * [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
-     * deleted.
-     * </pre>
-     */
+    /** */
     public void deleteMetricDescriptor(
         com.google.monitoring.v3.DeleteMetricDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteMetricDescriptorMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists time series that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void listTimeSeries(
         com.google.monitoring.v3.ListTimeSeriesRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListTimeSeriesResponse>
@@ -569,16 +509,7 @@ public final class MetricServiceGrpc {
       asyncUnimplementedUnaryCall(getListTimeSeriesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates or adds data to one or more time series.
-     * The response is empty if all time series in the request were written.
-     * If any time series could not be written, a corresponding failure message is
-     * included in the error response.
-     * </pre>
-     */
+    /** */
     public void createTimeSeries(
         com.google.monitoring.v3.CreateTimeSeriesRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -644,14 +575,7 @@ public final class MetricServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages metric descriptors, monitored resource descriptors, and
-   * time series data.
-   * </pre>
-   */
+  /** */
   public static final class MetricServiceStub
       extends io.grpc.stub.AbstractAsyncStub<MetricServiceStub> {
     private MetricServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -663,13 +587,7 @@ public final class MetricServiceGrpc {
       return new MetricServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void listMonitoredResourceDescriptors(
         com.google.monitoring.v3.ListMonitoredResourceDescriptorsRequest request,
         io.grpc.stub.StreamObserver<
@@ -681,13 +599,7 @@ public final class MetricServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single monitored resource descriptor. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void getMonitoredResourceDescriptor(
         com.google.monitoring.v3.GetMonitoredResourceDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.api.MonitoredResourceDescriptor> responseObserver) {
@@ -697,13 +609,7 @@ public final class MetricServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists metric descriptors that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void listMetricDescriptors(
         com.google.monitoring.v3.ListMetricDescriptorsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListMetricDescriptorsResponse>
@@ -714,13 +620,7 @@ public final class MetricServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single metric descriptor. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void getMetricDescriptor(
         com.google.monitoring.v3.GetMetricDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.api.MetricDescriptor> responseObserver) {
@@ -730,15 +630,7 @@ public final class MetricServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new metric descriptor.
-     * User-created metric descriptors define
-     * [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
-     * </pre>
-     */
+    /** */
     public void createMetricDescriptor(
         com.google.monitoring.v3.CreateMetricDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.api.MetricDescriptor> responseObserver) {
@@ -748,15 +640,7 @@ public final class MetricServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a metric descriptor. Only user-created
-     * [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
-     * deleted.
-     * </pre>
-     */
+    /** */
     public void deleteMetricDescriptor(
         com.google.monitoring.v3.DeleteMetricDescriptorRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -766,13 +650,7 @@ public final class MetricServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists time series that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public void listTimeSeries(
         com.google.monitoring.v3.ListTimeSeriesRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.v3.ListTimeSeriesResponse>
@@ -783,16 +661,7 @@ public final class MetricServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates or adds data to one or more time series.
-     * The response is empty if all time series in the request were written.
-     * If any time series could not be written, a corresponding failure message is
-     * included in the error response.
-     * </pre>
-     */
+    /** */
     public void createTimeSeries(
         com.google.monitoring.v3.CreateTimeSeriesRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -803,14 +672,7 @@ public final class MetricServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages metric descriptors, monitored resource descriptors, and
-   * time series data.
-   * </pre>
-   */
+  /** */
   public static final class MetricServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<MetricServiceBlockingStub> {
     private MetricServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -823,13 +685,7 @@ public final class MetricServiceGrpc {
       return new MetricServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListMonitoredResourceDescriptorsResponse
         listMonitoredResourceDescriptors(
             com.google.monitoring.v3.ListMonitoredResourceDescriptorsRequest request) {
@@ -837,97 +693,48 @@ public final class MetricServiceGrpc {
           getChannel(), getListMonitoredResourceDescriptorsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single monitored resource descriptor. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.api.MonitoredResourceDescriptor getMonitoredResourceDescriptor(
         com.google.monitoring.v3.GetMonitoredResourceDescriptorRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMonitoredResourceDescriptorMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists metric descriptors that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListMetricDescriptorsResponse listMetricDescriptors(
         com.google.monitoring.v3.ListMetricDescriptorsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMetricDescriptorsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single metric descriptor. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.api.MetricDescriptor getMetricDescriptor(
         com.google.monitoring.v3.GetMetricDescriptorRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMetricDescriptorMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new metric descriptor.
-     * User-created metric descriptors define
-     * [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
-     * </pre>
-     */
+    /** */
     public com.google.api.MetricDescriptor createMetricDescriptor(
         com.google.monitoring.v3.CreateMetricDescriptorRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMetricDescriptorMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a metric descriptor. Only user-created
-     * [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
-     * deleted.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteMetricDescriptor(
         com.google.monitoring.v3.DeleteMetricDescriptorRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMetricDescriptorMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists time series that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.v3.ListTimeSeriesResponse listTimeSeries(
         com.google.monitoring.v3.ListTimeSeriesRequest request) {
       return blockingUnaryCall(getChannel(), getListTimeSeriesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates or adds data to one or more time series.
-     * The response is empty if all time series in the request were written.
-     * If any time series could not be written, a corresponding failure message is
-     * included in the error response.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty createTimeSeries(
         com.google.monitoring.v3.CreateTimeSeriesRequest request) {
       return blockingUnaryCall(
@@ -935,14 +742,7 @@ public final class MetricServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages metric descriptors, monitored resource descriptors, and
-   * time series data.
-   * </pre>
-   */
+  /** */
   public static final class MetricServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<MetricServiceFutureStub> {
     private MetricServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -955,13 +755,7 @@ public final class MetricServiceGrpc {
       return new MetricServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListMonitoredResourceDescriptorsResponse>
         listMonitoredResourceDescriptors(
@@ -971,13 +765,7 @@ public final class MetricServiceGrpc {
           request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single monitored resource descriptor. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.api.MonitoredResourceDescriptor>
         getMonitoredResourceDescriptor(
@@ -987,13 +775,7 @@ public final class MetricServiceGrpc {
           request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists metric descriptors that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListMetricDescriptorsResponse>
         listMetricDescriptors(com.google.monitoring.v3.ListMetricDescriptorsRequest request) {
@@ -1001,56 +783,28 @@ public final class MetricServiceGrpc {
           getChannel().newCall(getListMetricDescriptorsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single metric descriptor. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.api.MetricDescriptor>
         getMetricDescriptor(com.google.monitoring.v3.GetMetricDescriptorRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetMetricDescriptorMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new metric descriptor.
-     * User-created metric descriptors define
-     * [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.api.MetricDescriptor>
         createMetricDescriptor(com.google.monitoring.v3.CreateMetricDescriptorRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateMetricDescriptorMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a metric descriptor. Only user-created
-     * [custom metrics](https://cloud.google.com/monitoring/custom-metrics) can be
-     * deleted.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteMetricDescriptor(com.google.monitoring.v3.DeleteMetricDescriptorRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteMetricDescriptorMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists time series that match a filter. This method does not require a Workspace.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.v3.ListTimeSeriesResponse>
         listTimeSeries(com.google.monitoring.v3.ListTimeSeriesRequest request) {
@@ -1058,16 +812,7 @@ public final class MetricServiceGrpc {
           getChannel().newCall(getListTimeSeriesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates or adds data to one or more time series.
-     * The response is empty if all time series in the request were written.
-     * If any time series could not be written, a corresponding failure message is
-     * included in the error response.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         createTimeSeries(com.google.monitoring.v3.CreateTimeSeriesRequest request) {
       return futureUnaryCall(
