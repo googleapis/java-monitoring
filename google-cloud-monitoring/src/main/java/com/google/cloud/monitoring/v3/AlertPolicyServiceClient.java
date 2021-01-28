@@ -34,7 +34,6 @@ import com.google.monitoring.v3.AlertPolicy;
 import com.google.monitoring.v3.AlertPolicyName;
 import com.google.monitoring.v3.CreateAlertPolicyRequest;
 import com.google.monitoring.v3.DeleteAlertPolicyRequest;
-import com.google.api.resourcenames.ResourceName;
 import com.google.monitoring.v3.GetAlertPolicyRequest;
 import com.google.monitoring.v3.ListAlertPoliciesRequest;
 import com.google.monitoring.v3.ListAlertPoliciesResponse;
