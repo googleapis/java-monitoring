@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.13](https://www.github.com/googleapis/java-monitoring/compare/v2.0.12...v2.0.13) (2021-02-01)
+
+
+### Documentation
+
+* **samples:** fix NPE in DeleteMetricDescriptorIT#testDeleteMetricDescriptor ([#388](https://www.github.com/googleapis/java-monitoring/issues/388)) ([8475219](https://www.github.com/googleapis/java-monitoring/commit/84752197487103e08cba5a8b3da04d856266363a))
+
 ### [2.0.12](https://www.github.com/googleapis/java-monitoring/compare/v2.0.11...v2.0.12) (2021-01-14)
 
 
