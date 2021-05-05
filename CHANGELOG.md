@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0-sp.1](https://www.github.com/googleapis/java-monitoring/compare/2.1.0...v2.1.0-sp.1) (2021-05-05)
+
+
+### Features
+
+* configure initial sp version ([#532](https://www.github.com/googleapis/java-monitoring/issues/532)) ([005dd03](https://www.github.com/googleapis/java-monitoring/commit/005dd03fc6815411894e40f56f6905b71e8c15a9))
+
 ## [2.1.0](https://www.github.com/googleapis/java-monitoring/compare/v2.0.14...v2.1.0) (2021-03-11)
 
 
