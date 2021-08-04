@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://www.github.com/googleapis/java-monitoring/compare/v2.3.4...v2.4.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#623](https://www.github.com/googleapis/java-monitoring/issues/623)) ([0203f2c](https://www.github.com/googleapis/java-monitoring/commit/0203f2cd9ca38be3705c1635ea812f628d86a55a))
+
 ### [2.3.4](https://www.github.com/googleapis/java-monitoring/compare/v2.3.3...v2.3.4) (2021-07-02)
 
 
