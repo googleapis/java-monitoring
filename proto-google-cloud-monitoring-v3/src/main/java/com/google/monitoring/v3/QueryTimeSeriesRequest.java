@@ -138,11 +138,12 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The project on which to execute the request. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   * which to execute the request. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * </pre>
    *
-   * <code>string name = 1;</code>
+   * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    *
    * @return The name.
    */
@@ -162,11 +163,12 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The project on which to execute the request. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   * which to execute the request. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * </pre>
    *
-   * <code>string name = 1;</code>
+   * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    *
    * @return The bytes for name.
    */
@@ -194,7 +196,7 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
    * The default time zone is in UTC.
    * </pre>
    *
-   * <code>string query = 7;</code>
+   * <code>string query = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    *
    * @return The query.
    */
@@ -219,7 +221,7 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
    * The default time zone is in UTC.
    * </pre>
    *
-   * <code>string query = 7;</code>
+   * <code>string query = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    *
    * @return The bytes for query.
    */
@@ -676,11 +678,12 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return The name.
      */
@@ -699,11 +702,12 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return The bytes for name.
      */
@@ -722,11 +726,12 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @param value The name to set.
      * @return This builder for chaining.
@@ -744,11 +749,12 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return This builder for chaining.
      */
@@ -762,11 +768,12 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -792,7 +799,7 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      * The default time zone is in UTC.
      * </pre>
      *
-     * <code>string query = 7;</code>
+     * <code>string query = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return The query.
      */
@@ -816,7 +823,7 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      * The default time zone is in UTC.
      * </pre>
      *
-     * <code>string query = 7;</code>
+     * <code>string query = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return The bytes for query.
      */
@@ -840,7 +847,7 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      * The default time zone is in UTC.
      * </pre>
      *
-     * <code>string query = 7;</code>
+     * <code>string query = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @param value The query to set.
      * @return This builder for chaining.
@@ -863,7 +870,7 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      * The default time zone is in UTC.
      * </pre>
      *
-     * <code>string query = 7;</code>
+     * <code>string query = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return This builder for chaining.
      */
@@ -882,7 +889,7 @@ public final class QueryTimeSeriesRequest extends com.google.protobuf.GeneratedM
      * The default time zone is in UTC.
      * </pre>
      *
-     * <code>string query = 7;</code>
+     * <code>string query = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @param value The bytes for query to set.
      * @return This builder for chaining.

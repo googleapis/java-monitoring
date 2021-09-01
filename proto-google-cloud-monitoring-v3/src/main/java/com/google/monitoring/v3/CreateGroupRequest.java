@@ -137,7 +137,8 @@ public final class CreateGroupRequest extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Required. The project in which to create the group. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+   * which to create the group. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * </pre>
    *
@@ -163,7 +164,8 @@ public final class CreateGroupRequest extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Required. The project in which to create the group. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+   * which to create the group. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * </pre>
    *
@@ -617,7 +619,8 @@ public final class CreateGroupRequest extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Required. The project in which to create the group. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the group. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -642,7 +645,8 @@ public final class CreateGroupRequest extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Required. The project in which to create the group. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the group. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -667,7 +671,8 @@ public final class CreateGroupRequest extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Required. The project in which to create the group. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the group. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -691,7 +696,8 @@ public final class CreateGroupRequest extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Required. The project in which to create the group. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the group. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -711,7 +717,8 @@ public final class CreateGroupRequest extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Required. The project in which to create the group. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the group. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *

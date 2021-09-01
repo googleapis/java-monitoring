@@ -130,7 +130,8 @@ public final class ListUptimeCheckConfigsRequest extends com.google.protobuf.Gen
    *
    *
    * <pre>
-   * Required. The project whose Uptime check configurations are listed. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+   * whose Uptime check configurations are listed. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * </pre>
    *
@@ -156,7 +157,8 @@ public final class ListUptimeCheckConfigsRequest extends com.google.protobuf.Gen
    *
    *
    * <pre>
-   * Required. The project whose Uptime check configurations are listed. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+   * whose Uptime check configurations are listed. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * </pre>
    *
@@ -608,7 +610,8 @@ public final class ListUptimeCheckConfigsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The project whose Uptime check configurations are listed. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+     * whose Uptime check configurations are listed. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -633,7 +636,8 @@ public final class ListUptimeCheckConfigsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The project whose Uptime check configurations are listed. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+     * whose Uptime check configurations are listed. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -658,7 +662,8 @@ public final class ListUptimeCheckConfigsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The project whose Uptime check configurations are listed. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+     * whose Uptime check configurations are listed. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -682,7 +687,8 @@ public final class ListUptimeCheckConfigsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The project whose Uptime check configurations are listed. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+     * whose Uptime check configurations are listed. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -702,7 +708,8 @@ public final class ListUptimeCheckConfigsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The project whose Uptime check configurations are listed. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+     * whose Uptime check configurations are listed. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *

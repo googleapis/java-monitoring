@@ -134,7 +134,8 @@ public final class CreateUptimeCheckConfigRequest extends com.google.protobuf.Ge
    *
    *
    * <pre>
-   * Required. The project in which to create the Uptime check. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+   * which to create the Uptime check. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * </pre>
    *
@@ -160,7 +161,8 @@ public final class CreateUptimeCheckConfigRequest extends com.google.protobuf.Ge
    *
    *
    * <pre>
-   * Required. The project in which to create the Uptime check. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+   * which to create the Uptime check. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * </pre>
    *
@@ -589,7 +591,8 @@ public final class CreateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * Required. The project in which to create the Uptime check. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the Uptime check. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -614,7 +617,8 @@ public final class CreateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * Required. The project in which to create the Uptime check. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the Uptime check. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -639,7 +643,8 @@ public final class CreateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * Required. The project in which to create the Uptime check. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the Uptime check. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -663,7 +668,8 @@ public final class CreateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * Required. The project in which to create the Uptime check. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the Uptime check. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *
@@ -683,7 +689,8 @@ public final class CreateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * Required. The project in which to create the Uptime check. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+     * which to create the Uptime check. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * </pre>
      *

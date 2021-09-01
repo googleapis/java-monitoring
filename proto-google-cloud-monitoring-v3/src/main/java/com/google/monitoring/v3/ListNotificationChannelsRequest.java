@@ -147,7 +147,8 @@ public final class ListNotificationChannelsRequest extends com.google.protobuf.G
    *
    *
    * <pre>
-   * Required. The project on which to execute the request. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   * which to execute the request. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * This names the container
    * in which to look for the notification channels; it does not name a
@@ -179,7 +180,8 @@ public final class ListNotificationChannelsRequest extends com.google.protobuf.G
    *
    *
    * <pre>
-   * Required. The project on which to execute the request. The format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   * which to execute the request. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    * This names the container
    * in which to look for the notification channels; it does not name a
@@ -780,7 +782,8 @@ public final class ListNotificationChannelsRequest extends com.google.protobuf.G
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * This names the container
      * in which to look for the notification channels; it does not name a
@@ -811,7 +814,8 @@ public final class ListNotificationChannelsRequest extends com.google.protobuf.G
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * This names the container
      * in which to look for the notification channels; it does not name a
@@ -842,7 +846,8 @@ public final class ListNotificationChannelsRequest extends com.google.protobuf.G
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * This names the container
      * in which to look for the notification channels; it does not name a
@@ -872,7 +877,8 @@ public final class ListNotificationChannelsRequest extends com.google.protobuf.G
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * This names the container
      * in which to look for the notification channels; it does not name a
@@ -898,7 +904,8 @@ public final class ListNotificationChannelsRequest extends com.google.protobuf.G
      *
      *
      * <pre>
-     * Required. The project on which to execute the request. The format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+     * which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      * This names the container
      * in which to look for the notification channels; it does not name a

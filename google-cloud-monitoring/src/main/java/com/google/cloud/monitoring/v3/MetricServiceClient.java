@@ -188,7 +188,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -218,7 +219,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -248,7 +250,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -281,7 +284,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -530,7 +534,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -558,7 +563,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -586,7 +592,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -616,7 +623,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -854,8 +862,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
-   *     <p>projects/[PROJECT_ID_OR_NUMBER]
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is: 4 projects/[PROJECT_ID_OR_NUMBER]
    * @param metricDescriptor Required. The new [custom
    *     metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -886,8 +894,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
-   *     <p>projects/[PROJECT_ID_OR_NUMBER]
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is: 4 projects/[PROJECT_ID_OR_NUMBER]
    * @param metricDescriptor Required. The new [custom
    *     metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -918,8 +926,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
-   *     <p>projects/[PROJECT_ID_OR_NUMBER]
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is: 4 projects/[PROJECT_ID_OR_NUMBER]
    * @param metricDescriptor Required. The new [custom
    *     metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -952,8 +960,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
-   *     <p>projects/[PROJECT_ID_OR_NUMBER]
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is: 4 projects/[PROJECT_ID_OR_NUMBER]
    * @param metricDescriptor Required. The new [custom
    *     metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -1154,8 +1162,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project, organization or folder on which to execute the request. The
-   *     format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+   *     organization or folder on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
    * @param filter Required. A [monitoring
    *     filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies which time
@@ -1202,8 +1210,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project, organization or folder on which to execute the request. The
-   *     format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+   *     organization or folder on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
    * @param filter Required. A [monitoring
    *     filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies which time
@@ -1250,8 +1258,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project, organization or folder on which to execute the request. The
-   *     format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+   *     organization or folder on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
    * @param filter Required. A [monitoring
    *     filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies which time
@@ -1298,8 +1306,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project, organization or folder on which to execute the request. The
-   *     format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+   *     organization or folder on which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
    * @param filter Required. A [monitoring
    *     filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies which time
@@ -1451,7 +1459,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @param timeSeries Required. The new data to be added to a list of time series. Adds at most one
    *     data point to each of several time series. The new data point must be more recent than any
@@ -1485,7 +1494,8 @@ public class MetricServiceClient implements BackgroundResource {
    * }
    * }</pre>
    *
-   * @param name Required. The project on which to execute the request. The format is:
+   * @param name Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+   *     which to execute the request. The format is:
    *     <p>projects/[PROJECT_ID_OR_NUMBER]
    * @param timeSeries Required. The new data to be added to a list of time series. Adds at most one
    *     data point to each of several time series. The new data point must be more recent than any

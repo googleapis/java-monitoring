@@ -1582,7 +1582,7 @@ public final class WindowsBasedSli extends com.google.protobuf.GeneratedMessageV
    *
    * <pre>
    * A `MetricRange` is used when each window is good when the value x of a
-   * single `TimeSeries` satisfies `range.min &lt;= x &lt; range.max`. The provided
+   * single `TimeSeries` satisfies `range.min &lt;= x &lt;= range.max`. The provided
    * `TimeSeries` must have `ValueType = INT64` or `ValueType = DOUBLE` and
    * `MetricKind = GAUGE`.
    * </pre>
@@ -1968,7 +1968,7 @@ public final class WindowsBasedSli extends com.google.protobuf.GeneratedMessageV
      *
      * <pre>
      * A `MetricRange` is used when each window is good when the value x of a
-     * single `TimeSeries` satisfies `range.min &lt;= x &lt; range.max`. The provided
+     * single `TimeSeries` satisfies `range.min &lt;= x &lt;= range.max`. The provided
      * `TimeSeries` must have `ValueType = INT64` or `ValueType = DOUBLE` and
      * `MetricKind = GAUGE`.
      * </pre>

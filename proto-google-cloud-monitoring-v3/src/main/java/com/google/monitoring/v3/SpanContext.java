@@ -22,8 +22,8 @@ package com.google.monitoring.v3;
  *
  *
  * <pre>
- * The context of a span, attached to
- * [Exemplars][google.api.Distribution.Exemplars]
+ * The context of a span. This is attached to an
+ * [Exemplar][google.api.Distribution.Exemplar]
  * in [Distribution][google.api.Distribution] values during aggregation.
  * It contains the name of a span with format:
  *     projects/[PROJECT_ID_OR_NUMBER]/traces/[TRACE_ID]/spans/[SPAN_ID]
@@ -335,8 +335,8 @@ public final class SpanContext extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * The context of a span, attached to
-   * [Exemplars][google.api.Distribution.Exemplars]
+   * The context of a span. This is attached to an
+   * [Exemplar][google.api.Distribution.Exemplar]
    * in [Distribution][google.api.Distribution] values during aggregation.
    * It contains the name of a span with format:
    *     projects/[PROJECT_ID_OR_NUMBER]/traces/[TRACE_ID]/spans/[SPAN_ID]

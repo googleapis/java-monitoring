@@ -341,8 +341,8 @@ public final class ListTimeSeriesRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Required. The project, organization or folder on which to execute the request. The
-   * format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+   * organization or folder on which to execute the request. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    *     organizations/[ORGANIZATION_ID]
    *     folders/[FOLDER_ID]
@@ -370,8 +370,8 @@ public final class ListTimeSeriesRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Required. The project, organization or folder on which to execute the request. The
-   * format is:
+   * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+   * organization or folder on which to execute the request. The format is:
    *     projects/[PROJECT_ID_OR_NUMBER]
    *     organizations/[ORGANIZATION_ID]
    *     folders/[FOLDER_ID]
@@ -1275,8 +1275,8 @@ public final class ListTimeSeriesRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The project, organization or folder on which to execute the request. The
-     * format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+     * organization or folder on which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      *     organizations/[ORGANIZATION_ID]
      *     folders/[FOLDER_ID]
@@ -1303,8 +1303,8 @@ public final class ListTimeSeriesRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The project, organization or folder on which to execute the request. The
-     * format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+     * organization or folder on which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      *     organizations/[ORGANIZATION_ID]
      *     folders/[FOLDER_ID]
@@ -1331,8 +1331,8 @@ public final class ListTimeSeriesRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The project, organization or folder on which to execute the request. The
-     * format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+     * organization or folder on which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      *     organizations/[ORGANIZATION_ID]
      *     folders/[FOLDER_ID]
@@ -1358,8 +1358,8 @@ public final class ListTimeSeriesRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The project, organization or folder on which to execute the request. The
-     * format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+     * organization or folder on which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      *     organizations/[ORGANIZATION_ID]
      *     folders/[FOLDER_ID]
@@ -1381,8 +1381,8 @@ public final class ListTimeSeriesRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The project, organization or folder on which to execute the request. The
-     * format is:
+     * Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+     * organization or folder on which to execute the request. The format is:
      *     projects/[PROJECT_ID_OR_NUMBER]
      *     organizations/[ORGANIZATION_ID]
      *     folders/[FOLDER_ID]
