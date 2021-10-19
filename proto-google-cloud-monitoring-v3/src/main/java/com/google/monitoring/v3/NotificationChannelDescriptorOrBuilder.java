@@ -206,6 +206,84 @@ public interface NotificationChannelDescriptorOrBuilder
    *
    *
    * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @return A list containing the supportedTiers.
+   */
+  @java.lang.Deprecated
+  java.util.List<com.google.monitoring.v3.ServiceTier> getSupportedTiersList();
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @return The count of supportedTiers.
+   */
+  @java.lang.Deprecated
+  int getSupportedTiersCount();
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @param index The index of the element to return.
+   * @return The supportedTiers at the given index.
+   */
+  @java.lang.Deprecated
+  com.google.monitoring.v3.ServiceTier getSupportedTiers(int index);
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @return A list containing the enum numeric values on the wire for supportedTiers.
+   */
+  @java.lang.Deprecated
+  java.util.List<java.lang.Integer> getSupportedTiersValueList();
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of supportedTiers at the given index.
+   */
+  @java.lang.Deprecated
+  int getSupportedTiersValue(int index);
+
+  /**
+   *
+   *
+   * <pre>
    * The product launch stage for channels of this type.
    * </pre>
    *

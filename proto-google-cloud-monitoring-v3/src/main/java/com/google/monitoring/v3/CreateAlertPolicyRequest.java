@@ -275,7 +275,7 @@ public final class CreateAlertPolicyRequest extends com.google.protobuf.Generate
     if (alertPolicy_ != null) {
       output.writeMessage(2, getAlertPolicy());
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
     unknownFields.writeTo(output);
@@ -290,7 +290,7 @@ public final class CreateAlertPolicyRequest extends com.google.protobuf.Generate
     if (alertPolicy_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getAlertPolicy());
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
     size += unknownFields.getSerializedSize();

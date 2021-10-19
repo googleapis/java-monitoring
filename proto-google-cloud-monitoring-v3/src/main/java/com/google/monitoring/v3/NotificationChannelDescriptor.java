@@ -45,6 +45,7 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
     displayName_ = "";
     description_ = "";
     labels_ = java.util.Collections.emptyList();
+    supportedTiers_ = java.util.Collections.emptyList();
     launchStage_ = 0;
   }
 
@@ -109,6 +110,31 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
                   input.readMessage(com.google.api.LabelDescriptor.parser(), extensionRegistry));
               break;
             }
+          case 40:
+            {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                supportedTiers_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              supportedTiers_.add(rawValue);
+              break;
+            }
+          case 42:
+            {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while (input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  supportedTiers_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                supportedTiers_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
           case 50:
             {
               java.lang.String s = input.readStringRequireUtf8();
@@ -139,6 +165,9 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         labels_ = java.util.Collections.unmodifiableList(labels_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        supportedTiers_ = java.util.Collections.unmodifiableList(supportedTiers_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -453,6 +482,117 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
     return labels_.get(index);
   }
 
+  public static final int SUPPORTED_TIERS_FIELD_NUMBER = 5;
+  private java.util.List<java.lang.Integer> supportedTiers_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+          java.lang.Integer, com.google.monitoring.v3.ServiceTier>
+      supportedTiers_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.google.monitoring.v3.ServiceTier>() {
+            public com.google.monitoring.v3.ServiceTier convert(java.lang.Integer from) {
+              @SuppressWarnings("deprecation")
+              com.google.monitoring.v3.ServiceTier result =
+                  com.google.monitoring.v3.ServiceTier.valueOf(from);
+              return result == null ? com.google.monitoring.v3.ServiceTier.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @return A list containing the supportedTiers.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.List<com.google.monitoring.v3.ServiceTier> getSupportedTiersList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.google.monitoring.v3.ServiceTier>(
+        supportedTiers_, supportedTiers_converter_);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @return The count of supportedTiers.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public int getSupportedTiersCount() {
+    return supportedTiers_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @param index The index of the element to return.
+   * @return The supportedTiers at the given index.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public com.google.monitoring.v3.ServiceTier getSupportedTiers(int index) {
+    return supportedTiers_converter_.convert(supportedTiers_.get(index));
+  }
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @return A list containing the enum numeric values on the wire for supportedTiers.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.List<java.lang.Integer> getSupportedTiersValueList() {
+    return supportedTiers_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * The tiers that support this notification channel; the project service tier
+   * must be one of the supported_tiers.
+   * </pre>
+   *
+   * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+   * </code>
+   *
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of supportedTiers at the given index.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public int getSupportedTiersValue(int index) {
+    return supportedTiers_.get(index);
+  }
+
+  private int supportedTiersMemoizedSerializedSize;
+
   public static final int LAUNCH_STAGE_FIELD_NUMBER = 7;
   private int launchStage_;
   /**
@@ -502,19 +642,27 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getTypeBytes().isEmpty()) {
+    getSerializedSize();
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
     }
-    if (!getDisplayNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, displayName_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
     for (int i = 0; i < labels_.size(); i++) {
       output.writeMessage(4, labels_.get(i));
     }
-    if (!getNameBytes().isEmpty()) {
+    if (getSupportedTiersList().size() > 0) {
+      output.writeUInt32NoTag(42);
+      output.writeUInt32NoTag(supportedTiersMemoizedSerializedSize);
+    }
+    for (int i = 0; i < supportedTiers_.size(); i++) {
+      output.writeEnumNoTag(supportedTiers_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, name_);
     }
     if (launchStage_ != com.google.api.LaunchStage.LAUNCH_STAGE_UNSPECIFIED.getNumber()) {
@@ -529,19 +677,32 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
     if (size != -1) return size;
 
     size = 0;
-    if (!getTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
     }
-    if (!getDisplayNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, displayName_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
     for (int i = 0; i < labels_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, labels_.get(i));
     }
-    if (!getNameBytes().isEmpty()) {
+    {
+      int dataSize = 0;
+      for (int i = 0; i < supportedTiers_.size(); i++) {
+        dataSize +=
+            com.google.protobuf.CodedOutputStream.computeEnumSizeNoTag(supportedTiers_.get(i));
+      }
+      size += dataSize;
+      if (!getSupportedTiersList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(dataSize);
+      }
+      supportedTiersMemoizedSerializedSize = dataSize;
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
     }
     if (launchStage_ != com.google.api.LaunchStage.LAUNCH_STAGE_UNSPECIFIED.getNumber()) {
@@ -568,6 +729,7 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
     if (!getDisplayName().equals(other.getDisplayName())) return false;
     if (!getDescription().equals(other.getDescription())) return false;
     if (!getLabelsList().equals(other.getLabelsList())) return false;
+    if (!supportedTiers_.equals(other.supportedTiers_)) return false;
     if (launchStage_ != other.launchStage_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -591,6 +753,10 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
     if (getLabelsCount() > 0) {
       hash = (37 * hash) + LABELS_FIELD_NUMBER;
       hash = (53 * hash) + getLabelsList().hashCode();
+    }
+    if (getSupportedTiersCount() > 0) {
+      hash = (37 * hash) + SUPPORTED_TIERS_FIELD_NUMBER;
+      hash = (53 * hash) + supportedTiers_.hashCode();
     }
     hash = (37 * hash) + LAUNCH_STAGE_FIELD_NUMBER;
     hash = (53 * hash) + launchStage_;
@@ -758,6 +924,8 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
       } else {
         labelsBuilder_.clear();
       }
+      supportedTiers_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);
       launchStage_ = 0;
 
       return this;
@@ -801,6 +969,11 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
       } else {
         result.labels_ = labelsBuilder_.build();
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        supportedTiers_ = java.util.Collections.unmodifiableList(supportedTiers_);
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.supportedTiers_ = supportedTiers_;
       result.launchStage_ = launchStage_;
       onBuilt();
       return result;
@@ -894,6 +1067,16 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
             labelsBuilder_.addAllMessages(other.labels_);
           }
         }
+      }
+      if (!other.supportedTiers_.isEmpty()) {
+        if (supportedTiers_.isEmpty()) {
+          supportedTiers_ = other.supportedTiers_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureSupportedTiersIsMutable();
+          supportedTiers_.addAll(other.supportedTiers_);
+        }
+        onChanged();
       }
       if (other.launchStage_ != 0) {
         setLaunchStageValue(other.getLaunchStageValue());
@@ -1779,6 +1962,263 @@ public final class NotificationChannelDescriptor extends com.google.protobuf.Gen
         labels_ = null;
       }
       return labelsBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> supportedTiers_ = java.util.Collections.emptyList();
+
+    private void ensureSupportedTiersIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        supportedTiers_ = new java.util.ArrayList<java.lang.Integer>(supportedTiers_);
+        bitField0_ |= 0x00000002;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @return A list containing the supportedTiers.
+     */
+    @java.lang.Deprecated
+    public java.util.List<com.google.monitoring.v3.ServiceTier> getSupportedTiersList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.monitoring.v3.ServiceTier>(
+          supportedTiers_, supportedTiers_converter_);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @return The count of supportedTiers.
+     */
+    @java.lang.Deprecated
+    public int getSupportedTiersCount() {
+      return supportedTiers_.size();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @param index The index of the element to return.
+     * @return The supportedTiers at the given index.
+     */
+    @java.lang.Deprecated
+    public com.google.monitoring.v3.ServiceTier getSupportedTiers(int index) {
+      return supportedTiers_converter_.convert(supportedTiers_.get(index));
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @param index The index to set the value at.
+     * @param value The supportedTiers to set.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated
+    public Builder setSupportedTiers(int index, com.google.monitoring.v3.ServiceTier value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureSupportedTiersIsMutable();
+      supportedTiers_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @param value The supportedTiers to add.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated
+    public Builder addSupportedTiers(com.google.monitoring.v3.ServiceTier value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureSupportedTiersIsMutable();
+      supportedTiers_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @param values The supportedTiers to add.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated
+    public Builder addAllSupportedTiers(
+        java.lang.Iterable<? extends com.google.monitoring.v3.ServiceTier> values) {
+      ensureSupportedTiersIsMutable();
+      for (com.google.monitoring.v3.ServiceTier value : values) {
+        supportedTiers_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated
+    public Builder clearSupportedTiers() {
+      supportedTiers_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @return A list containing the enum numeric values on the wire for supportedTiers.
+     */
+    @java.lang.Deprecated
+    public java.util.List<java.lang.Integer> getSupportedTiersValueList() {
+      return java.util.Collections.unmodifiableList(supportedTiers_);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of supportedTiers at the given index.
+     */
+    @java.lang.Deprecated
+    public int getSupportedTiersValue(int index) {
+      return supportedTiers_.get(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of supportedTiers at the given index.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated
+    public Builder setSupportedTiersValue(int index, int value) {
+      ensureSupportedTiersIsMutable();
+      supportedTiers_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @param value The enum numeric value on the wire for supportedTiers to add.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated
+    public Builder addSupportedTiersValue(int value) {
+      ensureSupportedTiersIsMutable();
+      supportedTiers_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The tiers that support this notification channel; the project service tier
+     * must be one of the supported_tiers.
+     * </pre>
+     *
+     * <code>repeated .google.monitoring.v3.ServiceTier supported_tiers = 5 [deprecated = true];
+     * </code>
+     *
+     * @param values The enum numeric values on the wire for supportedTiers to add.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated
+    public Builder addAllSupportedTiersValue(java.lang.Iterable<java.lang.Integer> values) {
+      ensureSupportedTiersIsMutable();
+      for (int value : values) {
+        supportedTiers_.add(value);
+      }
+      onChanged();
+      return this;
     }
 
     private int launchStage_ = 0;

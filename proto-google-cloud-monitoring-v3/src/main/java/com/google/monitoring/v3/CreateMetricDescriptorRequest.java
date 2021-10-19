@@ -259,7 +259,7 @@ public final class CreateMetricDescriptorRequest extends com.google.protobuf.Gen
     if (metricDescriptor_ != null) {
       output.writeMessage(2, getMetricDescriptor());
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
     unknownFields.writeTo(output);
@@ -274,7 +274,7 @@ public final class CreateMetricDescriptorRequest extends com.google.protobuf.Gen
     if (metricDescriptor_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getMetricDescriptor());
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
     size += unknownFields.getSerializedSize();

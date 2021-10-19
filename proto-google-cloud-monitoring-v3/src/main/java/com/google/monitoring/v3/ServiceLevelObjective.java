@@ -829,7 +829,7 @@ public final class ServiceLevelObjective extends com.google.protobuf.GeneratedMe
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     if (serviceLevelIndicator_ != null) {
@@ -844,7 +844,7 @@ public final class ServiceLevelObjective extends com.google.protobuf.GeneratedMe
     if (periodCase_ == 6) {
       output.writeEnum(6, ((java.lang.Integer) period_));
     }
-    if (!getDisplayNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, displayName_);
     }
     com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
@@ -858,7 +858,7 @@ public final class ServiceLevelObjective extends com.google.protobuf.GeneratedMe
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     if (serviceLevelIndicator_ != null) {
@@ -877,7 +877,7 @@ public final class ServiceLevelObjective extends com.google.protobuf.GeneratedMe
       size +=
           com.google.protobuf.CodedOutputStream.computeEnumSize(6, ((java.lang.Integer) period_));
     }
-    if (!getDisplayNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, displayName_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :

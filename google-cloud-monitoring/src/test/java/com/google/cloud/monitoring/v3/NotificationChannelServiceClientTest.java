@@ -48,6 +48,7 @@ import com.google.monitoring.v3.NotificationChannelName;
 import com.google.monitoring.v3.OrganizationName;
 import com.google.monitoring.v3.ProjectName;
 import com.google.monitoring.v3.SendNotificationChannelVerificationCodeRequest;
+import com.google.monitoring.v3.ServiceTier;
 import com.google.monitoring.v3.UpdateNotificationChannelRequest;
 import com.google.monitoring.v3.VerifyNotificationChannelRequest;
 import com.google.protobuf.AbstractMessage;
@@ -313,6 +314,7 @@ public class NotificationChannelServiceClientTest {
             .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllLabels(new ArrayList<LabelDescriptor>())
+            .addAllSupportedTiers(new ArrayList<ServiceTier>())
             .setLaunchStage(LaunchStage.forNumber(0))
             .build();
     mockNotificationChannelService.addResponse(expectedResponse);
@@ -364,6 +366,7 @@ public class NotificationChannelServiceClientTest {
             .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllLabels(new ArrayList<LabelDescriptor>())
+            .addAllSupportedTiers(new ArrayList<ServiceTier>())
             .setLaunchStage(LaunchStage.forNumber(0))
             .build();
     mockNotificationChannelService.addResponse(expectedResponse);
