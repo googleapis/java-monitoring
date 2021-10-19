@@ -29,7 +29,7 @@
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-monitoring</artifactId>
-      <version>3.0.5-SNAPSHOT</version>
+      <version>3.0.9-SNAPSHOT</version>
     </dependency>
     <!-- [END monitoring_install_without_bom] -->
     <!-- {x-version-update-end} -->
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java-util</artifactId>
-      <version>3.17.3</version>
+      <version>3.18.1</version>
     </dependency>
   </dependencies>
 
