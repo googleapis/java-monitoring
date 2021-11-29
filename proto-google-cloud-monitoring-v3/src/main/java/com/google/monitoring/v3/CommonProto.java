@@ -50,8 +50,7 @@ public final class CommonProto {
     java.lang.String[] descriptorData = {
       "\n"
           + "!google/monitoring/v3/common.proto\022\024goo"
-          + "gle.monitoring.v3\032\035google/api/distributi"
-          + "on.proto\032\036google/protobuf/duration.proto\032\037google/protobuf/timestamp.proto\"\252\001\n\n"
+          + "gle.monitoring.v3\032\035google/api/distribution.proto\032\036google/protobuf/duration.proto\032\037google/protobuf/timestamp.proto\"\252\001\n\n"
           + "TypedValue\022\024\n\n"
           + "bool_value\030\001 \001(\010H\000\022\025\n"
           + "\013int64_value\030\002 \001(\003H\000\022\026\n"
