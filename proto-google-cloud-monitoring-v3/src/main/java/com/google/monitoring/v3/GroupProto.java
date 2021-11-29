@@ -40,20 +40,22 @@ public final class GroupProto {
 
   static {
     java.lang.String[] descriptorData = {
-      "\n google/monitoring/v3/group.proto\022\024goog"
-          + "le.monitoring.v3\032\031google/api/resource.pr"
-          + "oto\"\200\002\n\005Group\022\014\n\004name\030\001 \001(\t\022\024\n\014display_n"
-          + "ame\030\002 \001(\t\022\023\n\013parent_name\030\003 \001(\t\022\016\n\006filter"
-          + "\030\005 \001(\t\022\022\n\nis_cluster\030\006 \001(\010:\231\001\352A\225\001\n\037monit"
-          + "oring.googleapis.com/Group\022!projects/{pr"
+      "\n"
+          + " google/monitoring/v3/group.proto\022\024goog"
+          + "le.monitoring.v3\032\031google/api/resource.proto\"\200\002\n"
+          + "\005Group\022\014\n"
+          + "\004name\030\001 \001(\t\022\024\n"
+          + "\014display_name\030\002 \001(\t\022\023\n"
+          + "\013parent_name\030\003 \001(\t\022\016\n"
+          + "\006filter\030\005 \001(\t\022\022\n\n"
+          + "is_cluster\030\006 \001(\010:\231\001\352A\225\001\n"
+          + "\037monitoring.googleapis.com/Group\022!projects/{pr"
           + "oject}/groups/{group}\022+organizations/{or"
-          + "ganization}/groups/{group}\022\037folders/{fol"
-          + "der}/groups/{group}\022\001*B\302\001\n\030com.google.mo"
-          + "nitoring.v3B\nGroupProtoP\001Z>google.golang"
-          + ".org/genproto/googleapis/monitoring/v3;m"
+          + "ganization}/groups/{group}\022\037folders/{folder}/groups/{group}\022\001*B\302\001\n"
+          + "\030com.google.monitoring.v3B\n"
+          + "GroupProtoP\001Z>google.golang.org/genproto/googleapis/monitoring/v3;m"
           + "onitoring\252\002\032Google.Cloud.Monitoring.V3\312\002"
-          + "\032Google\\Cloud\\Monitoring\\V3\352\002\035Google::Cl"
-          + "oud::Monitoring::V3b\006proto3"
+          + "\032Google\\Cloud\\Monitoring\\V3\352\002\035Google::Cloud::Monitoring::V3b\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
