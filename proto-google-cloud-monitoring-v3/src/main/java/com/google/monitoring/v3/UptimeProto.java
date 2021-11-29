@@ -73,8 +73,7 @@ public final class UptimeProto {
   static {
     java.lang.String[] descriptorData = {
       "\n"
-          + "!google/monitoring/v3/uptime.proto\022\024goo"
-          + "gle.monitoring.v3\032#google/api/monitored_resource.proto\032\031google/api/resource.proto\032\036google/protobuf/duration.proto\"\346\001\n"
+          + "!google/monitoring/v3/uptime.proto\022\024google.monitoring.v3\032#google/api/monitored_resource.proto\032\031google/api/resource.proto\032\036google/protobuf/duration.proto\"\346\001\n"
           + "\017InternalChecker\022\014\n"
           + "\004name\030\001 \001(\t\022\024\n"
           + "\014display_name\030\002 \001(\t\022\017\n"
@@ -150,8 +149,7 @@ public final class UptimeProto {
           + "\023NOT_CONTAINS_STRING\020\002\022\021\n\r"
           + "MATCHES_REGEX\020\003\022\025\n"
           + "\021NOT_MATCHES_REGEX\020\004:\363\001\352A\357\001\n"
-          + "+monitoring.googleapis.com/UptimeCheckConfig\022;projects/{project}/uptimeCheckConf"
-          + "igs/{uptime_check_config}\022Eorganizations/{organization}/uptimeCheckConfigs/{uptime_check_config}\0229folders/{folder}/uptimeCheckConfigs/{uptime_check_config}\022\001*B\n"
+          + "+monitoring.googleapis.com/UptimeCheckConfig\022;projects/{project}/uptimeCheckConfigs/{uptime_check_config}\022Eorganizations/{organization}/uptimeCheckConfigs/{uptime_check_config}\0229folders/{folder}/uptimeCheckConfigs/{uptime_check_config}\022\001*B\n"
           + "\n"
           + "\010resourceB\024\n"
           + "\022check_request_type\"n\n\r"
