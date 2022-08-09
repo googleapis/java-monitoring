@@ -129,8 +129,7 @@ public class UptimeSample {
         listUptimeCheckIps();
         break;
       case "get":
-        getUptimeCheckConfig(
-            cl.getOptionValue(DISPLAY_NAME_OPTION.getOpt(), "new uptime check"));
+        getUptimeCheckConfig(cl.getOptionValue(DISPLAY_NAME_OPTION.getOpt(), "new uptime check"));
         break;
       case "delete":
         deleteUptimeCheckConfig(
@@ -169,8 +168,8 @@ public class UptimeSample {
   // [END monitoring_uptime_check_create]]
 
   // [START monitoring_uptime_check_update]]
-  private static void updateUptimeCheck(
-      String checkName, String hostName, String pathName) throws IOException {
+  private static void updateUptimeCheck(String checkName, String hostName, String pathName)
+      throws IOException {
 
     UpdateUptimeCheckConfigRequest request =
         UpdateUptimeCheckConfigRequest.newBuilder()
@@ -259,8 +258,7 @@ public class UptimeSample {
       if (config != null) {
         System.out.println(config.toString());
       } else {
-        System.out.println(
-            "No uptime check config found with ID " + checkName);
+        System.out.println("No uptime check config found with ID " + checkName);
       }
     } catch (Exception e) {
       usage("Exception getting uptime check: " + e.toString());
@@ -270,8 +268,7 @@ public class UptimeSample {
   // [END monitoring_uptime_check_get]]
 
   // [START monitoring_uptime_check_delete]]
-  private static void deleteUptimeCheckConfig(String checkName)
-      throws IOException {
+  private static void deleteUptimeCheckConfig(String checkName) throws IOException {
     try (UptimeCheckServiceClient client = UptimeCheckServiceClient.create()) {
       client.deleteUptimeCheckConfig(checkName);
     } catch (Exception e) {

@@ -65,7 +65,7 @@ public class UptimeIT {
     UptimeSample.main("create", "-n", config.getDisplayName(), "-o", "test.example.com", "-a", "/");
     String actual = bout.toString();
     assertThat(actual).contains(config.getDisplayName());
-    checkName =  actual.split(":")[1].trim();
+    checkName = actual.split(":")[1].trim();
   }
 
   @Test
