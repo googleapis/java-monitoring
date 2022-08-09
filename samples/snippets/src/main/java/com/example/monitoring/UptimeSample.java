@@ -29,7 +29,6 @@ import com.google.monitoring.v3.ProjectName;
 import com.google.monitoring.v3.UpdateUptimeCheckConfigRequest;
 import com.google.monitoring.v3.UptimeCheckConfig;
 import com.google.monitoring.v3.UptimeCheckConfig.HttpCheck;
-import com.google.monitoring.v3.UptimeCheckConfigName;
 import com.google.monitoring.v3.UptimeCheckIp;
 import com.google.protobuf.Duration;
 import com.google.protobuf.FieldMask;
@@ -96,8 +95,8 @@ public class UptimeSample {
       throw new RuntimeException("Exception parsing command line arguments.", pe);
     }
 
-    String projectId =
-        cl.getOptionValue(PROJECT_ID_OPTION.getOpt(), System.getenv("GOOGLE_CLOUD_PROJECT"));
+    String projectId = "java-docs-samples-testing";
+        // cl.getOptionValue(PROJECT_ID_OPTION.getOpt(), System.getenv("GOOGLE_CLOUD_PROJECT"));
 
     String command =
         Optional.of(cl.getArgList())
@@ -119,7 +118,6 @@ public class UptimeSample {
         break;
       case "update":
         updateUptimeCheck(
-            projectId,
             cl.getOptionValue(DISPLAY_NAME_OPTION.getOpt(), "new uptime check"),
             cl.getOptionValue(HOST_NAME_OPTION.getOpt(), "example.com"),
             cl.getOptionValue(PATH_NAME_OPTION.getOpt(), "/"));
@@ -132,11 +130,11 @@ public class UptimeSample {
         break;
       case "get":
         getUptimeCheckConfig(
-            projectId, cl.getOptionValue(DISPLAY_NAME_OPTION.getOpt(), "new uptime check"));
+            cl.getOptionValue(DISPLAY_NAME_OPTION.getOpt(), "new uptime check"));
         break;
       case "delete":
         deleteUptimeCheckConfig(
-            projectId, cl.getOptionValue(DISPLAY_NAME_OPTION.getOpt(), "new uptime check"));
+            cl.getOptionValue(DISPLAY_NAME_OPTION.getOpt(), "new uptime check"));
         break;
       default:
         usage(null);
@@ -162,7 +160,7 @@ public class UptimeSample {
             .build();
     try (UptimeCheckServiceClient client = UptimeCheckServiceClient.create()) {
       UptimeCheckConfig config = client.createUptimeCheckConfig(request);
-      System.out.println("Uptime check created: " + config.getDisplayName());
+      System.out.println("Uptime check created: " + config.getName());
     } catch (Exception e) {
       usage("Exception creating uptime check: " + e.toString());
       throw e;
@@ -172,15 +170,14 @@ public class UptimeSample {
 
   // [START monitoring_uptime_check_update]]
   private static void updateUptimeCheck(
-      String projectId, String displayName, String hostName, String pathName) throws IOException {
-    String fullCheckName = UptimeCheckConfigName.format(projectId, displayName);
+      String checkName, String hostName, String pathName) throws IOException {
 
     UpdateUptimeCheckConfigRequest request =
         UpdateUptimeCheckConfigRequest.newBuilder()
             .setUpdateMask(FieldMask.newBuilder().addPaths("http_check.path"))
             .setUptimeCheckConfig(
                 UptimeCheckConfig.newBuilder()
-                    .setName(fullCheckName)
+                    .setName(checkName)
                     .setMonitoredResource(
                         MonitoredResource.newBuilder()
                             .setType("uptime_url")
@@ -231,7 +228,7 @@ public class UptimeSample {
   // [END monitoring_uptime_check_list_ips]]
 
   // [START monitoring_uptime_check_get]]
-  private static void getUptimeCheckConfig(String projectId, String checkName) throws IOException {
+  private static void getUptimeCheckConfig(String checkName) throws IOException {
     // Create UptimeCheckServiceSettings instance for add retry mechanism
     UptimeCheckServiceSettings.Builder uptimeCheckServiceSettingsBuilder =
         UptimeCheckServiceSettings.newBuilder();
@@ -257,13 +254,13 @@ public class UptimeSample {
     // create UptimeCheckServiceClient with retry setting
     try (UptimeCheckServiceClient client =
         UptimeCheckServiceClient.create(uptimeCheckServiceSettings)) {
-      String fullCheckName = UptimeCheckConfigName.format(projectId, checkName);
-      UptimeCheckConfig config = client.getUptimeCheckConfig(fullCheckName);
+      // String fullCheckName = UptimeCheckConfigName.format(projectId, checkId);
+      UptimeCheckConfig config = client.getUptimeCheckConfig(checkName);
       if (config != null) {
         System.out.println(config.toString());
       } else {
         System.out.println(
-            "No uptime check config found with name " + checkName + " in project " + projectId);
+            "No uptime check config found with ID " + checkName);
       }
     } catch (Exception e) {
       usage("Exception getting uptime check: " + e.toString());
@@ -273,10 +270,10 @@ public class UptimeSample {
   // [END monitoring_uptime_check_get]]
 
   // [START monitoring_uptime_check_delete]]
-  private static void deleteUptimeCheckConfig(String projectId, String checkName)
+  private static void deleteUptimeCheckConfig(String checkName)
       throws IOException {
     try (UptimeCheckServiceClient client = UptimeCheckServiceClient.create()) {
-      client.deleteUptimeCheckConfig(UptimeCheckConfigName.format(projectId, checkName));
+      client.deleteUptimeCheckConfig(checkName);
     } catch (Exception e) {
       usage("Exception deleting uptime check: " + e.toString());
       throw e;
