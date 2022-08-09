@@ -253,7 +253,6 @@ public class UptimeSample {
     // create UptimeCheckServiceClient with retry setting
     try (UptimeCheckServiceClient client =
         UptimeCheckServiceClient.create(uptimeCheckServiceSettings)) {
-      // String fullCheckName = UptimeCheckConfigName.format(projectId, checkId);
       UptimeCheckConfig config = client.getUptimeCheckConfig(checkName);
       if (config != null) {
         System.out.println(config.toString());
