@@ -95,8 +95,8 @@ public class UptimeSample {
       throw new RuntimeException("Exception parsing command line arguments.", pe);
     }
 
-    String projectId = "java-docs-samples-testing";
-        // cl.getOptionValue(PROJECT_ID_OPTION.getOpt(), System.getenv("GOOGLE_CLOUD_PROJECT"));
+    String projectId =
+        cl.getOptionValue(PROJECT_ID_OPTION.getOpt(), System.getenv("GOOGLE_CLOUD_PROJECT"));
 
     String command =
         Optional.of(cl.getArgList())
