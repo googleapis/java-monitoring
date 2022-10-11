@@ -32,6 +32,7 @@ public interface CreateTimeSeriesErrorOrBuilder
    *
    * <code>.google.monitoring.v3.TimeSeries time_series = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the timeSeries field is set.
    */
   @java.lang.Deprecated
@@ -45,6 +46,7 @@ public interface CreateTimeSeriesErrorOrBuilder
    *
    * <code>.google.monitoring.v3.TimeSeries time_series = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The timeSeries.
    */
   @java.lang.Deprecated
@@ -70,6 +72,7 @@ public interface CreateTimeSeriesErrorOrBuilder
    *
    * <code>.google.rpc.Status status = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the status field is set.
    */
   @java.lang.Deprecated
@@ -83,6 +86,7 @@ public interface CreateTimeSeriesErrorOrBuilder
    *
    * <code>.google.rpc.Status status = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The status.
    */
   @java.lang.Deprecated

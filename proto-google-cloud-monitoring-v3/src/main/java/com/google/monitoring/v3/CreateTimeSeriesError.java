@@ -50,73 +50,6 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
     return this.unknownFields;
   }
 
-  private CreateTimeSeriesError(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              com.google.monitoring.v3.TimeSeries.Builder subBuilder = null;
-              if (timeSeries_ != null) {
-                subBuilder = timeSeries_.toBuilder();
-              }
-              timeSeries_ =
-                  input.readMessage(
-                      com.google.monitoring.v3.TimeSeries.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(timeSeries_);
-                timeSeries_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 18:
-            {
-              com.google.rpc.Status.Builder subBuilder = null;
-              if (status_ != null) {
-                subBuilder = status_.toBuilder();
-              }
-              status_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(status_);
-                status_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.monitoring.v3.MetricServiceProto
         .internal_static_google_monitoring_v3_CreateTimeSeriesError_descriptor;
@@ -143,6 +76,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
    *
    * <code>.google.monitoring.v3.TimeSeries time_series = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the timeSeries field is set.
    */
   @java.lang.Override
@@ -159,6 +93,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
    *
    * <code>.google.monitoring.v3.TimeSeries time_series = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The timeSeries.
    */
   @java.lang.Override
@@ -194,6 +129,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
    *
    * <code>.google.rpc.Status status = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the status field is set.
    */
   @java.lang.Override
@@ -210,6 +146,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
    *
    * <code>.google.rpc.Status status = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The status.
    */
   @java.lang.Override
@@ -252,7 +189,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
     if (status_ != null) {
       output.writeMessage(2, getStatus());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -267,7 +204,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
     if (status_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getStatus());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -291,7 +228,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
     if (hasStatus()) {
       if (!getStatus().equals(other.getStatus())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -310,7 +247,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getStatus().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -439,17 +376,10 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
     }
 
     // Construct using com.google.monitoring.v3.CreateTimeSeriesError.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
@@ -559,7 +489,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
       if (other.hasStatus()) {
         mergeStatus(other.getStatus());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -574,17 +504,43 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.monitoring.v3.CreateTimeSeriesError parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                input.readMessage(getTimeSeriesFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 10
+            case 18:
+              {
+                input.readMessage(getStatusFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 18
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.monitoring.v3.CreateTimeSeriesError) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -603,6 +559,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
      *
      * <code>.google.monitoring.v3.TimeSeries time_series = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return Whether the timeSeries field is set.
      */
     @java.lang.Deprecated
@@ -618,6 +575,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
      *
      * <code>.google.monitoring.v3.TimeSeries time_series = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The timeSeries.
      */
     @java.lang.Deprecated
@@ -794,6 +752,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
      *
      * <code>.google.rpc.Status status = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return Whether the status field is set.
      */
     @java.lang.Deprecated
@@ -809,6 +768,7 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
      *
      * <code>.google.rpc.Status status = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The status.
      */
     @java.lang.Deprecated
@@ -994,7 +954,18 @@ public final class CreateTimeSeriesError extends com.google.protobuf.GeneratedMe
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CreateTimeSeriesError(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
