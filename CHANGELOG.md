@@ -1,5 +1,119 @@
 # Changelog
 
+## [3.2.10](https://github.com/googleapis/java-monitoring/compare/v3.2.9...v3.2.10) (2022-10-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* Release gapic-generator-java v2.0.0 (#626)
+
+### Features
+
+* Add `gcf-owl-bot[bot]` to `ignoreAuthors` ([#558](https://github.com/googleapis/java-monitoring/issues/558)) ([38ba442](https://github.com/googleapis/java-monitoring/commit/38ba44243fc53b769805f1a302ba1799fce6145f))
+* add CreateServiceTimeSeries RPC ([bdfc556](https://github.com/googleapis/java-monitoring/commit/bdfc5568896b8e79c37308a701249bd0414377d0))
+* Added creation and mutation records to notification channels ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* Added IstioCanonicalService for service monitoring ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* Added support for auto-close configurations ([#730](https://github.com/googleapis/java-monitoring/issues/730)) ([a723983](https://github.com/googleapis/java-monitoring/commit/a723983722eaee3ac7a0b71bb526115420e1fea9))
+* Added support for logs-based alerts: https://cloud.google.com/logging/docs/alerting/log-based-alerts ([bdfc556](https://github.com/googleapis/java-monitoring/commit/bdfc5568896b8e79c37308a701249bd0414377d0))
+* Added support for Monitoring Query Language: https://cloud.google.com/monitoring/mql ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* Added support for querying metrics for folders and organizations ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* Added support for secondary aggregation when querying metrics ([#471](https://github.com/googleapis/java-monitoring/issues/471)) ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* Added support for units in the MetricService ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* Added support for user-defined labels on cloud monitoring's Service and ServiceLevelObjective objects ([#663](https://github.com/googleapis/java-monitoring/issues/663)) ([bdfc556](https://github.com/googleapis/java-monitoring/commit/bdfc5568896b8e79c37308a701249bd0414377d0))
+* Added total_size to the response of ListAlertPolicies ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* **generator:** Update protoc to v3.15.3 ([#447](https://github.com/googleapis/java-monitoring/issues/447)) ([e489cf5](https://github.com/googleapis/java-monitoring/commit/e489cf514e573b40a45f9b2423700967db868567))
+* Introduce Native Image testing build script changes ([#701](https://github.com/googleapis/java-monitoring/issues/701)) ([706b654](https://github.com/googleapis/java-monitoring/commit/706b654e08cec92079944708b80b7e2b61de393e))
+* Next release from main branch is 3.2.0 ([#709](https://github.com/googleapis/java-monitoring/issues/709)) ([6eab6bb](https://github.com/googleapis/java-monitoring/commit/6eab6bb259da744343cd71ce39357c7010de6003))
+* Release gapic-generator-java v2.0.0 ([#626](https://github.com/googleapis/java-monitoring/issues/626)) ([fa9defd](https://github.com/googleapis/java-monitoring/commit/fa9defdf959b2872eaf4a78430c93ad642240a20))
+
+
+### Bug Fixes
+
+* Add `shopt -s nullglob` to dependencies script ([#599](https://github.com/googleapis/java-monitoring/issues/599)) ([5850a34](https://github.com/googleapis/java-monitoring/commit/5850a34330fb3209127a6f3c8bdfdb90162cb660))
+* Extended the default deadline for UpdateGroup to 180s ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* **java:** Add -ntp flag to native image testing command ([#1299](https://github.com/googleapis/java-monitoring/issues/1299)) ([#739](https://github.com/googleapis/java-monitoring/issues/739)) ([1c8d8ce](https://github.com/googleapis/java-monitoring/commit/1c8d8ce25d22fbf8ae812bc042a2b080f495483e))
+* **java:** Java 17 dependency arguments ([#714](https://github.com/googleapis/java-monitoring/issues/714)) ([895efc9](https://github.com/googleapis/java-monitoring/commit/895efc913241d39fe54684a27fdaba06e0afe6e9))
+* mark required fields in QueryTimeSeriesRequest as required ([bdfc556](https://github.com/googleapis/java-monitoring/commit/bdfc5568896b8e79c37308a701249bd0414377d0))
+* Next release from 3.2.x is 3.2.10 ([#972](https://github.com/googleapis/java-monitoring/issues/972)) ([1af6d01](https://github.com/googleapis/java-monitoring/commit/1af6d01c09d7fe9852e936187ae3eaab8a6fc1e1))
+* Reintroduce deprecated field/enum for backward compatibility ([bdfc556](https://github.com/googleapis/java-monitoring/commit/bdfc5568896b8e79c37308a701249bd0414377d0))
+* Release scripts from issuing overlapping phases ([#491](https://github.com/googleapis/java-monitoring/issues/491)) ([2649814](https://github.com/googleapis/java-monitoring/commit/26498148c73349b8d27617c3492532ddf28e1561))
+* Typo ([#488](https://github.com/googleapis/java-monitoring/issues/488)) ([860e81c](https://github.com/googleapis/java-monitoring/commit/860e81c631c0211f8f2a26aa64daccf2cad6f3fc))
+* Un-deprecated cluster_istio for service monitoring ([8a42810](https://github.com/googleapis/java-monitoring/commit/8a42810e2f0786de716b123e1091b6a1dd7d1e45))
+* Update dependencies.sh to not break on mac ([#595](https://github.com/googleapis/java-monitoring/issues/595)) ([95fd642](https://github.com/googleapis/java-monitoring/commit/95fd6427c0121995990db1e81942df44b73c6a90))
+
+
+### Documentation
+
+* fix typo in alert.proto ([bdfc556](https://github.com/googleapis/java-monitoring/commit/bdfc5568896b8e79c37308a701249bd0414377d0))
+* Generate sample code in the Java microgenerator ([#419](https://github.com/googleapis/java-monitoring/issues/419)) ([66f4480](https://github.com/googleapis/java-monitoring/commit/66f448033b8513186040a45863d7431f82b69454))
+* **samples:** Fix NPE in DeleteMetricDescriptorIT#testDeleteMetricDescriptor ([#388](https://github.com/googleapis/java-monitoring/issues/388)) ([8475219](https://github.com/googleapis/java-monitoring/commit/84752197487103e08cba5a8b3da04d856266363a))
+
+
+### Dependencies
+
+* Fix scope for google-auth-library-oauth2-http ([#230](https://github.com/googleapis/java-monitoring/issues/230)) ([f055231](https://github.com/googleapis/java-monitoring/commit/f055231a31e7c9ea5814571052ba900a57d236f0))
+* **java:** Update actions/github-script action to v5 ([#1339](https://github.com/googleapis/java-monitoring/issues/1339)) ([#783](https://github.com/googleapis/java-monitoring/issues/783)) ([5c10283](https://github.com/googleapis/java-monitoring/commit/5c10283715181fb3a6400b995b414b93e5db6c56))
+* Regenerating with new Protobuf (3.2.x) ([#935](https://github.com/googleapis/java-monitoring/issues/935)) ([f5e912f](https://github.com/googleapis/java-monitoring/commit/f5e912f7c12ee8855c2068d74b2ac3f3a725cec7))
+* Update actions/github-script action to v5 ([#782](https://github.com/googleapis/java-monitoring/issues/782)) ([6cd71ac](https://github.com/googleapis/java-monitoring/commit/6cd71acff0b460a31bfd0276984c5c3f3f4410d6))
+* Update actions/github-script action to v6 ([#795](https://github.com/googleapis/java-monitoring/issues/795)) ([e3d3e3d](https://github.com/googleapis/java-monitoring/commit/e3d3e3d2f45c0c8665bb8ec5aa1cd79c7697087e))
+* Update actions/setup-java action to v3 ([#803](https://github.com/googleapis/java-monitoring/issues/803)) ([cb13c16](https://github.com/googleapis/java-monitoring/commit/cb13c163dec0a7fdd921ad9b3d2ad0850082b650))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.0 ([#272](https://github.com/googleapis/java-monitoring/issues/272)) ([08d9982](https://github.com/googleapis/java-monitoring/commit/08d99829de06e061538f397cb05098bd1be7b375))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.2 ([#289](https://github.com/googleapis/java-monitoring/issues/289)) ([08edb22](https://github.com/googleapis/java-monitoring/commit/08edb220737f83471b3dd9bdf40b6795e30018aa))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.12.1 ([#305](https://github.com/googleapis/java-monitoring/issues/305)) ([519bde6](https://github.com/googleapis/java-monitoring/commit/519bde60cfd34c03a76e230bf0c9e7735d6a1c3a))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.13.0 ([#312](https://github.com/googleapis/java-monitoring/issues/312)) ([f2af81e](https://github.com/googleapis/java-monitoring/commit/f2af81ece7e41116f28e3d8bf1c9a19f891dfb6e))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.14.1 ([#331](https://github.com/googleapis/java-monitoring/issues/331)) ([75461ee](https://github.com/googleapis/java-monitoring/commit/75461ee6a0ffd88b9ffc7b671de76e872f8f1f56))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.15.0 ([#345](https://github.com/googleapis/java-monitoring/issues/345)) ([c630400](https://github.com/googleapis/java-monitoring/commit/c630400689726101775ebe99736eba88de2f7114))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.0 ([#363](https://github.com/googleapis/java-monitoring/issues/363)) ([c55899d](https://github.com/googleapis/java-monitoring/commit/c55899dd93d595f1b2ed64641c011096ab20f49c))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.1 ([#372](https://github.com/googleapis/java-monitoring/issues/372)) ([2a499dc](https://github.com/googleapis/java-monitoring/commit/2a499dc2c68c9484c6f3ccd83aaf6653c90cff17))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.17.0 ([#380](https://github.com/googleapis/java-monitoring/issues/380)) ([11d81c2](https://github.com/googleapis/java-monitoring/commit/11d81c23ea34f219892711b86edd22338cfd6b99))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.18.0 ([#394](https://github.com/googleapis/java-monitoring/issues/394)) ([e9cc332](https://github.com/googleapis/java-monitoring/commit/e9cc3321593eacecebe4c31fc5c030ecb465503a))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.19.0 ([#431](https://github.com/googleapis/java-monitoring/issues/431)) ([228c745](https://github.com/googleapis/java-monitoring/commit/228c74532f781f6c39cb5f3f3e413f34b5506e35))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.0 ([#443](https://github.com/googleapis/java-monitoring/issues/443)) ([9117bb1](https://github.com/googleapis/java-monitoring/commit/9117bb15c8430f63eb30c9bd400c429dc4fc51c7))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.1 ([#459](https://github.com/googleapis/java-monitoring/issues/459)) ([59d8c6e](https://github.com/googleapis/java-monitoring/commit/59d8c6ee074b8f7af15dfc0b33dabb3638832ae9))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.21.0 ([#478](https://github.com/googleapis/java-monitoring/issues/478)) ([d028912](https://github.com/googleapis/java-monitoring/commit/d0289124b32940e1cb1ccb580c30c5b463d6db54))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.21.1 ([#494](https://github.com/googleapis/java-monitoring/issues/494)) ([d378046](https://github.com/googleapis/java-monitoring/commit/d378046da57095904ffc91e9528535def27cbc82))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.6 ([#207](https://github.com/googleapis/java-monitoring/issues/207)) ([725e59a](https://github.com/googleapis/java-monitoring/commit/725e59a6cb62dc5dc542359fab5f3c5d98069e22))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v0.9.0 ([#248](https://github.com/googleapis/java-monitoring/issues/248)) ([3dbf19d](https://github.com/googleapis/java-monitoring/commit/3dbf19dc0d6c4a36ba4b41c651ff404b07941959))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v1 ([#523](https://github.com/googleapis/java-monitoring/issues/523)) ([3460aad](https://github.com/googleapis/java-monitoring/commit/3460aad7a595aeb55d0d17a93e7477b63ae931cc))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v1.1.0 ([#540](https://github.com/googleapis/java-monitoring/issues/540)) ([8f07c54](https://github.com/googleapis/java-monitoring/commit/8f07c54c78046b30f7dfd49ddf54ba932db7787d))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v1.2.0 ([#557](https://github.com/googleapis/java-monitoring/issues/557)) ([30dd87f](https://github.com/googleapis/java-monitoring/commit/30dd87fa16ac266e681e777ca53b530c7c1751c0))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v1.3.0 ([#579](https://github.com/googleapis/java-monitoring/issues/579)) ([f0d5447](https://github.com/googleapis/java-monitoring/commit/f0d54474f4a6a0bf9a226442c28b26f3c2803141))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v1.4.0 ([#602](https://github.com/googleapis/java-monitoring/issues/602)) ([417d016](https://github.com/googleapis/java-monitoring/commit/417d016a3feef46f53218943f24a56ecb965b5e7))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2 ([#627](https://github.com/googleapis/java-monitoring/issues/627)) ([8c03abf](https://github.com/googleapis/java-monitoring/commit/8c03abf6b1ac6a8a9e5efd4e403ef6509db4ff40))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.0.1 ([#634](https://github.com/googleapis/java-monitoring/issues/634)) ([84ac756](https://github.com/googleapis/java-monitoring/commit/84ac756b895c161d0337fa6f8c1f5e61d05186e8))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.1.0 ([#646](https://github.com/googleapis/java-monitoring/issues/646)) ([2b92237](https://github.com/googleapis/java-monitoring/commit/2b922376a6c5ed8ac44e962346a8b3b58687d123))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.10.0 ([#829](https://github.com/googleapis/java-monitoring/issues/829)) ([119b9cb](https://github.com/googleapis/java-monitoring/commit/119b9cbaa6881a3734ab1dc24566804e5888c100))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.0 ([#656](https://github.com/googleapis/java-monitoring/issues/656)) ([32c24c2](https://github.com/googleapis/java-monitoring/commit/32c24c22a9d1bdeeb74ccf61e82b685a36f8510e))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.1 ([#673](https://github.com/googleapis/java-monitoring/issues/673)) ([740ddb9](https://github.com/googleapis/java-monitoring/commit/740ddb9b6cccdf33189ebd58905786613757b39d))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.3.0 ([#683](https://github.com/googleapis/java-monitoring/issues/683)) ([b67e83e](https://github.com/googleapis/java-monitoring/commit/b67e83e80f53f899d7746300e8f2bbfd712fb552))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.4.0 ([#702](https://github.com/googleapis/java-monitoring/issues/702)) ([61fb443](https://github.com/googleapis/java-monitoring/commit/61fb443625368228cadda3b8c772f16322e533ca))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.0 ([#729](https://github.com/googleapis/java-monitoring/issues/729)) ([22456cd](https://github.com/googleapis/java-monitoring/commit/22456cd76a6abe7ec6dfac92714ef042383af3b6))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.1 ([#736](https://github.com/googleapis/java-monitoring/issues/736)) ([bc15ad8](https://github.com/googleapis/java-monitoring/commit/bc15ad8033b1bb80facc705de4a8cf1da98ed96c))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.6.0 ([#766](https://github.com/googleapis/java-monitoring/issues/766)) ([4e3df7b](https://github.com/googleapis/java-monitoring/commit/4e3df7b957b0762fe17acd94e152829e1419b488))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.7.0 ([#785](https://github.com/googleapis/java-monitoring/issues/785)) ([e3a69d9](https://github.com/googleapis/java-monitoring/commit/e3a69d9e6a59a7440792b992e9cc036b994e9ecb))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.8.0 ([#810](https://github.com/googleapis/java-monitoring/issues/810)) ([288dbf0](https://github.com/googleapis/java-monitoring/commit/288dbf0cdcce833d7282ce758ef985943da7886c))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v2.9.0 ([#819](https://github.com/googleapis/java-monitoring/issues/819)) ([343e2d1](https://github.com/googleapis/java-monitoring/commit/343e2d130d30ffe4808bb50e06e29247543709e3))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.12.4 ([#211](https://github.com/googleapis/java-monitoring/issues/211)) ([80a28da](https://github.com/googleapis/java-monitoring/commit/80a28da2064be473bb9018fea5517e9de4875c8c))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.13.0 ([#235](https://github.com/googleapis/java-monitoring/issues/235)) ([5b09dfc](https://github.com/googleapis/java-monitoring/commit/5b09dfc50ef6df3b5e232cea2661b514c30ce145))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.15.0 ([#428](https://github.com/googleapis/java-monitoring/issues/428)) ([56ec572](https://github.com/googleapis/java-monitoring/commit/56ec572360902025048d7e4a6c45d578d699ca3c))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.15.3 ([#437](https://github.com/googleapis/java-monitoring/issues/437)) ([f68a6c3](https://github.com/googleapis/java-monitoring/commit/f68a6c3276836286a23ef49118b7d39bcad4bb15))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.15.5 ([#452](https://github.com/googleapis/java-monitoring/issues/452)) ([e3bf3c7](https://github.com/googleapis/java-monitoring/commit/e3bf3c766fadf9fc3ba56b0ebf11139a564b2f0f))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.15.7 ([#461](https://github.com/googleapis/java-monitoring/issues/461)) ([aa17b1b](https://github.com/googleapis/java-monitoring/commit/aa17b1b006fc0203b040bdb9035df8e732c6307c))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.15.8 ([#477](https://github.com/googleapis/java-monitoring/issues/477)) ([31d72d7](https://github.com/googleapis/java-monitoring/commit/31d72d721af4eaec6d3896fd59f53f588911e220))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.16.0 ([#537](https://github.com/googleapis/java-monitoring/issues/537)) ([e83413c](https://github.com/googleapis/java-monitoring/commit/e83413cf34e6b67c84ff60a148f6dc22af49f18b))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.17.0 ([#547](https://github.com/googleapis/java-monitoring/issues/547)) ([020b40d](https://github.com/googleapis/java-monitoring/commit/020b40df07df50f624132bda0cec5e780ff38055))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.17.1 ([#564](https://github.com/googleapis/java-monitoring/issues/564)) ([227eee4](https://github.com/googleapis/java-monitoring/commit/227eee4edb7a37cfe6cdad2e6c040f65ce0c96ce))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.17.2 ([#571](https://github.com/googleapis/java-monitoring/issues/571)) ([8b361c3](https://github.com/googleapis/java-monitoring/commit/8b361c305f424e4fbf19c1bb873c0b0cbd090224))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.17.3 ([#587](https://github.com/googleapis/java-monitoring/issues/587)) ([0ff0e5c](https://github.com/googleapis/java-monitoring/commit/0ff0e5c0e8d9a66f395068b1a8d2024ecba3647d))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.18.0 ([#678](https://github.com/googleapis/java-monitoring/issues/678)) ([a6f7e57](https://github.com/googleapis/java-monitoring/commit/a6f7e575bd8e54e9cc119898643a9490e6c4a4e3))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.18.1 ([#694](https://github.com/googleapis/java-monitoring/issues/694)) ([8f2ae69](https://github.com/googleapis/java-monitoring/commit/8f2ae69832a92fee66eb22a140dbe499a15d5f19))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.19.1 ([#708](https://github.com/googleapis/java-monitoring/issues/708)) ([d9798fd](https://github.com/googleapis/java-monitoring/commit/d9798fdcc11ea563fed40c2fc3af189ccd498fbc))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.19.2 ([#764](https://github.com/googleapis/java-monitoring/issues/764)) ([0d2afb9](https://github.com/googleapis/java-monitoring/commit/0d2afb96951aaf1377762fe9ba71ba0a636c21c1))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.19.3 ([#775](https://github.com/googleapis/java-monitoring/issues/775)) ([2a5ccda](https://github.com/googleapis/java-monitoring/commit/2a5ccdad7b08461e81e5a430b1dbdea92b91f7ec))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.19.4 ([#784](https://github.com/googleapis/java-monitoring/issues/784)) ([7d45889](https://github.com/googleapis/java-monitoring/commit/7d45889b559e5888b4c0f210aea67c442ac5ec36))
+* Update dependency com.google.protobuf:protobuf-java-util to v3.20.0 ([#825](https://github.com/googleapis/java-monitoring/issues/825)) ([fa72938](https://github.com/googleapis/java-monitoring/commit/fa72938482b24b2088bb19dca1870a8e97ef3067))
+* Update dependency commons-cli:commons-cli to v1.5.0 ([#716](https://github.com/googleapis/java-monitoring/issues/716)) ([563c35e](https://github.com/googleapis/java-monitoring/commit/563c35ecd5e27b1feef3aae302c64008e33be1c5))
+
 ## [3.2.9](https://github.com/googleapis/java-monitoring/compare/v3.2.8...v3.2.9) (2022-10-11)
 
 
