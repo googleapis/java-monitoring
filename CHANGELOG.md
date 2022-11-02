@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0-sp.3](https://github.com/googleapis/java-monitoring/compare/v2.1.0-sp.2...v2.1.0-sp.3) (2022-11-02)
+
+
+### Dependencies
+
+* Regenerating with new Protobuf (2.1.0-sp) ([#989](https://github.com/googleapis/java-monitoring/issues/989)) ([cab278d](https://github.com/googleapis/java-monitoring/commit/cab278d41aa0bcb6b1df8b50d2cf424bb7bd437d))
+
 ## [2.1.0-sp.2](https://www.github.com/googleapis/java-monitoring/compare/2.1.0-sp.1...v2.1.0-sp.2) (2021-11-11)
 
 
