@@ -53,74 +53,6 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
     return this.unknownFields;
   }
 
-  private TimeSeriesDescriptor(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                labelDescriptors_ = new java.util.ArrayList<com.google.api.LabelDescriptor>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              labelDescriptors_.add(
-                  input.readMessage(com.google.api.LabelDescriptor.parser(), extensionRegistry));
-              break;
-            }
-          case 42:
-            {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                pointDescriptors_ =
-                    new java.util.ArrayList<
-                        com.google.monitoring.v3.TimeSeriesDescriptor.ValueDescriptor>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              pointDescriptors_.add(
-                  input.readMessage(
-                      com.google.monitoring.v3.TimeSeriesDescriptor.ValueDescriptor.parser(),
-                      extensionRegistry));
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        labelDescriptors_ = java.util.Collections.unmodifiableList(labelDescriptors_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        pointDescriptors_ = java.util.Collections.unmodifiableList(pointDescriptors_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.monitoring.v3.MetricProto
         .internal_static_google_monitoring_v3_TimeSeriesDescriptor_descriptor;
@@ -250,64 +182,6 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
-    }
-
-    private ValueDescriptor(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                key_ = s;
-                break;
-              }
-            case 16:
-              {
-                int rawValue = input.readEnum();
-
-                valueType_ = rawValue;
-                break;
-              }
-            case 24:
-              {
-                int rawValue = input.readEnum();
-
-                metricKind_ = rawValue;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -471,7 +345,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
           != com.google.api.MetricDescriptor.MetricKind.METRIC_KIND_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, metricKind_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -491,7 +365,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
           != com.google.api.MetricDescriptor.MetricKind.METRIC_KIND_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream.computeEnumSize(3, metricKind_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -510,7 +384,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
       if (!getKey().equals(other.getKey())) return false;
       if (valueType_ != other.valueType_) return false;
       if (metricKind_ != other.metricKind_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -527,7 +401,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
       hash = (53 * hash) + valueType_;
       hash = (37 * hash) + METRIC_KIND_FIELD_NUMBER;
       hash = (53 * hash) + metricKind_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -659,17 +533,10 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
       }
 
       // Construct using com.google.monitoring.v3.TimeSeriesDescriptor.ValueDescriptor.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -776,7 +643,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
         if (other.metricKind_ != 0) {
           setMetricKindValue(other.getMetricKindValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -791,19 +658,49 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.monitoring.v3.TimeSeriesDescriptor.ValueDescriptor parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  key_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+              case 16:
+                {
+                  valueType_ = input.readEnum();
+
+                  break;
+                } // case 16
+              case 24:
+                {
+                  metricKind_ = input.readEnum();
+
+                  break;
+                } // case 24
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.monitoring.v3.TimeSeriesDescriptor.ValueDescriptor)
-                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1130,7 +1027,19 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new ValueDescriptor(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -1323,7 +1232,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
     for (int i = 0; i < pointDescriptors_.size(); i++) {
       output.writeMessage(5, pointDescriptors_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1338,7 +1247,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
     for (int i = 0; i < pointDescriptors_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, pointDescriptors_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1356,7 +1265,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
 
     if (!getLabelDescriptorsList().equals(other.getLabelDescriptorsList())) return false;
     if (!getPointDescriptorsList().equals(other.getPointDescriptorsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1375,7 +1284,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
       hash = (37 * hash) + POINT_DESCRIPTORS_FIELD_NUMBER;
       hash = (53 * hash) + getPointDescriptorsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1504,20 +1413,10 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
     }
 
     // Construct using com.google.monitoring.v3.TimeSeriesDescriptor.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-        getLabelDescriptorsFieldBuilder();
-        getPointDescriptorsFieldBuilder();
-      }
     }
 
     @java.lang.Override
@@ -1525,16 +1424,18 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
       super.clear();
       if (labelDescriptorsBuilder_ == null) {
         labelDescriptors_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        labelDescriptors_ = null;
         labelDescriptorsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (pointDescriptorsBuilder_ == null) {
         pointDescriptors_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        pointDescriptors_ = null;
         pointDescriptorsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -1684,7 +1585,7 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1699,17 +1600,57 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.monitoring.v3.TimeSeriesDescriptor parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                com.google.api.LabelDescriptor m =
+                    input.readMessage(com.google.api.LabelDescriptor.parser(), extensionRegistry);
+                if (labelDescriptorsBuilder_ == null) {
+                  ensureLabelDescriptorsIsMutable();
+                  labelDescriptors_.add(m);
+                } else {
+                  labelDescriptorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+            case 42:
+              {
+                com.google.monitoring.v3.TimeSeriesDescriptor.ValueDescriptor m =
+                    input.readMessage(
+                        com.google.monitoring.v3.TimeSeriesDescriptor.ValueDescriptor.parser(),
+                        extensionRegistry);
+                if (pointDescriptorsBuilder_ == null) {
+                  ensurePointDescriptorsIsMutable();
+                  pointDescriptors_.add(m);
+                } else {
+                  pointDescriptorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.monitoring.v3.TimeSeriesDescriptor) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -2506,7 +2447,18 @@ public final class TimeSeriesDescriptor extends com.google.protobuf.GeneratedMes
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new TimeSeriesDescriptor(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
